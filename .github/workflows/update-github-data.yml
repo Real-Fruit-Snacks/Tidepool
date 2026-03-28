@@ -1,0 +1,68 @@
+name: Update GitHub Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6am UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Fetch GitHub data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          USER="${{ github.repository_owner }}"
+
+          # Fetch user info
+          USER_DATA=$(gh api "users/${USER}" --jq '{
+            login: .login,
+            name: .name,
+            bio: .bio,
+            public_repos: .public_repos,
+            followers: .followers,
+            following: .following,
+            created_at: .created_at,
+            avatar_url: .avatar_url
+          }')
+
+          # Fetch repos (paginated, sorted by updated)
+          REPOS=$(gh api "users/${USER}/repos?per_page=100&sort=updated" --paginate --jq '[.[] | select(.fork == false) | {
+            name: .name,
+            description: .description,
+            language: .language,
+            stars: .stargazers_count,
+            forks: .forks_count,
+            url: .html_url,
+            updated_at: .updated_at
+          }]')
+
+          # Aggregate languages
+          LANGUAGES=$(echo "$REPOS" | jq '[.[].language // empty] | group_by(.) | map({(.[0]): length}) | add // {}')
+
+          # Combine into final JSON
+          jq -n \
+            --argjson user "$USER_DATA" \
+            --argjson repos "$REPOS" \
+            --argjson languages "$LANGUAGES" \
+            '{
+              user: $user,
+              repos: $repos,
+              languages: $languages,
+              updated_at: now | todate
+            }' > public/data/github.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/github.json
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "chore: update GitHub data [skip ci]"
+          git push
