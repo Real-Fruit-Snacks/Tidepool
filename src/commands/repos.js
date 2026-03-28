@@ -15,13 +15,13 @@ export function register(registry) {
       }
 
       const repos = data.repos
-        .sort((a, b) => (b.stars || 0) - (a.stars || 0))
+        .sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0))
         .slice(0, 15);
 
       const headers = ['Repository', 'Stars', 'Language', 'Description'];
       const rows = repos.map(r => [
         fg(palette.blue, r.name || ''),
-        fg(palette.yellow, String(r.stars || 0)),
+        fg(palette.yellow, String(r.stars ?? 0)),
         fg(r.language ? palette.green : palette.overlay0, r.language || '-'),
         dim((r.description || '').slice(0, 40) + ((r.description || '').length > 40 ? '...' : '')),
       ]);

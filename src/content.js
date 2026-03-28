@@ -24,17 +24,20 @@ export const contact = [
 export const skills = [
   { category: 'Languages', items: [
     { name: 'JavaScript',  level: 90, color: palette.yellow },
-    { name: 'TypeScript',  level: 85, color: palette.blue },
-    { name: 'Python',      level: 80, color: palette.green },
-    { name: 'Rust',        level: 60, color: palette.peach },
+    { name: 'Python',      level: 85, color: palette.green },
+    { name: 'Go',          level: 75, color: palette.sky },
+    { name: 'TypeScript',  level: 70, color: palette.blue },
+    { name: 'Rust',        level: 65, color: palette.peach },
+    { name: 'C',           level: 60, color: palette.text },
+    { name: 'Assembly',    level: 55, color: palette.red },
     { name: 'Bash',        level: 75, color: palette.teal },
   ]},
   { category: 'Frameworks & Tools', items: [
     { name: 'Node.js',    level: 88, color: palette.green },
-    { name: 'React',      level: 82, color: palette.sky },
     { name: 'Git',        level: 90, color: palette.red },
     { name: 'Linux',      level: 85, color: palette.yellow },
     { name: 'Docker',     level: 70, color: palette.sapphire },
+    { name: 'Vite',       level: 75, color: palette.mauve },
   ]},
 ];
 
