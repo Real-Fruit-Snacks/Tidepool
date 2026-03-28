@@ -31,7 +31,7 @@ export function hydrateFilesystem(fs, data) {
       '',
       `  \x1b[1m\x1b[38;2;137;180;250mLanguage\x1b[39m\x1b[22m   \x1b[38;2;166;227;161m${lang}\x1b[39m`,
       `  \x1b[1m\x1b[38;2;137;180;250mStars\x1b[39m\x1b[22m      \x1b[38;2;249;226;175m★ ${stars}\x1b[39m`,
-      `  \x1b[1m\x1b[38;2;137;180;250mForks\x1b[39m\x1b[22m      ${forks}`,
+      `  \x1b[1m\x1b[38;2;137;180;250mForks\x1b[39m\x1b[22m      \x1b[38;2;205;214;244m${forks}\x1b[39m`,
       `  \x1b[1m\x1b[38;2;137;180;250mURL\x1b[39m\x1b[22m        \x1b[38;2;116;199;236m${url}\x1b[39m`,
       '',
     ].join('\n');

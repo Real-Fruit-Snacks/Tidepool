@@ -1,5 +1,5 @@
 import { palette } from './theme.js';
-import { fg, bold, dim, italic } from './formatter.js';
+import { fg, bold, dim } from './formatter.js';
 
 export const about = `
 ${fg(palette.mauve, bold('Real-Fruit-Snacks'))}

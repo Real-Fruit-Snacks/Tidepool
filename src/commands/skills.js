@@ -1,5 +1,5 @@
 import { palette } from '../theme.js';
-import { fg, bold, dim, progressBar, box } from '../formatter.js';
+import { fg, bold, dim, progressBar } from '../formatter.js';
 import { skills } from '../content.js';
 
 export function register(registry) {

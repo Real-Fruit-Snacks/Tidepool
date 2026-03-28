@@ -1,5 +1,5 @@
 import { palette } from '../theme.js';
-import { fg, bold, dim, padEnd, visibleLength } from '../formatter.js';
+import { fg, bold, dim, padEnd } from '../formatter.js';
 
 export function register(registry) {
   registry.register('ls', {

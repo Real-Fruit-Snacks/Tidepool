@@ -1,5 +1,5 @@
 import { palette } from '../theme.js';
-import { fg, dim } from '../formatter.js';
+import { fg } from '../formatter.js';
 
 export function register(registry) {
   registry.register('cat', {
