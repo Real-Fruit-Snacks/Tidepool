@@ -12,22 +12,23 @@ export function register(registry) {
         return;
       }
 
-      const path = args[0];
-      const absPath = ctx.fs.resolve(path);
-      const node = ctx.fs.get(absPath);
+      for (const path of args) {
+        const absPath = ctx.fs.resolve(path);
+        const node = ctx.fs.get(absPath);
 
-      if (!node) {
-        ctx.term.writeln(fg(palette.red, `cat: ${path}: No such file or directory`));
-        return;
-      }
-      if (node.type === 'dir') {
-        ctx.term.writeln(fg(palette.red, `cat: ${path}: Is a directory`));
-        return;
-      }
+        if (!node) {
+          ctx.term.writeln(fg(palette.red, `cat: ${path}: No such file or directory`));
+          continue;
+        }
+        if (node.type === 'dir') {
+          ctx.term.writeln(fg(palette.red, `cat: ${path}: Is a directory`));
+          continue;
+        }
 
-      const lines = node.content.split('\n');
-      for (const line of lines) {
-        ctx.term.writeln(line);
+        const lines = node.content.split('\n');
+        for (const line of lines) {
+          ctx.term.writeln(line);
+        }
       }
     }
   });

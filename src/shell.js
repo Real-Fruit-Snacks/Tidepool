@@ -228,10 +228,42 @@ export class Shell {
     return prompt.replace(/\x1b\[[0-9;]*m/g, '').length;
   }
 
+  _expandGlobs(args) {
+    const expanded = [];
+    for (const arg of args) {
+      if (arg.includes('*') || arg.includes('?')) {
+        const lastSlash = arg.lastIndexOf('/');
+        const dirPart = lastSlash >= 0 ? arg.slice(0, lastSlash) || '/' : '';
+        const pattern = lastSlash >= 0 ? arg.slice(lastSlash + 1) : arg;
+
+        const absDir = dirPart ? this.fs.resolve(dirPart) : this.fs.cwd;
+        const entries = this.fs.ls(absDir, pattern.startsWith('.'));
+
+        if (entries) {
+          const regex = new RegExp('^' + pattern
+            .replace(/[.+^${}()|[\]\\]/g, '\\$&')
+            .replace(/\*/g, '.*')
+            .replace(/\?/g, '.')
+            + '$');
+          const matches = entries
+            .filter(e => regex.test(e.name))
+            .map(e => dirPart ? `${dirPart}/${e.name}` : e.name);
+
+          if (matches.length > 0) {
+            expanded.push(...matches);
+            continue;
+          }
+        }
+      }
+      expanded.push(arg);
+    }
+    return expanded;
+  }
+
   async _execute(input) {
     const parts = input.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
     const cmdName = parts[0]?.toLowerCase();
-    const args = parts.slice(1).map(a => a.replace(/^"|"$/g, ''));
+    const args = this._expandGlobs(parts.slice(1).map(a => a.replace(/^"|"$/g, '')));
 
     if (!cmdName) return;
 
