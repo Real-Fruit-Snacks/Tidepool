@@ -1,15 +1,322 @@
 {
   "user": {
-    "login": "Real-Fruit-Snacks",
-    "name": "",
-    "bio": "",
-    "public_repos": 0,
-    "followers": 0,
+    "avatar_url": "https://avatars.githubusercontent.com/u/87195021?v=4",
+    "bio": null,
+    "created_at": "2021-07-09T14:46:03Z",
+    "followers": 2,
     "following": 0,
-    "created_at": "",
-    "avatar_url": ""
+    "login": "Real-Fruit-Snacks",
+    "name": null,
+    "public_repos": 33
   },
-  "repos": [],
-  "languages": {},
-  "updated_at": ""
+  "repos": [
+    {
+      "description": null,
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "armsforge",
+      "stars": 0,
+      "updated_at": "2026-03-28T00:45:13Z",
+      "url": "https://github.com/Real-Fruit-Snacks/armsforge"
+    },
+    {
+      "description": "A fast, lightweight screenshot capture and annotation tool. Built with Rust, winit, and tiny-skia.",
+      "forks": 0,
+      "language": "Rust",
+      "name": "HydroShot",
+      "stars": 0,
+      "updated_at": "2026-03-28T00:31:22Z",
+      "url": "https://github.com/Real-Fruit-Snacks/HydroShot"
+    },
+    {
+      "description": null,
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-03-28T00:26:00Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
+      "description": "Privilege escalation reasoning engine — parses LinPEAS/WinPEAS output and generates ranked   exploitation playbooks",
+      "forks": 0,
+      "language": "Python",
+      "name": "Whirlpool",
+      "stars": 1,
+      "updated_at": "2026-03-26T23:34:12Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Whirlpool"
+    },
+    {
+      "description": "A modern, native markdown editor with real-time collaboration, live preview, wiki-links, canvas whiteboard, and 21+ themes. Built with Tauri and Rust.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Cascade",
+      "stars": 0,
+      "updated_at": "2026-03-26T01:08:22Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cascade"
+    },
+    {
+      "description": null,
+      "forks": 0,
+      "language": null,
+      "name": "Test",
+      "stars": 0,
+      "updated_at": "2026-03-22T15:26:20Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Test"
+    },
+    {
+      "description": "Open research platform for indexing, searching, and serving computational research publications",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Deadwater",
+      "stars": 0,
+      "updated_at": "2026-03-22T02:24:43Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Deadwater"
+    },
+    {
+      "description": "SSH wrapper for red team operations, written in Rust. It wraps the system's real ssh binary via PTY, intercepting ! commands to provide session management, tunnel management, file transfers, passive filesystem mapping, and per-command session logging — while passing all SSH functionality through.",
+      "forks": 0,
+      "language": "Rust",
+      "name": "Slipstream",
+      "stars": 0,
+      "updated_at": "2026-03-21T02:12:12Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Slipstream"
+    },
+    {
+      "description": "Complete SSH-2.0 protocol implementation in pure x86_64 NASM assembly — ChaCha20-Poly1305 AEAD, Ed25519, X25519, SFTP, PTY, port forwarding, 94   KB static ELF, no libc",
+      "forks": 0,
+      "language": "Python",
+      "name": "Depth",
+      "stars": 0,
+      "updated_at": "2026-03-16T17:33:59Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Depth"
+    },
+    {
+      "description": "Linux post-exploitation framework using kernel namespace isolation. Multi-channel C2 with polymorphic beacons and 36   stealth modules.",
+      "forks": 0,
+      "language": "Go",
+      "name": "Aquifer",
+      "stars": 0,
+      "updated_at": "2026-03-16T10:25:18Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Aquifer"
+    },
+    {
+      "description": "io_uring stealth implant loader in pure x86-64 NASM assembly — ChaCha20-Poly1305 AEAD, ~4.2   KB shellcode, invisible to syscall monitoring",
+      "forks": 0,
+      "language": "Python",
+      "name": "Undercurrent",
+      "stars": 0,
+      "updated_at": "2026-03-14T17:32:50Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Undercurrent"
+    },
+    {
+      "description": null,
+      "forks": 0,
+      "language": null,
+      "name": "Real-Fruit-Snacks",
+      "stars": 0,
+      "updated_at": "2026-03-14T01:33:43Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks"
+    },
+    {
+      "description": "ChaCha20-Poly1305 encrypted netcat in pure x86_64 NASM assembly — cross-platform, zero dependencies, ~8 KB",
+      "forks": 0,
+      "language": "Assembly",
+      "name": "Grotto",
+      "stars": 0,
+      "updated_at": "2026-03-14T01:22:43Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Grotto"
+    },
+    {
+      "description": "Collaborative browser-based terminal and playbook workspace for penetration testing, CTF competitions, and red team operations. Real-time sync, credential vault, variable substitution, output parsing, and session recording.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Riptide",
+      "stars": 3,
+      "updated_at": "2026-03-13T23:16:00Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Riptide"
+    },
+    {
+      "description": " ChaCha20-Poly1305 encrypted reverse shell + Hell's Gate process injector in pure x86_64 NASM assembly",
+      "forks": 0,
+      "language": "Assembly",
+      "name": "Vapor",
+      "stars": 0,
+      "updated_at": "2026-03-13T03:57:51Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Vapor"
+    },
+    {
+      "description": "Encrypted HTTPS reverse shell — XChaCha20-Poly1305 over TLS, ~37 KB",
+      "forks": 0,
+      "language": "C",
+      "name": "Dew",
+      "stars": 0,
+      "updated_at": "2026-03-12T23:59:04Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Dew"
+    },
+    {
+      "description": "Encrypted HTTPS reverse shell for Windows. ~50 KB C implant with interactive Python listener.",
+      "forks": 0,
+      "language": "C",
+      "name": "Droplet",
+      "stars": 0,
+      "updated_at": "2026-03-12T23:52:09Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Droplet"
+    },
+    {
+      "description": "Obsidian plugin to replace variables in markdown with YAML frontmatter values. Copy, replace, and rename with a   single command. Built for pentesting notes, CTF templates, and reusable workflows",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Tidemark",
+      "stars": 0,
+      "updated_at": "2026-03-04T01:46:19Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
+    },
+    {
+      "description": "Payload delivery server for authorized red team engagements. Token-gated access, 12 delivery methods, AES-256-GCM   encryption at rest, memory zeroing. Single Go binary, zero dependencies. ",
+      "forks": 0,
+      "language": "Go",
+      "name": "Wellspring",
+      "stars": 0,
+      "updated_at": "2026-03-04T01:38:53Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Wellspring"
+    },
+    {
+      "description": "Modular credential spraying tool for authorized security testing. 28 native Python protocol modules with automatic port scanning, adaptive skipping, and pass-the-hash support. ",
+      "forks": 0,
+      "language": "Python",
+      "name": "Rapids",
+      "stars": 0,
+      "updated_at": "2026-03-03T23:11:00Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Rapids"
+    },
+    {
+      "description": "Lightning-fast offline Linux man pages browser with TLDR summaries and Catppuccin themes. PWA — works without internet.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Fathom",
+      "stars": 0,
+      "updated_at": "2026-03-03T23:09:55Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Fathom"
+    },
+    {
+      "description": "A personal knowledge base and digital garden built on Quartz",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Sunken-Archive",
+      "stars": 0,
+      "updated_at": "2026-03-03T23:07:45Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Sunken-Archive"
+    },
+    {
+      "description": "Browser-native Linux terminals powered by x86 emulation. No servers, no installs, no   accounts — just open and type.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Shallows",
+      "stars": 0,
+      "updated_at": "2026-03-03T22:57:45Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Shallows"
+    },
+    {
+      "description": "Browser-based Vim editor — CodeMirror 6, Catppuccin Mocha, zero dependencies",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Ripple",
+      "stars": 0,
+      "updated_at": "2026-03-03T02:31:10Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Ripple"
+    },
+    {
+      "description": "Lightweight C2 framework for red team operations. ECDH P-256 forward secrecy, AES-256-GCM encryption, uTLS Chrome fingerprinting.",
+      "forks": 1,
+      "language": "Go",
+      "name": "Siphon",
+      "stars": 4,
+      "updated_at": "2026-02-28T05:17:26Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Siphon"
+    },
+    {
+      "description": "Windows privilege escalation enumeration framework — 16 checks, 97 tools, MITRE ATT&CK mapping, fileless agent, single-file HTML reports",
+      "forks": 0,
+      "language": "Python",
+      "name": "Seep",
+      "stars": 0,
+      "updated_at": "2026-02-26T03:59:09Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Seep"
+    },
+    {
+      "description": "Active Directory security audit tool — extract quick wins, attack        paths, and misconfigurations from BloodHound CE  ",
+      "forks": 0,
+      "language": "Python",
+      "name": "Runoff",
+      "stars": 0,
+      "updated_at": "2026-02-25T02:24:10Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Runoff"
+    },
+    {
+      "description": "Reverse/bind FUSE filesystem mount for penetration testing — mount a remote target's   filesystem locally over TLS 1.3",
+      "forks": 0,
+      "language": "Go",
+      "name": "Spillway",
+      "stars": 0,
+      "updated_at": "2026-02-25T02:08:11Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Spillway"
+    },
+    {
+      "description": "Advanced parser & formatter for Nmap and RustScan outputs — color-coded terminal reports, multi-format exports, and interactive scanning with Catppuccin styling.",
+      "forks": 0,
+      "language": "Python",
+      "name": "Deluge",
+      "stars": 1,
+      "updated_at": "2026-02-14T17:03:00Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Deluge"
+    },
+    {
+      "description": "Static web app that transforms markdown notes into a searchable, offline-first command reference with fuzzy search, variable substitution, and Catppuccin themes.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Surge",
+      "stars": 0,
+      "updated_at": "2026-02-09T17:15:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Surge"
+    },
+    {
+      "description": "NetExec wrapper combining 35+ AD enumeration modules into a single command with colored output, multi-target scanning, and actionable recommendations.",
+      "forks": 0,
+      "language": "Python",
+      "name": "Maelstrom",
+      "stars": 0,
+      "updated_at": "2026-02-09T16:04:24Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Maelstrom"
+    },
+    {
+      "description": "Statically-linked SSH server in Go — reverse/bind shell, SFTP, port forwarding, TLS wrapping",
+      "forks": 0,
+      "language": "Shell",
+      "name": "Undertow",
+      "stars": 0,
+      "updated_at": "2026-02-09T15:03:21Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Undertow"
+    },
+    {
+      "description": "One-command setup script for ligolo-ng tunneling. Auto-downloads binaries, configures TUN interface, and guides you through pivoting.",
+      "forks": 0,
+      "language": "Shell",
+      "name": "LigoloSupport",
+      "stars": 0,
+      "updated_at": "2026-01-27T16:52:27Z",
+      "url": "https://github.com/Real-Fruit-Snacks/LigoloSupport"
+    }
+  ],
+  "languages": {
+    "JavaScript": 8,
+    "Rust": 2,
+    "Python": 8,
+    "TypeScript": 3,
+    "Go": 4,
+    "Assembly": 2,
+    "C": 2,
+    "Shell": 2
+  },
+  "updated_at": "2026-03-28T00:45:51.209Z"
 }

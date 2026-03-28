@@ -62,9 +62,9 @@ export function box(lines, { title = '', padding = 1, borderColor = palette.surf
   const result = [];
   // Top border
   if (title) {
-    const titleStr = ` ${title} `;
-    const remaining = Math.max(0, innerWidth - visibleLength(titleStr));
-    result.push(border('╭') + border('─') + fg(palette.mauve, bold(title)) + border(' ') + border('─'.repeat(remaining)) + border('╮'));
+    const titleVis = visibleLength(title);
+    const remaining = Math.max(0, innerWidth - titleVis - 3);
+    result.push(border('╭─ ') + fg(palette.mauve, bold(title)) + border(' ' + '─'.repeat(remaining) + '╮'));
   } else {
     result.push(border('╭' + '─'.repeat(innerWidth) + '╮'));
   }
