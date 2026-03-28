@@ -11,13 +11,13 @@
   },
   "repos": [
     {
-      "description": null,
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell   commands in the browser",
       "forks": 0,
       "language": "JavaScript",
-      "name": "armsforge",
+      "name": "Tidepool",
       "stars": 0,
-      "updated_at": "2026-03-28T00:45:13Z",
-      "url": "https://github.com/Real-Fruit-Snacks/armsforge"
+      "updated_at": "2026-03-28T01:47:52Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A fast, lightweight screenshot capture and annotation tool. Built with Rust, winit, and tiny-skia.",
@@ -25,17 +25,17 @@
       "language": "Rust",
       "name": "HydroShot",
       "stars": 0,
-      "updated_at": "2026-03-28T00:31:22Z",
+      "updated_at": "2026-03-28T01:45:12Z",
       "url": "https://github.com/Real-Fruit-Snacks/HydroShot"
     },
     {
-      "description": null,
+      "description": "Enterprise-grade AI-powered security platform that transforms offensive security operations through intelligent automation and seamless Claude Code integration",
       "forks": 0,
       "language": "JavaScript",
-      "name": "Tidepool",
+      "name": "armsforge",
       "stars": 0,
-      "updated_at": "2026-03-28T00:26:00Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+      "updated_at": "2026-03-28T01:42:13Z",
+      "url": "https://github.com/Real-Fruit-Snacks/armsforge"
     },
     {
       "description": "Privilege escalation reasoning engine — parses LinPEAS/WinPEAS output and generates ranked   exploitation playbooks",
@@ -309,14 +309,14 @@
     }
   ],
   "languages": {
-    "JavaScript": 8,
-    "Rust": 2,
-    "Python": 8,
-    "TypeScript": 3,
-    "Go": 4,
     "Assembly": 2,
     "C": 2,
-    "Shell": 2
+    "Go": 4,
+    "JavaScript": 8,
+    "Python": 8,
+    "Rust": 2,
+    "Shell": 2,
+    "TypeScript": 3
   },
-  "updated_at": "2026-03-28T00:45:51.209Z"
+  "updated_at": "2026-03-28T06:18:22Z"
 }
