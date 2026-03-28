@@ -1,6 +1,6 @@
 <div align="center">
 
-# Tidepool
+<img src="docs/banner.svg" alt="Tidepool" width="800">
 
 An interactive terminal portfolio website built with xterm.js. Visitors explore your developer profile by typing real shell commands in a browser-based terminal emulator.
 

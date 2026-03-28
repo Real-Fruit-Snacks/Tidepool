@@ -1,17 +1,15 @@
 import { palette } from '../theme.js';
 import { fg, bg, bold, dim } from '../formatter.js';
 
+const ART_WIDTH = 41;
+
 const ASCII_ART = [
-  '    ____            __   ______          _ __     ',
-  '   / __ \\___  ____ _/ /  / ____/______  (_) /_    ',
-  '  / /_/ / _ \\/ __ `/ /  / /_  / ___/ / / / / __/',
-  ' / _, _/  __/ /_/ / /  / __/ / /  / /_/ / / /_   ',
-  '/_/ |_|\\___/\\__,_/_/  /_/   /_/   \\__,_/_/\\__/   ',
-  '    _____                  __                      ',
-  '   / ___/____  ____ ______/ /__ _____              ',
-  '   \\__ \\/ __ \\/ __ `/ ___/ //_/ ___/             ',
-  '  ___/ / / / / /_/ / /__/ ,< (__  )              ',
-  ' /____/_/ /_/\\__,_/\\___/_/|_/____/               ',
+  '  _______     __                       __',
+  ' /_  __(_)___/ /__  ____  ____  ____  / /',
+  '  / / / / __  / _ \\/ __ \\/ __ \\/ __ \\/ / ',
+  ' / / / / /_/ /  __/ /_/ / /_/ / /_/ / /  ',
+  '/_/ /_/\\__,_/\\___/ .___/\\____/\\____/_/   ',
+  '                /_/                      ',
 ];
 
 export function register(registry) {
@@ -32,9 +30,9 @@ export function register(registry) {
         ['Terminal', fg(palette.text, 'xterm.js v5')],
         ['Theme', fg(palette.text, 'Catppuccin Mocha')],
         ['', ''],
-        ['Repos', fg(palette.blue, String(user.public_repos || '~'))],
-        ['Followers', fg(palette.mauve, String(user.followers || '~'))],
-        ['Following', fg(palette.green, String(user.following || '~'))],
+        ['Repos', fg(palette.blue, String(user.public_repos ?? '~'))],
+        ['Followers', fg(palette.mauve, String(user.followers ?? '~'))],
+        ['Following', fg(palette.green, String(user.following ?? '~'))],
         ['Member Since', fg(palette.peach, user.created_at ? new Date(user.created_at).getFullYear().toString() : '~')],
       ];
 
@@ -45,7 +43,7 @@ export function register(registry) {
       const maxLines = Math.max(artLines, infoLines);
 
       for (let i = 0; i < maxLines; i++) {
-        const artLine = i < artLines ? fg(palette.mauve, ASCII_ART[i]) : ' '.repeat(50);
+        const artLine = i < artLines ? fg(palette.mauve, ASCII_ART[i]) : ' '.repeat(ART_WIDTH);
 
         if (i < infoLines) {
           const [key, val] = info[i];
@@ -58,8 +56,8 @@ export function register(registry) {
 
       // Color blocks
       ctx.term.writeln('');
-      let colorBar = '  ' + ' '.repeat(50) + '  ';
       const colors = [palette.red, palette.peach, palette.yellow, palette.green, palette.teal, palette.blue, palette.mauve, palette.pink];
+      let colorBar = '  ' + ' '.repeat(ART_WIDTH) + '  ';
       for (const c of colors) {
         colorBar += bg(c, '   ');
       }
