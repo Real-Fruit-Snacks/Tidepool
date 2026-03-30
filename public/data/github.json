@@ -11,6 +11,15 @@
   },
   "repos": [
     {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell   commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-03-29T06:21:51Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": null,
       "forks": 0,
       "language": null,
@@ -36,15 +45,6 @@
       "stars": 1,
       "updated_at": "2026-03-28T23:02:00Z",
       "url": "https://github.com/Real-Fruit-Snacks/LigoloSupport"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell   commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-03-28T06:18:26Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Enterprise-grade AI-powered security platform that transforms offensive security operations through intelligent automation and seamless Claude Code integration",
@@ -318,5 +318,5 @@
     "Shell": 2,
     "TypeScript": 3
   },
-  "updated_at": "2026-03-29T06:21:46Z"
+  "updated_at": "2026-03-30T06:33:35Z"
 }
