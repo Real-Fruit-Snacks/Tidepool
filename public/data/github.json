@@ -11,6 +11,15 @@
   },
   "repos": [
     {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell   commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-03-31T06:26:20Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Collaborative browser-based terminal and playbook workspace for penetration testing, CTF competitions, and red team operations. Real-time sync, credential vault, variable substitution, output parsing, and session recording.",
       "forks": 1,
       "language": "JavaScript",
@@ -18,15 +27,6 @@
       "stars": 3,
       "updated_at": "2026-03-31T00:39:11Z",
       "url": "https://github.com/Real-Fruit-Snacks/Riptide"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell   commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-03-30T06:33:40Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": null,
@@ -318,5 +318,5 @@
     "Shell": 2,
     "TypeScript": 3
   },
-  "updated_at": "2026-03-31T06:26:15Z"
+  "updated_at": "2026-04-01T06:31:38Z"
 }
