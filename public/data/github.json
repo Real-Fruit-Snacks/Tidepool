@@ -7,16 +7,25 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 32
+    "public_repos": 33
   },
   "repos": [
+    {
+      "description": "Network relay with integrated process masquerading - SOCAT 1.7.3.3 derivative with stealth capabilities for authorized security operations",
+      "forks": 0,
+      "language": "C",
+      "name": "Conduit",
+      "stars": 0,
+      "updated_at": "2026-04-04T03:30:13Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Conduit"
+    },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell   commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 0,
-      "updated_at": "2026-04-02T06:23:30Z",
+      "updated_at": "2026-04-03T06:23:39Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -301,7 +310,7 @@
   ],
   "languages": {
     "Assembly": 2,
-    "C": 2,
+    "C": 3,
     "Go": 4,
     "JavaScript": 8,
     "Python": 8,
@@ -309,5 +318,5 @@
     "Shell": 2,
     "TypeScript": 3
   },
-  "updated_at": "2026-04-03T06:23:35Z"
+  "updated_at": "2026-04-04T06:19:14Z"
 }
