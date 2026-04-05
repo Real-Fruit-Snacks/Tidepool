@@ -3,796 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tidepool — Interactive Terminal Portfolio</title>
-    <meta name="description" content="Interactive terminal portfolio built with xterm.js. Explore a developer profile through real shell commands in the browser. Catppuccin Mocha theming, virtual filesystem, daily GitHub data.">
+    <title>Tidepool &#8212; Interactive Terminal Portfolio</title>
+    <meta name="description" content="Interactive terminal portfolio via xterm.js. Type commands to explore projects, skills, and contact info.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Inter,sans-serif' font-size='24' font-weight='800' fill='%2389dceb'%3ET%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --red: #f38ba8;
-            --maroon: #eba0ac;
-            --pink: #f5c2e7;
-            --mauve: #cba6f7;
-            --lavender: #b4befe;
-            --blue: #89b4fa;
-            --sapphire: #74c7ec;
-            --sky: #89dceb;
-            --teal: #94e2d5;
-            --green: #a6e3a1;
-            --yellow: #f9e2af;
-            --peach: #fab387;
-            --text: #cdd6f4;
-            --subtext1: #bac2de;
-            --subtext0: #a6adc8;
-            --overlay2: #9399b2;
-            --overlay1: #7f849c;
-            --overlay0: #6c7086;
-            --surface2: #585b70;
-            --surface1: #45475a;
-            --surface0: #313244;
-            --base: #1e1e2e;
-            --mantle: #181825;
-            --crust: #11111b;
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --accent1:#89dceb;--accent2:#89b4fa;--accentmid:#74c7ec;
+            --accentrgb:137,220,235;
+            --text:#cdd6f4;--sub1:#bac2de;--sub0:#a6adc8;
+            --ov2:#9399b2;--ov1:#7f849c;--ov0:#6c7086;
+            --sf2:#585b70;--sf1:#45475a;--sf0:#313244;
+            --base:#1e1e2e;--mantle:#181825;--crust:#11111b;
+            --green:#a6e3a1;--yellow:#f9e2af;--red:#f38ba8;
+            --peach:#fab387;--mauve:#cba6f7;--teal:#94e2d5;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--base);
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: radial-gradient(circle, var(--overlay0) 1px, transparent 1px);
-            background-size: 24px 24px;
-            opacity: 0.15;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        body::after {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
-            pointer-events: none;
-            z-index: 999;
-            opacity: 0.4;
-        }
-
-        ::selection { background: rgba(137, 220, 235, 0.3); color: var(--text); }
-
-        code {
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--mantle);
-            padding: 2px 7px;
-            border-radius: 3px;
-            font-size: 0.88em;
-            color: var(--green);
-        }
-
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
-
-        /* ── Hero ── */
-        .hero {
-            padding: 100px 0 70px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            right: 10%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--surface1), transparent);
-        }
-
-        .hero-logo {
-            max-width: 440px;
-            margin: 0 auto 32px;
-        }
-
-        .hero-logo img { width: 100%; height: auto; }
-
-        .hero .subtitle {
-            font-size: clamp(15px, 2vw, 18px);
-            color: var(--subtext0);
-            max-width: 680px;
-            margin: 0 auto 28px;
-            line-height: 1.7;
-        }
-
-        /* ── Stats ── */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-            margin: 48px 0;
-        }
-
-        .stat {
-            background: var(--surface0);
-            border: 1px solid var(--surface1);
-            border-radius: 8px;
-            padding: 20px 16px;
-            text-align: center;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .stat:hover { transform: translateY(-2px); border-color: var(--surface2); }
-
-        .stat-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--sky);
-            line-height: 1;
-        }
-
-        .stat-label { font-size: 12px; color: var(--overlay1); margin-top: 6px; letter-spacing: 0.03em; }
-
-        /* ── CTAs ── */
-        .cta-group { display: flex; gap: 14px; justify-content: center; margin-top: 36px; }
-
-        .btn {
-            padding: 13px 32px;
-            border-radius: 6px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            letter-spacing: 0.03em;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--sky), var(--sapphire));
-            color: var(--crust);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 0 24px rgba(137, 220, 235, 0.35);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: var(--surface0);
-            color: var(--text);
-            border: 1px solid var(--surface1);
-        }
-
-        .btn-secondary:hover { background: var(--surface1); border-color: var(--surface2); }
-
-        .btn-ghost {
-            background: transparent;
-            color: var(--subtext1);
-            border: 1px solid var(--surface1);
-        }
-
-        .btn-ghost:hover { background: var(--surface0); color: var(--text); }
-
-        /* ── Sections ── */
-        section { padding: 72px 0; }
-
-        section h2 {
-            font-size: clamp(28px, 4vw, 42px);
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--text);
-            letter-spacing: -0.02em;
-        }
-
-        section .section-desc {
-            font-size: 15px;
-            color: var(--subtext0);
-            margin-bottom: 44px;
-            max-width: 640px;
-            line-height: 1.7;
-        }
-
-        /* ── Feature Grid ── */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .feature {
-            background: var(--surface0);
-            border: 1px solid var(--surface1);
-            border-radius: 8px;
-            padding: 28px;
-            transition: all 0.25s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--sky), var(--sapphire));
-            opacity: 0;
-            transition: opacity 0.25s;
-        }
-
-        .feature:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-            border-color: var(--surface2);
-        }
-
-        .feature:hover::before { opacity: 1; }
-
-        .feature h3 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--sky);
-            margin-bottom: 10px;
-            letter-spacing: 0.02em;
-        }
-
-        .feature p { font-size: 13.5px; color: var(--subtext1); line-height: 1.65; }
-
-        /* ── Command Cards ── */
-        .commands-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .cmd-card {
-            background: var(--surface0);
-            border: 1px solid var(--surface1);
-            border-radius: 8px;
-            padding: 28px;
-            transition: all 0.25s;
-        }
-
-        .cmd-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--surface2);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .cmd-card .cmd-icon {
-            font-size: 24px;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .cmd-card h3 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--teal);
-            margin-bottom: 8px;
-        }
-
-        .cmd-card p { font-size: 13px; color: var(--subtext1); line-height: 1.6; margin-bottom: 14px; }
-
-        .cmd-card .cmd-example {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: var(--green);
-            background: var(--mantle);
-            padding: 8px 12px;
-            border-radius: 4px;
-            display: block;
-            overflow-x: auto;
-        }
-
-        /* ── Capabilities ── */
-        .capabilities {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-            gap: 10px;
-        }
-
-        .capability {
-            background: var(--surface0);
-            border: 1px solid var(--surface1);
-            border-radius: 20px;
-            padding: 9px 18px;
-            font-size: 12.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .capability:hover { border-color: var(--surface2); background: var(--surface1); }
-
-        .cap-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-        .cap-dot.full { background: var(--green); }
-        .cap-dot.partial { background: var(--yellow); }
-        .cap-dot.none { background: var(--surface2); }
-
-        /* ── Terminal ── */
-        .terminal {
-            background: var(--mantle);
-            border: 1px solid var(--surface1);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        }
-
-        .terminal-bar {
-            background: var(--crust);
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 1px solid var(--surface0);
-        }
-
-        .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .terminal-dot:nth-child(1) { background: var(--red); }
-        .terminal-dot:nth-child(2) { background: var(--yellow); }
-        .terminal-dot:nth-child(3) { background: var(--green); }
-        .terminal-label { flex: 1; text-align: center; font-size: 11px; color: var(--overlay0); font-family: 'JetBrains Mono', monospace; }
-
-        .terminal-body {
-            padding: 24px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            line-height: 1.8;
-        }
-
-        .terminal-body pre { margin: 0; white-space: pre-wrap; word-wrap: break-word; }
-        .terminal-body .p { color: var(--green); }
-        .terminal-body .c { color: var(--overlay0); }
-        .terminal-body .v { color: var(--sky); }
-        .terminal-body .f { color: var(--peach); }
-        .terminal-body .cursor {
-            display: inline-block;
-            width: 8px; height: 15px;
-            background: var(--text);
-            animation: blink 1s step-end infinite;
-            vertical-align: middle;
-        }
-
-        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-
-        /* ── Architecture ── */
-        .arch-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .arch-card {
-            background: var(--surface0);
-            border: 1px solid var(--surface1);
-            border-radius: 8px;
-            padding: 28px;
-            transition: border-color 0.2s;
-        }
-
-        .arch-card:hover { border-color: var(--surface2); }
-
-        .arch-num {
-            display: inline-flex;
-            width: 30px; height: 30px;
-            background: linear-gradient(135deg, var(--sky), var(--sapphire));
-            color: var(--crust);
-            border-radius: 50%;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 14px;
-        }
-
-        .arch-card h3 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--teal);
-            margin-bottom: 10px;
-        }
-
-        .arch-card p { font-size: 13.5px; color: var(--subtext1); line-height: 1.6; }
-
-        /* ── Two Column ── */
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-
-        /* ── Footer ── */
-        footer {
-            border-top: 1px solid var(--surface1);
-            padding: 48px 0;
-            margin-top: 80px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-        }
-
-        .footer-grid h4 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: var(--text);
-            margin-bottom: 14px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .footer-grid ul { list-style: none; }
-        .footer-grid li { margin-bottom: 8px; }
-        .footer-grid a { color: var(--overlay2); text-decoration: none; font-size: 13px; transition: color 0.2s; }
-        .footer-grid a:hover { color: var(--sky); }
-
-        .footer-grid p { font-size: 13px; color: var(--overlay1); line-height: 1.7; }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 36px;
-            padding-top: 24px;
-            border-top: 1px solid var(--surface0);
-            font-size: 12px;
-            color: var(--overlay0);
-            letter-spacing: 0.02em;
-        }
-
-        /* ── Responsive ── */
-        @media (max-width: 960px) {
-            .stats { grid-template-columns: repeat(3, 1fr); }
-            .commands-grid, .two-col, .arch-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 600px) {
-            .container { padding: 0 16px; }
-            .hero { padding: 60px 0 48px; }
-            section { padding: 48px 0; }
-            .stats { grid-template-columns: repeat(2, 1fr); }
-            .cta-group { flex-direction: column; align-items: center; }
-            .btn { width: 100%; max-width: 280px; text-align: center; }
-            .features { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-
-        a:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+        body{font-family:'Inter',system-ui,sans-serif;background:var(--crust);color:var(--text);line-height:1.7;overflow-x:hidden}
+        ::selection{background:rgba(var(--accentrgb),0.3);color:var(--text)}
+        .container{max-width:1140px;margin:0 auto;padding:0 28px}
+        code{font-family:'JetBrains Mono',monospace;background:var(--mantle);padding:2px 7px;border-radius:3px;font-size:.88em;color:var(--green)}
+        .nav{position:fixed;top:0;left:0;right:0;height:56px;background:rgba(17,17,27,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(49,50,68,0.5);z-index:1000;display:flex;align-items:center;justify-content:center}
+        .nav-inner{max-width:1140px;width:100%;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
+        .nav-logo{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none}
+        .nav-links{display:flex;align-items:center;gap:28px}
+        .nav-links a{font-size:13px;font-weight:500;color:var(--ov0);text-decoration:none;transition:color .2s}
+        .nav-links a:hover{color:var(--text)}
+        .nav-cta{background:linear-gradient(135deg,var(--accent1),var(--accentmid));color:var(--crust);padding:7px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:box-shadow .2s,transform .2s}
+        .nav-cta:hover{box-shadow:0 0 20px rgba(var(--accentrgb),0.3);transform:translateY(-1px)}
+        .hero{padding:140px 0 80px;text-align:center;position:relative}
+        .hero::before{content:'';position:absolute;top:60px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(var(--accentrgb),0.08) 0%,transparent 60%);pointer-events:none}
+        .hero-logo{position:relative;max-width:600px;margin:0 auto 32px}
+        .hero-logo img{width:100%;height:auto}
+        .hero-tagline{position:relative;font-size:clamp(24px,3.5vw,38px);font-weight:700;line-height:1.2;margin-bottom:16px;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero-desc{position:relative;font-size:16px;color:var(--ov0);max-width:560px;margin:0 auto 32px}
+        .hero-ctas{position:relative;display:flex;gap:12px;justify-content:center;margin-bottom:48px}
+        .btn-primary{background:linear-gradient(135deg,var(--accent1),var(--accentmid));color:var(--crust);padding:12px 28px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;text-decoration:none;transition:box-shadow .2s,transform .2s}
+        .btn-primary:hover{box-shadow:0 0 24px rgba(var(--accentrgb),0.35);transform:translateY(-2px)}
+        .btn-secondary{background:var(--sf0);color:var(--text);padding:12px 28px;border-radius:8px;border:1px solid var(--sf1);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s}
+        .btn-secondary:hover{background:var(--sf1);border-color:var(--sf2)}
+        .terminal{position:relative;max-width:800px;margin:0 auto;background:var(--mantle);border:1px solid var(--sf0);border-radius:12px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.5),0 0 24px rgba(var(--accentrgb),0.06)}
+        .terminal-bar{background:var(--crust);padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--sf0)}
+        .terminal-dot{width:12px;height:12px;border-radius:50%}
+        .terminal-dot:nth-child(1){background:var(--red)}
+        .terminal-dot:nth-child(2){background:var(--yellow)}
+        .terminal-dot:nth-child(3){background:var(--green)}
+        .terminal-label{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ov0)}
+        .terminal-body{padding:24px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.9;text-align:left}
+        .terminal-body pre{margin:0;white-space:pre-wrap;word-wrap:break-word}
+        .t-g{color:var(--green)}.t-b{color:var(--accent1)}.t-m{color:var(--sub0)}.t-p{color:var(--peach)}
+        .stats{display:flex;justify-content:center;gap:40px;padding:60px 0;position:relative}
+        .stat{text-align:center}
+        .stat-num{font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:var(--accent1);line-height:1}
+        .stat-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--sf2);margin-top:6px;letter-spacing:2px;text-transform:uppercase}
+        .stat-div{width:1px;height:48px;background:var(--sf0);align-self:center}
+        section{padding:80px 0}
+        .section-label{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--accent1);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .section-title{font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:12px;letter-spacing:-.02em}
+        .section-desc{font-size:15px;color:var(--ov0);margin-bottom:48px;max-width:560px}
+        .gradient-line{height:1px;background:linear-gradient(90deg,transparent,var(--accent1),var(--accent2),transparent);margin:0 auto;max-width:600px}
+        .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+        .bento-card{background:var(--mantle);border:1px solid var(--sf0);border-radius:12px;padding:28px;transition:all .25s;position:relative;overflow:hidden}
+        .bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent1),var(--accent2));opacity:0;transition:opacity .25s}
+        .bento-card:hover{transform:translateY(-3px);border-color:var(--sf1);box-shadow:0 12px 32px rgba(0,0,0,0.25),0 0 20px rgba(var(--accentrgb),0.06)}
+        .bento-card:hover::before{opacity:1}
+        .bento-hero{grid-column:span 2}
+        .bento-card h3{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--accent1);margin-bottom:8px}
+        .bento-card p{font-size:13.5px;color:var(--sub0);line-height:1.6}
+        .bento-card .mini-terminal{background:var(--crust);border-radius:8px;padding:14px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.8;text-align:left}
+        .bento-stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+        .bento-stat .big{font-family:'JetBrains Mono',monospace;font-size:42px;font-weight:700;color:var(--accent1)}
+        .bento-stat .label{font-size:12px;color:var(--sf2);margin-top:4px;letter-spacing:1px}
+        .pills{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+        .pill{background:var(--mantle);border:1px solid var(--sf0);border-radius:20px;padding:9px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;display:flex;align-items:center;gap:8px;transition:all .2s;color:var(--sub0)}
+        .pill:hover{border-color:var(--sf1);background:var(--base)}
+        .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+        .dot-g{background:var(--green)}.dot-y{background:var(--yellow)}.dot-n{background:var(--sf2)}
+        .arch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+        .arch-card{background:var(--mantle);border:1px solid var(--sf0);border-radius:12px;padding:28px;transition:border-color .2s}
+        .arch-card:hover{border-color:var(--sf1)}
+        .arch-num{display:inline-flex;width:30px;height:30px;background:linear-gradient(135deg,var(--accent1),var(--accentmid));color:var(--crust);border-radius:50%;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin-bottom:14px}
+        .arch-card h3{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--teal);margin-bottom:8px}
+        .arch-card p{font-size:13.5px;color:var(--sub0);line-height:1.6}
+        .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+        .detect-card{background:var(--mantle);border-radius:12px;padding:28px}
+        .detect-card h3{font-size:14px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+        .detect-card ul{list-style:none;font-size:13px;color:var(--sub0);line-height:2.2}
+        .detect-hidden{border-left:3px solid var(--green)}.detect-hidden h3{color:var(--green)}
+        .detect-visible{border-left:3px solid var(--yellow)}.detect-visible h3{color:var(--yellow)}
+        footer{padding:48px 0;margin-top:40px}
+        .footer-line{height:1px;background:linear-gradient(90deg,transparent,var(--accent1),var(--accent2),transparent);margin-bottom:48px}
+        .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+        .footer-grid h4{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text);margin-bottom:14px;letter-spacing:2px;text-transform:uppercase}
+        .footer-grid ul{list-style:none}
+        .footer-grid li{margin-bottom:8px}
+        .footer-grid a{color:var(--ov2);text-decoration:none;font-size:13px;transition:color .2s}
+        .footer-grid a:hover{color:var(--accent1)}
+        .footer-grid p{font-size:13px;color:var(--ov1);line-height:1.7}
+        .footer-bottom{text-align:center;margin-top:36px;padding-top:24px;border-top:1px solid var(--sf0);font-size:12px;color:var(--ov0)}
+        .animate{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+        .animate.visible{opacity:1;transform:translateY(0)}
+        .animate-scale{opacity:0;transform:translateY(24px) scale(.97);transition:opacity .8s ease,transform .8s ease}
+        .animate-scale.visible{opacity:1;transform:translateY(0) scale(1)}
+        @media(max-width:960px){.bento{grid-template-columns:1fr 1fr}.bento-hero{grid-column:span 2}.two-col,.arch-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(2,1fr)}.stats{flex-wrap:wrap;gap:24px}}
+        @media(max-width:600px){.container{padding:0 16px}.hero{padding:100px 0 48px}.bento{grid-template-columns:1fr}.bento-hero{grid-column:span 1}.stats{gap:16px}.stat-div{display:none}.nav-links a:not(.nav-cta){display:none}.footer-grid{grid-template-columns:1fr}.pills{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
+        a:focus-visible{outline:2px solid var(--accent1);outline-offset:2px}
     </style>
 </head>
 <body>
+    <!-- Nav -->
+    <nav class="nav"><div class="nav-inner">
+        <a href="#" class="nav-logo">Tidepool</a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#architecture">Architecture</a>
+            <a href="https://github.com/Real-Fruit-Snacks/Tidepool">GitHub</a>
+            <a href="https://github.com/Real-Fruit-Snacks/Tidepool" class="nav-cta">Try It</a>
+        </div>
+    </div></nav>
 
-    <!-- ════════════════════ HERO ════════════════════ -->
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-logo">
-                <img src="https://raw.githubusercontent.com/Real-Fruit-Snacks/Tidepool/main/docs/assets/logo-dark.svg" alt="Tidepool">
+            <div class="hero-logo animate"><img src="https://raw.githubusercontent.com/Real-Fruit-Snacks/Tidepool/main/docs/assets/logo-dark.svg" alt="Tidepool"></div>
+            <h1 class="hero-tagline animate" style="transition-delay:.1s">Your portfolio, in a terminal</h1>
+            <p class="hero-desc animate" style="transition-delay:.2s">Interactive terminal portfolio via xterm.js. Type commands to explore projects, skills, and contact info. Catppuccin Mocha themed with boot animation.</p>
+            <div class="hero-ctas animate" style="transition-delay:.3s">
+                <a href="https://github.com/Real-Fruit-Snacks/Tidepool" class="btn-primary">Launch Terminal</a>
+                <a href="https://github.com/Real-Fruit-Snacks/Tidepool" class="btn-secondary">View Source</a>
             </div>
+            <div class="terminal animate-scale" style="transition-delay:.4s">
+                <div class="terminal-bar">
+                    <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+                    <span class="terminal-label">tidepool</span>
+                </div>
+                <div class="terminal-body"><pre><span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> neofetch
+<span class="t-m">  _____ _     _                   _</span>
+<span class="t-m"> |_   _(_) __| | ___ _ __   ___  | |</span>
+<span class="t-m">   | | | |/ _` |/ _ \ '_ \ / _ \ | |</span>
+<span class="t-m">   | | | | (_| |  __/ |_) | (_) || |</span>
+<span class="t-m">   |_| |_|\__,_|\___| .__/ \___/ |_|</span>
 
-            <p class="subtitle">
-                Interactive terminal portfolio built with xterm.js.
-                Explore a developer profile through real shell commands in the browser.
-                Virtual filesystem, daily GitHub data, Catppuccin Mocha theming, and permalink support.
-            </p>
-
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-value">14</div>
-                    <div class="stat-label">Shell Commands</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">24-bit</div>
-                    <div class="stat-label">ANSI Color</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">0</div>
-                    <div class="stat-label">Backend Servers</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">Daily</div>
-                    <div class="stat-label">GitHub Sync</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">3</div>
-                    <div class="stat-label">xterm.js Addons</div>
-                </div>
-            </div>
-
-            <div class="cta-group">
-                <a href="https://real-fruit-snacks.github.io/Tidepool" class="btn btn-primary">Live Demo</a>
-                <a href="https://github.com/Real-Fruit-Snacks/Tidepool" class="btn btn-secondary">View Source</a>
-                <a href="https://github.com/Real-Fruit-Snacks/Tidepool#quick-start" class="btn btn-ghost">Documentation</a>
+<span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> repos
+<span class="t-p">Fetching GitHub repositories...</span></pre></div>
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════ COMMANDS ════════════════════ -->
-    <section>
+    <!-- Stats -->
+    <div class="container">
+        <div class="stats animate">
+            <div class="stat"><div class="stat-num" data-target="15">0</div><div class="stat-label">Commands</div></div>
+            <div class="stat-div"></div>
+            <div class="stat"><div class="stat-num" data-target="24">0</div><div class="stat-label">Bit Color</div></div>
+            <div class="stat-div"></div>
+            <div class="stat"><div class="stat-num" data-target="200">0</div><div class="stat-label">History</div></div>
+            <div class="stat-div"></div>
+            <div class="stat"><div class="stat-num" data-target="5">0</div><div class="stat-label">Platforms</div></div>
+        </div>
+        <div class="gradient-line"></div>
+    </div>
+
+    <!-- Features Bento -->
+    <section id="features">
         <div class="container">
-            <h2>Shell Commands</h2>
-            <p class="section-desc">Fourteen commands covering navigation, developer info, GitHub data, and system display. Tab completion and fuzzy suggestions included.</p>
-
-            <div class="commands-grid">
-                <div class="cmd-card">
-                    <span class="cmd-icon">&#128187;</span>
-                    <h3>neofetch</h3>
-                    <p>System info display with ASCII art logo, Catppuccin color blocks, and live GitHub statistics.</p>
-                    <code class="cmd-example">visitor@rfs:~ $ neofetch</code>
+            <div class="section-label animate">FEATURES</div>
+            <h2 class="section-title animate" style="transition-delay:.08s">A portfolio you can type in</h2>
+            <p class="section-desc animate" style="transition-delay:.16s">Full xterm.js terminal with virtual filesystem, tab completion, command history, boot animation, and permalink support.</p>
+            <div class="bento">
+                <div class="bento-card bento-hero animate" style="transition-delay:.1s">
+                    <h3>Terminal Emulation</h3>
+                    <p>Full xterm.js terminal with VT100/VT220 emulation, 24-bit ANSI color, cursor blink, 1000-line scrollback, and automatic viewport fitting. Clickable URLs via web-links addon.</p>
+                    <div class="mini-terminal"><span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> help<br><span class="t-m">  about     &#8212; About me</span><br><span class="t-m">  repos     &#8212; GitHub repositories</span><br><span class="t-m">  skills    &#8212; Technical skills</span><br><span class="t-m">  neofetch  &#8212; System info</span></div>
                 </div>
-
-                <div class="cmd-card">
-                    <span class="cmd-icon">&#128193;</span>
-                    <h3>ls / cd / cat</h3>
-                    <p>Navigate a virtual Unix filesystem. Grid and long format listing, directory traversal with ~ and - shortcuts.</p>
-                    <code class="cmd-example">visitor@rfs:~ $ ls -la projects/</code>
+                <div class="bento-card bento-stat animate" style="transition-delay:.18s">
+                    <div class="big">15</div>
+                    <div class="label">Shell Commands</div>
                 </div>
-
-                <div class="cmd-card">
-                    <span class="cmd-icon">&#128736;</span>
-                    <h3>skills</h3>
-                    <p>Technical skills with color-coded progress bars. Per-language Catppuccin colors and proficiency levels.</p>
-                    <code class="cmd-example">visitor@rfs:~ $ skills</code>
+                <div class="bento-card animate" style="transition-delay:.2s">
+                    <h3 style="color:var(--mauve)">Virtual Filesystem</h3>
+                    <p>Navigate directories, read files, and discover content through a simulated Unix filesystem. Supports <code>ls</code>, <code>cd</code>, <code>cat</code>, and <code>pwd</code>.</p>
                 </div>
-
-                <div class="cmd-card">
-                    <span class="cmd-icon">&#128230;</span>
-                    <h3>repos</h3>
-                    <p>GitHub repositories table sorted by stars. Languages, descriptions, and links from daily-updated data.</p>
-                    <code class="cmd-example">visitor@rfs:~ $ repos</code>
+                <div class="bento-card animate" style="transition-delay:.28s">
+                    <h3 style="color:var(--green)">GitHub Data Pipeline</h3>
+                    <p>Repo stats, languages, and profile info fetched daily via GitHub Actions. Data committed to <code>github.json</code> and hydrated into the virtual filesystem at load time.</p>
                 </div>
-
-                <div class="cmd-card">
-                    <span class="cmd-icon">&#128196;</span>
-                    <h3>resume</h3>
-                    <p>Full resume with experience, education, and certifications. Rendered with box drawing and ANSI formatting.</p>
-                    <code class="cmd-example">visitor@rfs:~ $ resume</code>
+                <div class="bento-card animate" style="transition-delay:.36s">
+                    <h3 style="color:var(--peach)">Tab Completion</h3>
+                    <p>Context-aware completion for commands and file paths. Common prefix expansion with candidate cycling on repeated Tab presses.</p>
                 </div>
-
-                <div class="cmd-card">
-                    <span class="cmd-icon">&#128172;</span>
-                    <h3>contact</h3>
-                    <p>Contact information in a styled box. Email, social links, and profiles with clickable URLs.</p>
-                    <code class="cmd-example">visitor@rfs:~ $ contact</code>
+                <div class="bento-card bento-stat animate" style="transition-delay:.1s">
+                    <div class="big" style="color:var(--teal)">24</div>
+                    <div class="label">Bit ANSI Color</div>
+                </div>
+                <div class="bento-card bento-hero animate" style="transition-delay:.18s">
+                    <h3 style="color:var(--red)">Boot Animation</h3>
+                    <p>Simulated BIOS and kernel boot sequence with ASCII art logo. Progressive line reveal with randomized timing. Skippable with any keypress for returning visitors.</p>
+                    <div class="mini-terminal"><span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> skills<br><span class="t-m">JavaScript  </span><span class="t-g">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> <span class="t-b">95%</span><br><span class="t-m">TypeScript  </span><span class="t-g">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><span class="t-m">&#9617;</span> <span class="t-b">90%</span><br><span class="t-m">Python      </span><span class="t-g">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><span class="t-m">&#9617;&#9617;</span> <span class="t-b">85%</span></div>
+                </div>
+                <div class="bento-card animate" style="transition-delay:.26s">
+                    <h3 style="color:var(--yellow)">Permalink Support</h3>
+                    <p>Share direct links to commands via URL hash. Visiting <code>#neofetch</code> auto-runs the command on page load. Bookmarkable deep links to any output.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════ FEATURES ════════════════════ -->
-    <section style="background: var(--mantle);">
+    <!-- Capabilities -->
+    <section style="background:var(--mantle)">
         <div class="container">
-            <h2>Features</h2>
-            <p class="section-desc">A full terminal experience in the browser. Every interaction feels like a real shell session.</p>
-
-            <div class="features">
-                <div class="feature">
-                    <h3>xterm.js Terminal</h3>
-                    <p>Full VT100/VT220 emulation with cursor movement, line editing, scrollback buffer, and 24-bit ANSI color rendering.</p>
-                </div>
-                <div class="feature">
-                    <h3>Virtual Filesystem</h3>
-                    <p>Navigable directory tree with <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>pwd</code>. Grid and long format. Home, parent, and previous directory shortcuts.</p>
-                </div>
-                <div class="feature">
-                    <h3>Tab Completion</h3>
-                    <p>Context-aware completion for commands and file paths. Common prefix expansion. Cycles through candidates on repeated presses.</p>
-                </div>
-                <div class="feature">
-                    <h3>Command History</h3>
-                    <p>Arrow key navigation through 200 previous commands. Persistent via localStorage. Line-numbered <code>history</code> command.</p>
-                </div>
-                <div class="feature">
-                    <h3>Boot Animation</h3>
-                    <p>Simulated BIOS and kernel boot with ASCII art logo. Progressive line reveal with randomized timing. Skippable with any keypress.</p>
-                </div>
-                <div class="feature">
-                    <h3>GitHub Integration</h3>
-                    <p>Repository stats, languages, and profile info fetched daily via GitHub Actions. Hydrated into the virtual filesystem at load.</p>
-                </div>
-                <div class="feature">
-                    <h3>Fuzzy Suggestions</h3>
-                    <p>Levenshtein distance matching for mistyped commands. <code>Did you mean...?</code> suggestions with ranked alternatives.</p>
-                </div>
-                <div class="feature">
-                    <h3>Permalink Support</h3>
-                    <p>URL hash linking to auto-run commands on page load. <code>#neofetch</code> opens straight to system info. Bookmarkable deep links.</p>
-                </div>
-                <div class="feature">
-                    <h3>Mobile Support</h3>
-                    <p>Responsive layout with keyboard toggle button for touch devices. Viewport-aware resizing via ResizeObserver and fit addon.</p>
-                </div>
+            <div class="section-label animate">CAPABILITIES</div>
+            <h2 class="section-title animate" style="transition-delay:.08s">Shell commands</h2>
+            <p class="section-desc animate" style="transition-delay:.16s">15 commands with aliases. Full keyboard shortcuts. Works on desktop and mobile.</p>
+            <div class="pills">
+                <div class="pill animate"><span class="dot dot-g"></span>help</div>
+                <div class="pill animate"><span class="dot dot-g"></span>neofetch</div>
+                <div class="pill animate"><span class="dot dot-g"></span>repos</div>
+                <div class="pill animate"><span class="dot dot-g"></span>skills</div>
+                <div class="pill animate"><span class="dot dot-g"></span>about</div>
+                <div class="pill animate"><span class="dot dot-g"></span>contact</div>
+                <div class="pill animate"><span class="dot dot-g"></span>resume</div>
+                <div class="pill animate"><span class="dot dot-g"></span>cat</div>
+                <div class="pill animate"><span class="dot dot-g"></span>ls</div>
+                <div class="pill animate"><span class="dot dot-g"></span>cd</div>
+                <div class="pill animate"><span class="dot dot-g"></span>pwd</div>
+                <div class="pill animate"><span class="dot dot-g"></span>whoami</div>
+                <div class="pill animate"><span class="dot dot-g"></span>clear</div>
+                <div class="pill animate"><span class="dot dot-g"></span>history</div>
+                <div class="pill animate"><span class="dot dot-g"></span>Tab Completion</div>
+                <div class="pill animate"><span class="dot dot-g"></span>Permalinks</div>
+                <div class="pill animate"><span class="dot dot-g"></span>Boot Animation</div>
+                <div class="pill animate"><span class="dot dot-y"></span>Mobile Touch</div>
+            </div>
+            <div style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ov0)">
+                <span style="color:var(--green)">&#9679;</span> Full &nbsp;
+                <span style="color:var(--yellow)">&#9679;</span> Touch Button &nbsp;
+                <span style="color:var(--sf2)">&#9679;</span> Not Supported
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════ CAPABILITIES ════════════════════ -->
-    <section>
+    <!-- Architecture -->
+    <section id="architecture">
         <div class="container">
-            <h2>Platform Capabilities</h2>
-            <p class="section-desc">Works everywhere modern browsers run. Full feature parity across Chrome, Firefox, and Safari. Touch support on mobile.</p>
-
-            <div class="capabilities">
-                <div class="capability"><span class="cap-dot full"></span>Terminal Render</div>
-                <div class="capability"><span class="cap-dot full"></span>24-bit Color</div>
-                <div class="capability"><span class="cap-dot full"></span>Cursor Blink</div>
-                <div class="capability"><span class="cap-dot full"></span>Scrollback</div>
-                <div class="capability"><span class="cap-dot full"></span>Web Links</div>
-                <div class="capability"><span class="cap-dot full"></span>Viewport Fit</div>
-                <div class="capability"><span class="cap-dot full"></span>Tab Complete</div>
-                <div class="capability"><span class="cap-dot full"></span>Cmd History</div>
-                <div class="capability"><span class="cap-dot full"></span>Virtual FS</div>
-                <div class="capability"><span class="cap-dot full"></span>Boot Sequence</div>
-                <div class="capability"><span class="cap-dot full"></span>Permalinks</div>
-                <div class="capability"><span class="cap-dot full"></span>Box Drawing</div>
-                <div class="capability"><span class="cap-dot full"></span>Progress Bars</div>
-                <div class="capability"><span class="cap-dot full"></span>Fuzzy Match</div>
-                <div class="capability"><span class="cap-dot full"></span>GitHub Data</div>
-                <div class="capability"><span class="cap-dot full"></span>localStorage</div>
-                <div class="capability"><span class="cap-dot partial"></span>Mobile Keys</div>
-                <div class="capability"><span class="cap-dot none"></span>Offline Mode</div>
-            </div>
-
-            <div style="margin-top: 20px; font-size: 12px; color: var(--overlay0); font-family: 'JetBrains Mono', monospace;">
-                <span style="color: var(--green);">&#9679;</span> Full &nbsp;&nbsp;
-                <span style="color: var(--yellow);">&#9679;</span> Partial &nbsp;&nbsp;
-                <span style="color: var(--surface2);">&#9679;</span> Not Supported
-            </div>
-        </div>
-    </section>
-
-    <!-- ════════════════════ ARCHITECTURE ════════════════════ -->
-    <section style="background: var(--mantle);">
-        <div class="container">
-            <h2>Architecture</h2>
-            <p class="section-desc">Clean module separation. Each concern in its own file. Zero framework dependencies beyond xterm.js and Vite.</p>
-
+            <div class="section-label animate">ARCHITECTURE</div>
+            <h2 class="section-title animate" style="transition-delay:.08s">Vite + xterm.js</h2>
+            <p class="section-desc animate" style="transition-delay:.16s">Modular JavaScript with Vite bundling. Each command is an independent module. GitHub data fetched daily via CI.</p>
             <div class="arch-grid">
-                <div class="arch-card">
-                    <div class="arch-num">1</div>
-                    <h3>Terminal Layer</h3>
-                    <p>xterm.js instance with fit addon for viewport sizing, web-links addon for clickable URLs, and Catppuccin Mocha theme applied at initialization.</p>
-                </div>
-                <div class="arch-card">
-                    <div class="arch-num">2</div>
-                    <h3>Shell Engine</h3>
-                    <p>Input handling with line editing, prompt rendering, and command dispatch. Integrates tab completion, history navigation, and Ctrl shortcuts.</p>
-                </div>
-                <div class="arch-card">
-                    <div class="arch-num">3</div>
-                    <h3>Command Registry</h3>
-                    <p>Fourteen commands registered with aliases. Levenshtein fuzzy matching for typos. Each command is an independent module returning formatted output.</p>
-                </div>
-                <div class="arch-card">
-                    <div class="arch-num">4</div>
-                    <h3>Data Pipeline</h3>
-                    <p>GitHub Actions fetch profile and repo data daily via <code>gh</code> CLI. JSON committed to <code>public/data/</code>. Loaded at runtime and hydrated into the virtual filesystem.</p>
-                </div>
+                <div class="arch-card animate" style="transition-delay:.1s"><div class="arch-num">1</div><h3>Terminal Layer</h3><p>xterm.js with fit and web-links addons. VT100/VT220 emulation, 24-bit color, 1000-line scrollback. Automatic viewport fitting on resize.</p></div>
+                <div class="arch-card animate" style="transition-delay:.2s"><div class="arch-num">2</div><h3>Shell Engine</h3><p>Input handling, prompt rendering, command dispatch, and history navigation. Tab completion with context-aware path and command matching.</p></div>
+                <div class="arch-card animate" style="transition-delay:.3s"><div class="arch-num">3</div><h3>Virtual Filesystem</h3><p>In-memory directory tree with <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>pwd</code>. Static content plus GitHub data hydrated at load time from <code>github.json</code>.</p></div>
+                <div class="arch-card animate" style="transition-delay:.4s"><div class="arch-num">4</div><h3>Data Pipeline</h3><p>GitHub Actions runs daily, fetches repo stats via <code>gh</code> CLI, commits <code>github.json</code> to <code>public/data/</code>. No API tokens exposed to the frontend.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════ GETTING STARTED ════════════════════ -->
-    <section>
+    <!-- Getting Started -->
+    <section style="background:var(--mantle)">
         <div class="container">
-            <h2>Getting Started</h2>
-            <p class="section-desc">Clone, install, and run. No build configuration required. Vite handles everything.</p>
-
+            <div class="section-label animate">GETTING STARTED</div>
+            <h2 class="section-title animate" style="transition-delay:.08s">Clone and run</h2>
+            <p class="section-desc animate" style="transition-delay:.16s">Node.js and npm required. Vite dev server starts in seconds.</p>
             <div class="two-col">
-                <div class="terminal">
-                    <div class="terminal-bar">
-                        <span class="terminal-dot"></span>
-                        <span class="terminal-dot"></span>
-                        <span class="terminal-dot"></span>
-                        <span class="terminal-label">setup.sh</span>
-                    </div>
-                    <div class="terminal-body">
-                        <pre><span class="c"># Clone and install</span>
-<span class="p">$</span> git clone https://github.com/Real-Fruit-Snacks/Tidepool.git
-<span class="p">$</span> cd Tidepool
+                <div class="terminal animate" style="transition-delay:.1s">
+                    <div class="terminal-bar"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-label">build.sh</span></div>
+                    <div class="terminal-body"><pre><span class="t-g">$</span> git clone https://github.com/Real-Fruit-Snacks/Tidepool.git
+<span class="t-g">$</span> cd Tidepool &amp;&amp; npm install
+<span class="t-g">$</span> npm run dev
 
-<span class="c"># Install dependencies</span>
-<span class="p">$</span> npm install
-
-<span class="c"># Start dev server</span>
-<span class="p">$</span> npm run dev
-<span class="v">  VITE v6.0.0  ready in 200ms</span>
-<span class="v">  Local: http://localhost:5173/</span>
-
-<span class="c"># Production build</span>
-<span class="p">$</span> npm run build
-<span class="v">dist/index.html          1.2 kB</span>
-<span class="v">dist/assets/index.js    48.3 kB</span><span class="cursor"></span></pre>
-                    </div>
+<span class="t-b">VITE ready in 200ms</span>
+<span class="t-b">http://localhost:5173</span></pre></div>
                 </div>
+                <div class="terminal animate" style="transition-delay:.25s">
+                    <div class="terminal-bar"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-label">usage.sh</span></div>
+                    <div class="terminal-body"><pre><span class="t-m"># Production build</span>
+<span class="t-g">$</span> npm run build
+<span class="t-g">$</span> npm run preview
 
-                <div class="terminal">
-                    <div class="terminal-bar">
-                        <span class="terminal-dot"></span>
-                        <span class="terminal-dot"></span>
-                        <span class="terminal-dot"></span>
-                        <span class="terminal-label">demo.sh</span>
-                    </div>
-                    <div class="terminal-body">
-                        <pre><span class="c"># Explore the terminal portfolio</span>
-<span class="p">visitor@rfs:~</span> <span class="p">$</span> help
-<span class="v">  Navigation: ls, cd, cat, pwd</span>
-<span class="v">  Info: about, contact, resume, skills</span>
-<span class="v">  GitHub: repos, neofetch</span>
-
-<span class="p">visitor@rfs:~</span> <span class="p">$</span> neofetch
-<span class="f">         ████████</span>
-<span class="f">       ██        ██</span>   <span class="v">visitor@real-fruit-snacks</span>
-<span class="f">      █   ██████   █</span>  <span class="v">OS: Tidepool 1.0.0</span>
-<span class="f">       ██        ██</span>   <span class="v">Shell: xterm.js 5.5</span>
-<span class="f">         ████████</span>     <span class="v">Theme: Catppuccin Mocha</span>
-
-<span class="p">visitor@rfs:~</span> <span class="p">$</span> repos
-<span class="v">  Flux       ★ 12  Rust</span>
-<span class="v">  Tidepool   ★  8  JavaScript</span></pre>
-                    </div>
+<span class="t-m"># Try commands</span>
+<span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> neofetch
+<span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> repos</pre></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ════════════════════ FOOTER ════════════════════ -->
+    <!-- Footer -->
     <footer>
         <div class="container">
+            <div class="footer-line"></div>
             <div class="footer-grid">
-                <div>
-                    <h4>Documentation</h4>
-                    <ul>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#quick-start">Quick Start</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#command-reference">Commands</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#features">Features</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#architecture">Architecture</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://real-fruit-snacks.github.io/Tidepool">Live Demo</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Tidepool/issues">Report Issue</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/CONTRIBUTING.md">Contributing</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/CHANGELOG.md">Changelog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Toolkit</h4>
-                    <ul>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Flux">Flux</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Riptide">Riptide</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Cascade">Cascade</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Slipstream">Slipstream</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/HydroShot">HydroShot</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Aquifer">Aquifer</a></li>
-                        <li><a href="https://github.com/Real-Fruit-Snacks/Conduit">Conduit</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>License</h4>
-                    <p>MIT License<br>Copyright &copy; 2026 Real-Fruit-Snacks<br><br>Built with xterm.js + Vite</p>
-                </div>
+                <div><h4>Documentation</h4><ul><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#quick-start">Quick Start</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#features">Features</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#architecture">Architecture</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#command-reference">Commands</a></li></ul></div>
+                <div><h4>Resources</h4><ul><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool/issues">Report Issue</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/CONTRIBUTING.md">Contributing</a></li><li><a href="https://xtermjs.org/">xterm.js</a></li><li><a href="https://vitejs.dev/">Vite</a></li></ul></div>
+                <div><h4>Toolkit</h4><ul><li><a href="https://github.com/Real-Fruit-Snacks/Sunken-Archive">Sunken-Archive</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Deadwater">Deadwater</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Shallows">Shallows</a></li><li><a href="https://github.com/Real-Fruit-Snacks">View All &#8594;</a></li></ul></div>
+                <div><h4>License</h4><p>MIT License<br>Copyright &#169; 2026<br>Real-Fruit-Snacks</p></div>
             </div>
-            <div class="footer-bottom">
-                Part of the Real-Fruit-Snacks toolkit &nbsp;&middot;&nbsp; Type <code style="background:none;padding:0;color:var(--sky)">help</code> to begin.
-            </div>
+            <div class="footer-bottom">Part of the Real-Fruit-Snacks reference collection</div>
         </div>
     </footer>
 
+    <script>
+    const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target)}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.animate,.animate-scale').forEach(el=>obs.observe(el));
+    function countUp(el){const t=parseInt(el.dataset.target),s=el.dataset.suffix||'',p=el.dataset.prefix||'',d=1500,st=performance.now();function u(n){const pr=Math.min((n-st)/d,1),e=1-Math.pow(1-pr,3);el.textContent=p+Math.floor(t*e)+s;if(pr<1)requestAnimationFrame(u)}requestAnimationFrame(u)}
+    const sobs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){countUp(el.target);sobs.unobserve(el.target)}})},{threshold:.5});
+    document.querySelectorAll('.stat-num').forEach(el=>sobs.observe(el));
+    window.addEventListener('scroll',()=>{document.querySelector('.nav').style.borderBottomColor=window.scrollY>20?'rgba(49,50,68,0.8)':'rgba(49,50,68,0.3)'});
+    </script>
 </body>
 </html>
