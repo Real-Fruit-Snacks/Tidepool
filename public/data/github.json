@@ -7,17 +7,35 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 35
+    "public_repos": 36
   },
   "repos": [
     {
-      "description": "OPSEC-first C2 framework in Rust (under active development) — X25519 ECDH key exchange, AES-256-GCM encryption, modular implant with runtime-loadable modules, mesh networking, multi-transport (HTTP/HTTPS/TCP/SMB/DNS), CLI operator, BOF compatibility",
+      "description": "Statically-linked SSH server for penetration testing — reverse/bind shells with full PTY, SFTP file transfer, local/remote/dynamic port forwarding, TLS wrapping with SNI spoofing, build-time configuration. Single static Rust binary.",
       "forks": 0,
       "language": "Rust",
-      "name": "Kraken",
+      "name": "Neap",
       "stars": 0,
-      "updated_at": "2026-04-05T22:30:48Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Kraken"
+      "updated_at": "2026-04-07T02:19:17Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Neap"
+    },
+    {
+      "description": "One-command ligolo-ng tunnel setup — auto-downloads binaries, configures TUN interface, guides pivoting. Zero to tunneling in 30 seconds.",
+      "forks": 0,
+      "language": "Shell",
+      "name": "LigoloSupport",
+      "stars": 1,
+      "updated_at": "2026-04-06T23:40:33Z",
+      "url": "https://github.com/Real-Fruit-Snacks/LigoloSupport"
+    },
+    {
+      "description": "SOCAT network relay with kernel-level process masquerading — argument hiding, prctl/setproctitle stealth, 50+ channel types, multi-platform",
+      "forks": 0,
+      "language": "C",
+      "name": "Conduit",
+      "stars": 0,
+      "updated_at": "2026-04-06T23:40:03Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Conduit"
     },
     {
       "description": "io_uring stealth implant loader in pure x86-64 NASM assembly — ChaCha20-Poly1305 AEAD, ~4.2 KB, invisible to syscall monitoring",
@@ -25,8 +43,35 @@
       "language": "Python",
       "name": "Undercurrent",
       "stars": 0,
-      "updated_at": "2026-04-05T20:56:21Z",
+      "updated_at": "2026-04-06T22:59:08Z",
       "url": "https://github.com/Real-Fruit-Snacks/Undercurrent"
+    },
+    {
+      "description": "ChaCha20-Poly1305 encrypted reverse shell and process injector in pure x86_64 NASM assembly — Hell's Gate syscalls, zero dependencies",
+      "forks": 0,
+      "language": "Assembly",
+      "name": "Vapor",
+      "stars": 0,
+      "updated_at": "2026-04-06T22:58:31Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Vapor"
+    },
+    {
+      "description": "OPSEC-first C2 framework in Rust (under active development) — X25519 ECDH key exchange, AES-256-GCM encryption, modular implant with runtime-loadable modules, mesh networking, multi-transport (HTTP/HTTPS/TCP/SMB/DNS), CLI operator, BOF compatibility",
+      "forks": 0,
+      "language": "Rust",
+      "name": "Kraken",
+      "stars": 0,
+      "updated_at": "2026-04-06T20:58:53Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Kraken"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-04-06T06:33:40Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Personal knowledge base and digital garden built on Quartz — interconnected notes, graph view, full-text search",
@@ -56,15 +101,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks"
     },
     {
-      "description": "ChaCha20-Poly1305 encrypted reverse shell and process injector in pure x86_64 NASM assembly — Hell's Gate syscalls, zero dependencies",
-      "forks": 0,
-      "language": "Assembly",
-      "name": "Vapor",
-      "stars": 0,
-      "updated_at": "2026-04-05T20:18:26Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Vapor"
-    },
-    {
       "description": "AI-powered security platform for offensive operations — intelligent automation, Claude Code integration, workflow orchestration",
       "forks": 0,
       "language": "JavaScript",
@@ -72,15 +108,6 @@
       "stars": 0,
       "updated_at": "2026-04-05T20:05:47Z",
       "url": "https://github.com/Real-Fruit-Snacks/armsforge"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-04-05T20:03:27Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Browser-native Linux terminals powered by x86 emulation — no servers, no installs, no accounts. Just open and type.",
@@ -164,15 +191,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Maelstrom"
     },
     {
-      "description": "One-command ligolo-ng tunnel setup — auto-downloads binaries, configures TUN interface, guides pivoting. Zero to tunneling in 30 seconds.",
-      "forks": 0,
-      "language": "Shell",
-      "name": "LigoloSupport",
-      "stars": 1,
-      "updated_at": "2026-04-05T19:52:17Z",
-      "url": "https://github.com/Real-Fruit-Snacks/LigoloSupport"
-    },
-    {
       "description": "Advanced parser and formatter for Nmap and RustScan outputs — color-coded terminal reports, multi-format exports, interactive scanning with Catppuccin styling",
       "forks": 0,
       "language": "Python",
@@ -234,15 +252,6 @@
       "stars": 0,
       "updated_at": "2026-04-05T19:46:40Z",
       "url": "https://github.com/Real-Fruit-Snacks/HydroShot"
-    },
-    {
-      "description": "SOCAT network relay with kernel-level process masquerading — argument hiding, prctl/setproctitle stealth, 50+ channel types, multi-platform",
-      "forks": 0,
-      "language": "C",
-      "name": "Conduit",
-      "stars": 0,
-      "updated_at": "2026-04-05T19:06:08Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Conduit"
     },
     {
       "description": "Encrypted HTTPS reverse shell for Windows — ~50 KB C implant with interactive Python listener, AES-256 encryption, TLS transport",
@@ -332,9 +341,9 @@
     "Go": 4,
     "JavaScript": 8,
     "Python": 8,
-    "Rust": 4,
+    "Rust": 5,
     "Shell": 2,
     "TypeScript": 3
   },
-  "updated_at": "2026-04-06T06:33:36Z"
+  "updated_at": "2026-04-07T06:28:15Z"
 }
