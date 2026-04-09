@@ -11,6 +11,24 @@
   },
   "repos": [
     {
+      "description": "Modern native markdown editor with real-time collaboration, live preview, wiki-links, canvas whiteboard, and 21+ themes — built with Tauri and Rust",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Cascade",
+      "stars": 1,
+      "updated_at": "2026-04-08T20:31:17Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cascade"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-04-08T06:29:14Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Water-themed security toolkit — 34 tools for penetration testing, red team operations, and security research",
       "forks": 0,
       "language": null,
@@ -36,15 +54,6 @@
       "stars": 0,
       "updated_at": "2026-04-07T17:16:52Z",
       "url": "https://github.com/Real-Fruit-Snacks/Flood"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-04-07T06:28:25Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Statically-linked SSH server for penetration testing — reverse/bind shells with full PTY, SFTP file transfer, local/remote/dynamic port forwarding, TLS wrapping with SNI spoofing, build-time configuration. Single static Rust binary.",
@@ -144,15 +153,6 @@
       "stars": 0,
       "updated_at": "2026-04-05T19:59:02Z",
       "url": "https://github.com/Real-Fruit-Snacks/Deadwater"
-    },
-    {
-      "description": "Modern native markdown editor with real-time collaboration, live preview, wiki-links, canvas whiteboard, and 21+ themes — built with Tauri and Rust",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Cascade",
-      "stars": 0,
-      "updated_at": "2026-04-05T19:58:30Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Cascade"
     },
     {
       "description": "Lightning-fast offline Linux man pages browser with TLDR summaries and Catppuccin themes. PWA — works without internet.",
@@ -363,5 +363,5 @@
     "Shell": 2,
     "TypeScript": 3
   },
-  "updated_at": "2026-04-08T06:29:09Z"
+  "updated_at": "2026-04-09T06:29:50Z"
 }
