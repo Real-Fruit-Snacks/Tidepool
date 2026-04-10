@@ -11,6 +11,15 @@
   },
   "repos": [
     {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-04-09T06:29:58Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Modern native markdown editor with real-time collaboration, live preview, wiki-links, canvas whiteboard, and 21+ themes — built with Tauri and Rust",
       "forks": 0,
       "language": "TypeScript",
@@ -18,15 +27,6 @@
       "stars": 1,
       "updated_at": "2026-04-08T20:31:17Z",
       "url": "https://github.com/Real-Fruit-Snacks/Cascade"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-04-08T06:29:14Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Water-themed security toolkit — 34 tools for penetration testing, red team operations, and security research",
@@ -363,5 +363,5 @@
     "Shell": 2,
     "TypeScript": 3
   },
-  "updated_at": "2026-04-09T06:29:50Z"
+  "updated_at": "2026-04-10T06:33:30Z"
 }
