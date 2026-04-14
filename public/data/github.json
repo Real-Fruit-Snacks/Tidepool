@@ -7,16 +7,61 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 38
+    "public_repos": 39
   },
   "repos": [
+    {
+      "description": "Modular credential spraying tool for authorized security testing — 28 native Python protocol modules, automatic port scanning, adaptive skipping, pass-the-hash support",
+      "forks": 0,
+      "language": "Python",
+      "name": "Rapids",
+      "stars": 0,
+      "updated_at": "2026-04-14T02:02:09Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Rapids"
+    },
+    {
+      "description": "Statically-linked SSH server for penetration testing — reverse/bind shells with full PTY, SFTP file transfer, local/remote/dynamic port forwarding, TLS wrapping with SNI spoofing, build-time configuration. Single static Rust binary.",
+      "forks": 0,
+      "language": "Rust",
+      "name": "Neap",
+      "stars": 0,
+      "updated_at": "2026-04-14T01:44:42Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Neap"
+    },
+    {
+      "description": "Active Directory security audit tool — extract quick wins, attack paths, and misconfigurations from BloodHound CE",
+      "forks": 0,
+      "language": "Python",
+      "name": "Runoff",
+      "stars": 0,
+      "updated_at": "2026-04-14T01:28:17Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Runoff"
+    },
+    {
+      "description": "Statically-linked SSH server for penetration testing — reverse/bind shells, SFTP, port forwarding, TLS wrapping with SNI spoofing, single static binary under 1.5MB. Written in Go.",
+      "forks": 0,
+      "language": "Go",
+      "name": "Undertow",
+      "stars": 0,
+      "updated_at": "2026-04-14T00:54:58Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Undertow"
+    },
+    {
+      "description": "Interactive x86 assembly learning lab with step-by-step simulator, register visualization, and concept tutorials",
+      "forks": 0,
+      "language": "HTML",
+      "name": "x86-assembly-lab",
+      "stars": 0,
+      "updated_at": "2026-04-14T00:16:31Z",
+      "url": "https://github.com/Real-Fruit-Snacks/x86-assembly-lab"
+    },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 0,
-      "updated_at": "2026-04-12T06:29:58Z",
+      "updated_at": "2026-04-13T06:40:10Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -54,15 +99,6 @@
       "stars": 0,
       "updated_at": "2026-04-07T17:16:52Z",
       "url": "https://github.com/Real-Fruit-Snacks/Flood"
-    },
-    {
-      "description": "Statically-linked SSH server for penetration testing — reverse/bind shells with full PTY, SFTP file transfer, local/remote/dynamic port forwarding, TLS wrapping with SNI spoofing, build-time configuration. Single static Rust binary.",
-      "forks": 0,
-      "language": "Rust",
-      "name": "Neap",
-      "stars": 0,
-      "updated_at": "2026-04-07T02:19:17Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Neap"
     },
     {
       "description": "One-command ligolo-ng tunnel setup — auto-downloads binaries, configures TUN interface, guides pivoting. Zero to tunneling in 30 seconds.",
@@ -191,15 +227,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
     },
     {
-      "description": "Active Directory security audit tool — extract quick wins, attack paths, and misconfigurations from BloodHound CE",
-      "forks": 0,
-      "language": "Python",
-      "name": "Runoff",
-      "stars": 0,
-      "updated_at": "2026-04-05T19:53:33Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Runoff"
-    },
-    {
       "description": "NetExec wrapper combining 35+ AD enumeration modules into a single command — colored output, multi-target scanning, actionable recommendations",
       "forks": 0,
       "language": "Python",
@@ -243,15 +270,6 @@
       "stars": 0,
       "updated_at": "2026-04-05T19:52:07Z",
       "url": "https://github.com/Real-Fruit-Snacks/Wellspring"
-    },
-    {
-      "description": "Modular credential spraying tool for authorized security testing — 28 native Python protocol modules, automatic port scanning, adaptive skipping, pass-the-hash support",
-      "forks": 0,
-      "language": "Python",
-      "name": "Rapids",
-      "stars": 0,
-      "updated_at": "2026-04-05T19:51:18Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Rapids"
     },
     {
       "description": "Markdown-to-command-reference static web app — fuzzy search, variable substitution, offline-first PWA, Catppuccin themes",
@@ -335,15 +353,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Grotto"
     },
     {
-      "description": "Statically-linked SSH server for penetration testing — reverse/bind shells, SFTP, port forwarding, TLS wrapping with SNI spoofing, single static binary under 1.5MB. Written in Go.",
-      "forks": 0,
-      "language": "Shell",
-      "name": "Undertow",
-      "stars": 0,
-      "updated_at": "2026-04-05T17:18:09Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Undertow"
-    },
-    {
       "description": "SSH wrapper for red team operations — drop-in ssh replacement with tunnel management, file transfers, passive filesystem mapping, per-command session logging, and target identity by fingerprint. Written in Rust.",
       "forks": 0,
       "language": "Rust",
@@ -356,12 +365,13 @@
   "languages": {
     "Assembly": 2,
     "C": 3,
-    "Go": 4,
+    "Go": 5,
+    "HTML": 1,
     "JavaScript": 8,
     "Python": 8,
     "Rust": 7,
-    "Shell": 2,
+    "Shell": 1,
     "TypeScript": 3
   },
-  "updated_at": "2026-04-13T06:40:00Z"
+  "updated_at": "2026-04-14T06:33:23Z"
 }
