@@ -11,6 +11,24 @@
   },
   "repos": [
     {
+      "description": "Learn x86 assembly in your browser - interactive simulator, stack visualizer, register quiz, and tutorials from fundamentals to reverse engineering",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "x86-assembly-lab",
+      "stars": 0,
+      "updated_at": "2026-04-14T19:46:54Z",
+      "url": "https://github.com/Real-Fruit-Snacks/x86-assembly-lab"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-04-14T06:33:27Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Modular credential spraying tool for authorized security testing — 28 native Python protocol modules, automatic port scanning, adaptive skipping, pass-the-hash support",
       "forks": 0,
       "language": "Python",
@@ -45,24 +63,6 @@
       "stars": 0,
       "updated_at": "2026-04-14T00:54:58Z",
       "url": "https://github.com/Real-Fruit-Snacks/Undertow"
-    },
-    {
-      "description": "Interactive x86 assembly learning lab with step-by-step simulator, register visualization, and concept tutorials",
-      "forks": 0,
-      "language": "HTML",
-      "name": "x86-assembly-lab",
-      "stars": 0,
-      "updated_at": "2026-04-14T00:16:31Z",
-      "url": "https://github.com/Real-Fruit-Snacks/x86-assembly-lab"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-04-13T06:40:10Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Modern native markdown editor with real-time collaboration, live preview, wiki-links, canvas whiteboard, and 21+ themes — built with Tauri and Rust",
@@ -366,12 +366,11 @@
     "Assembly": 2,
     "C": 3,
     "Go": 5,
-    "HTML": 1,
-    "JavaScript": 8,
+    "JavaScript": 9,
     "Python": 8,
     "Rust": 7,
     "Shell": 1,
     "TypeScript": 3
   },
-  "updated_at": "2026-04-14T06:33:23Z"
+  "updated_at": "2026-04-15T06:33:49Z"
 }
