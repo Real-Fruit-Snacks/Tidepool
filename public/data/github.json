@@ -7,17 +7,35 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 39
+    "public_repos": 40
   },
   "repos": [
     {
+      "description": "Cyberpunk neon tower defense — 6 elements, 14 towers, procedural campaign, endless mode, challenges, roguelite unlocks. Built with Phaser 3 + TypeScript + Vite.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Tower-Defense",
+      "stars": 0,
+      "updated_at": "2026-04-16T21:34:00Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tower-Defense"
+    },
+    {
       "description": "Learn x86 assembly in your browser - interactive simulator, stack visualizer, register quiz, and tutorials from fundamentals to reverse engineering",
       "forks": 0,
-      "language": "JavaScript",
+      "language": "HTML",
       "name": "x86-assembly-lab",
       "stars": 0,
-      "updated_at": "2026-04-16T02:14:36Z",
+      "updated_at": "2026-04-16T15:21:58Z",
       "url": "https://github.com/Real-Fruit-Snacks/x86-assembly-lab"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-04-16T06:34:24Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Advanced parser and formatter for Nmap and RustScan outputs — color-coded terminal reports, multi-format exports, interactive scanning with Catppuccin styling",
@@ -45,15 +63,6 @@
       "stars": 1,
       "updated_at": "2026-04-15T11:37:14Z",
       "url": "https://github.com/Real-Fruit-Snacks/Neap"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-04-15T06:33:53Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Active Directory security audit tool — extract quick wins, attack paths, and misconfigurations from BloodHound CE",
@@ -366,11 +375,12 @@
     "Assembly": 2,
     "C": 3,
     "Go": 5,
-    "JavaScript": 9,
+    "HTML": 1,
+    "JavaScript": 8,
     "Python": 8,
     "Rust": 7,
     "Shell": 1,
-    "TypeScript": 3
+    "TypeScript": 4
   },
-  "updated_at": "2026-04-16T06:34:20Z"
+  "updated_at": "2026-04-17T06:34:07Z"
 }
