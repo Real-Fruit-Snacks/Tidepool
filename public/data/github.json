@@ -7,16 +7,52 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 43
+    "public_repos": 44
   },
   "repos": [
+    {
+      "description": "A pixel-art medieval wave-defense incremental built as a single HTML file. Hold the wall, bank Crowns, return stronger.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "Crownfall",
+      "stars": 0,
+      "updated_at": "2026-04-22T23:34:46Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Crownfall"
+    },
+    {
+      "description": "Browser-based incremental factory game. Build, automate, prestige, publish. Zero-dependency vanilla HTML/CSS/JS.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Blueprint",
+      "stars": 0,
+      "updated_at": "2026-04-22T23:28:59Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
+    },
+    {
+      "description": "Water-themed security toolkit — 34 tools for penetration testing, red team operations, and security research",
+      "forks": 0,
+      "language": null,
+      "name": "Real-Fruit-Snacks",
+      "stars": 0,
+      "updated_at": "2026-04-22T21:55:14Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks"
+    },
+    {
+      "description": "Matt — Offensive Security Researcher. Resume & project index.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Real-Fruit-Snacks.github.io",
+      "stars": 0,
+      "updated_at": "2026-04-22T21:51:26Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks.github.io"
+    },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 0,
-      "updated_at": "2026-04-21T06:34:25Z",
+      "updated_at": "2026-04-22T06:34:40Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -72,24 +108,6 @@
       "stars": 0,
       "updated_at": "2026-04-19T20:53:38Z",
       "url": "https://github.com/Real-Fruit-Snacks/Lure"
-    },
-    {
-      "description": "Browser-based incremental factory game. Build, automate, prestige, publish. Zero-dependency vanilla HTML/CSS/JS.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Blueprint",
-      "stars": 0,
-      "updated_at": "2026-04-19T20:04:15Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
-    },
-    {
-      "description": "A pixel-art medieval wave-defense incremental built as a single HTML file. Hold the wall, bank Crowns, return stronger.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "Crownfall",
-      "stars": 0,
-      "updated_at": "2026-04-19T19:07:09Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Crownfall"
     },
     {
       "description": "Linux post-exploitation framework using kernel namespace isolation — multi-channel C2 with polymorphic beacons and 36 stealth modules",
@@ -153,15 +171,6 @@
       "stars": 1,
       "updated_at": "2026-04-08T20:31:17Z",
       "url": "https://github.com/Real-Fruit-Snacks/Cascade"
-    },
-    {
-      "description": "Water-themed security toolkit — 34 tools for penetration testing, red team operations, and security research",
-      "forks": 0,
-      "language": null,
-      "name": "Real-Fruit-Snacks",
-      "stars": 0,
-      "updated_at": "2026-04-07T17:23:35Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks"
     },
     {
       "description": "Async web fuzzer for directory enumeration, VHost discovery, and parameter fuzzing — single static Rust binary. Recursive scanning, FUZZ keyword placement, clusterbomb mode, auto-throttle on 429s, Burp proxy replay, interactive controls, JSON/CSV/Hashcat output.",
@@ -403,11 +412,11 @@
     "C": 3,
     "Go": 5,
     "HTML": 2,
-    "JavaScript": 9,
+    "JavaScript": 10,
     "Python": 9,
     "Rust": 7,
     "Shell": 1,
     "TypeScript": 4
   },
-  "updated_at": "2026-04-22T06:34:35Z"
+  "updated_at": "2026-04-23T06:34:56Z"
 }
