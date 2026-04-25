@@ -11,12 +11,21 @@
   },
   "repos": [
     {
+      "description": "Offensive forensic analysis framework in Rust — extract credentials, keys, and persistence from disk images and memory dumps. SAM, NTDS.dit, LSA, DPAPI, browser passwords, SSH keys, cloud credentials, LSASS minidumps. Raw, E01, VMDK with NTFS and ext4 support.",
+      "forks": 0,
+      "language": "Rust",
+      "name": "Abyss",
+      "stars": 1,
+      "updated_at": "2026-04-24T15:45:35Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Abyss"
+    },
+    {
       "description": "Single-file BusyBox-like multi-call binary, in Python — 50 POSIX utilities, native Windows support, freezable with Nuitka",
       "forks": 0,
       "language": "Python",
       "name": "mainsail",
       "stars": 0,
-      "updated_at": "2026-04-24T04:19:44Z",
+      "updated_at": "2026-04-24T10:07:52Z",
       "url": "https://github.com/Real-Fruit-Snacks/mainsail"
     },
     {
@@ -24,9 +33,18 @@
       "forks": 0,
       "language": "JavaScript",
       "name": "Blueprint",
-      "stars": 0,
-      "updated_at": "2026-04-23T16:54:09Z",
+      "stars": 1,
+      "updated_at": "2026-04-24T06:39:23Z",
       "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-04-24T06:35:58Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Matt — Offensive Security Researcher. Resume & project index.",
@@ -45,15 +63,6 @@
       "stars": 0,
       "updated_at": "2026-04-23T10:54:20Z",
       "url": "https://github.com/Real-Fruit-Snacks/Crownfall"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-04-23T06:35:02Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Water-themed security toolkit — 34 tools for penetration testing, red team operations, and security research",
@@ -144,15 +153,6 @@
       "stars": 0,
       "updated_at": "2026-04-17T20:10:48Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tower-Defense"
-    },
-    {
-      "description": "Offensive forensic analysis framework in Rust — extract credentials, keys, and persistence from disk images and memory dumps. SAM, NTDS.dit, LSA, DPAPI, browser passwords, SSH keys, cloud credentials, LSASS minidumps. Raw, E01, VMDK with NTFS and ext4 support.",
-      "forks": 0,
-      "language": "Rust",
-      "name": "Abyss",
-      "stars": 0,
-      "updated_at": "2026-04-17T12:50:36Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Abyss"
     },
     {
       "description": "Advanced parser and formatter for Nmap and RustScan outputs — color-coded terminal reports, multi-format exports, interactive scanning with Catppuccin styling",
@@ -427,5 +427,5 @@
     "Shell": 1,
     "TypeScript": 4
   },
-  "updated_at": "2026-04-24T06:35:54Z"
+  "updated_at": "2026-04-25T06:27:50Z"
 }
