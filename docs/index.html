@@ -1,316 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tidepool &#8212; Interactive Terminal Portfolio</title>
-    <meta name="description" content="Interactive terminal portfolio via xterm.js. Type commands to explore projects, skills, and contact info.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Inter,sans-serif' font-size='24' font-weight='800' fill='%2389dceb'%3ET%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{
-            --accent1:#89dceb;--accent2:#89b4fa;--accentmid:#74c7ec;
-            --accentrgb:137,220,235;
-            --text:#cdd6f4;--sub1:#bac2de;--sub0:#a6adc8;
-            --ov2:#9399b2;--ov1:#7f849c;--ov0:#6c7086;
-            --sf2:#585b70;--sf1:#45475a;--sf0:#313244;
-            --base:#1e1e2e;--mantle:#181825;--crust:#11111b;
-            --green:#a6e3a1;--yellow:#f9e2af;--red:#f38ba8;
-            --peach:#fab387;--mauve:#cba6f7;--teal:#94e2d5;
-        }
-        body{font-family:'Inter',system-ui,sans-serif;background:var(--crust);color:var(--text);line-height:1.7;overflow-x:hidden}
-        ::selection{background:rgba(var(--accentrgb),0.3);color:var(--text)}
-        .container{max-width:1140px;margin:0 auto;padding:0 28px}
-        code{font-family:'JetBrains Mono',monospace;background:var(--mantle);padding:2px 7px;border-radius:3px;font-size:.88em;color:var(--green)}
-        .nav{position:fixed;top:0;left:0;right:0;height:56px;background:rgba(17,17,27,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(49,50,68,0.5);z-index:1000;display:flex;align-items:center;justify-content:center}
-        .nav-inner{max-width:1140px;width:100%;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
-        .nav-logo{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none}
-        .nav-links{display:flex;align-items:center;gap:28px}
-        .nav-links a{font-size:13px;font-weight:500;color:var(--ov0);text-decoration:none;transition:color .2s}
-        .nav-links a:hover{color:var(--text)}
-        .nav-cta{background:linear-gradient(135deg,var(--accent1),var(--accentmid));color:var(--crust);padding:7px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:box-shadow .2s,transform .2s}
-        .nav-cta:hover{box-shadow:0 0 20px rgba(var(--accentrgb),0.3);transform:translateY(-1px)}
-        .hero{padding:140px 0 80px;text-align:center;position:relative}
-        .hero::before{content:'';position:absolute;top:60px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(var(--accentrgb),0.08) 0%,transparent 60%);pointer-events:none}
-        .hero-logo{position:relative;max-width:600px;margin:0 auto 32px}
-        .hero-logo img{width:100%;height:auto}
-        .hero-tagline{position:relative;font-size:clamp(24px,3.5vw,38px);font-weight:700;line-height:1.2;margin-bottom:16px;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .hero-desc{position:relative;font-size:16px;color:var(--ov0);max-width:560px;margin:0 auto 32px}
-        .hero-ctas{position:relative;display:flex;gap:12px;justify-content:center;margin-bottom:48px}
-        .btn-primary{background:linear-gradient(135deg,var(--accent1),var(--accentmid));color:var(--crust);padding:12px 28px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;text-decoration:none;transition:box-shadow .2s,transform .2s}
-        .btn-primary:hover{box-shadow:0 0 24px rgba(var(--accentrgb),0.35);transform:translateY(-2px)}
-        .btn-secondary{background:var(--sf0);color:var(--text);padding:12px 28px;border-radius:8px;border:1px solid var(--sf1);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s}
-        .btn-secondary:hover{background:var(--sf1);border-color:var(--sf2)}
-        .terminal{position:relative;max-width:800px;margin:0 auto;background:var(--mantle);border:1px solid var(--sf0);border-radius:12px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.5),0 0 24px rgba(var(--accentrgb),0.06)}
-        .terminal-bar{background:var(--crust);padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--sf0)}
-        .terminal-dot{width:12px;height:12px;border-radius:50%}
-        .terminal-dot:nth-child(1){background:var(--red)}
-        .terminal-dot:nth-child(2){background:var(--yellow)}
-        .terminal-dot:nth-child(3){background:var(--green)}
-        .terminal-label{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ov0)}
-        .terminal-body{padding:24px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.9;text-align:left}
-        .terminal-body pre{margin:0;white-space:pre-wrap;word-wrap:break-word}
-        .t-g{color:var(--green)}.t-b{color:var(--accent1)}.t-m{color:var(--sub0)}.t-p{color:var(--peach)}
-        .stats{display:flex;justify-content:center;gap:40px;padding:60px 0;position:relative}
-        .stat{text-align:center}
-        .stat-num{font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:var(--accent1);line-height:1}
-        .stat-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--sf2);margin-top:6px;letter-spacing:2px;text-transform:uppercase}
-        .stat-div{width:1px;height:48px;background:var(--sf0);align-self:center}
-        section{padding:80px 0}
-        .section-label{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--accent1);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
-        .section-title{font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:12px;letter-spacing:-.02em}
-        .section-desc{font-size:15px;color:var(--ov0);margin-bottom:48px;max-width:560px}
-        .gradient-line{height:1px;background:linear-gradient(90deg,transparent,var(--accent1),var(--accent2),transparent);margin:0 auto;max-width:600px}
-        .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-        .bento-card{background:var(--mantle);border:1px solid var(--sf0);border-radius:12px;padding:28px;transition:all .25s;position:relative;overflow:hidden}
-        .bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent1),var(--accent2));opacity:0;transition:opacity .25s}
-        .bento-card:hover{transform:translateY(-3px);border-color:var(--sf1);box-shadow:0 12px 32px rgba(0,0,0,0.25),0 0 20px rgba(var(--accentrgb),0.06)}
-        .bento-card:hover::before{opacity:1}
-        .bento-hero{grid-column:span 2}
-        .bento-card h3{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--accent1);margin-bottom:8px}
-        .bento-card p{font-size:13.5px;color:var(--sub0);line-height:1.6}
-        .bento-card .mini-terminal{background:var(--crust);border-radius:8px;padding:14px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.8;text-align:left}
-        .bento-stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-        .bento-stat .big{font-family:'JetBrains Mono',monospace;font-size:42px;font-weight:700;color:var(--accent1)}
-        .bento-stat .label{font-size:12px;color:var(--sf2);margin-top:4px;letter-spacing:1px}
-        .pills{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
-        .pill{background:var(--mantle);border:1px solid var(--sf0);border-radius:20px;padding:9px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;display:flex;align-items:center;gap:8px;transition:all .2s;color:var(--sub0)}
-        .pill:hover{border-color:var(--sf1);background:var(--base)}
-        .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-        .dot-g{background:var(--green)}.dot-y{background:var(--yellow)}.dot-n{background:var(--sf2)}
-        .arch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-        .arch-card{background:var(--mantle);border:1px solid var(--sf0);border-radius:12px;padding:28px;transition:border-color .2s}
-        .arch-card:hover{border-color:var(--sf1)}
-        .arch-num{display:inline-flex;width:30px;height:30px;background:linear-gradient(135deg,var(--accent1),var(--accentmid));color:var(--crust);border-radius:50%;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin-bottom:14px}
-        .arch-card h3{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--teal);margin-bottom:8px}
-        .arch-card p{font-size:13.5px;color:var(--sub0);line-height:1.6}
-        .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-        .detect-card{background:var(--mantle);border-radius:12px;padding:28px}
-        .detect-card h3{font-size:14px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-        .detect-card ul{list-style:none;font-size:13px;color:var(--sub0);line-height:2.2}
-        .detect-hidden{border-left:3px solid var(--green)}.detect-hidden h3{color:var(--green)}
-        .detect-visible{border-left:3px solid var(--yellow)}.detect-visible h3{color:var(--yellow)}
-        footer{padding:48px 0;margin-top:40px}
-        .footer-line{height:1px;background:linear-gradient(90deg,transparent,var(--accent1),var(--accent2),transparent);margin-bottom:48px}
-        .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
-        .footer-grid h4{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text);margin-bottom:14px;letter-spacing:2px;text-transform:uppercase}
-        .footer-grid ul{list-style:none}
-        .footer-grid li{margin-bottom:8px}
-        .footer-grid a{color:var(--ov2);text-decoration:none;font-size:13px;transition:color .2s}
-        .footer-grid a:hover{color:var(--accent1)}
-        .footer-grid p{font-size:13px;color:var(--ov1);line-height:1.7}
-        .footer-bottom{text-align:center;margin-top:36px;padding-top:24px;border-top:1px solid var(--sf0);font-size:12px;color:var(--ov0)}
-        .animate{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-        .animate.visible{opacity:1;transform:translateY(0)}
-        .animate-scale{opacity:0;transform:translateY(24px) scale(.97);transition:opacity .8s ease,transform .8s ease}
-        .animate-scale.visible{opacity:1;transform:translateY(0) scale(1)}
-        @media(max-width:960px){.bento{grid-template-columns:1fr 1fr}.bento-hero{grid-column:span 2}.two-col,.arch-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(2,1fr)}.stats{flex-wrap:wrap;gap:24px}}
-        @media(max-width:600px){.container{padding:0 16px}.hero{padding:100px 0 48px}.bento{grid-template-columns:1fr}.bento-hero{grid-column:span 1}.stats{gap:16px}.stat-div{display:none}.nav-links a:not(.nav-cta){display:none}.footer-grid{grid-template-columns:1fr}.pills{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
-        a:focus-visible{outline:2px solid var(--accent1);outline-offset:2px}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tidepool / Interactive terminal portfolio</title>
+<meta name="description" content="Interactive terminal portfolio built on xterm.js. Virtual filesystem, daily GitHub data via CI, Catppuccin Mocha, tab completion, command history, boot animation, permalinks.">
+<meta property="og:title" content="Tidepool — Interactive terminal portfolio">
+<meta property="og:description" content="14 commands · virtual filesystem · xterm.js · Catppuccin Mocha · permalinks.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e1e2e'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Inter,sans-serif' font-size='20' font-weight='800' fill='%23cdd6f4'%3ET%3Ctspan fill='%23f5c2e7'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--base:#1e1e2e;--mantle:#181825;--crust:#11111b;--sf0:#313244;--sf1:#45475a;--sf2:#585b70;--ov0:#6c7086;--ov1:#7f849c;--ov2:#9399b2;--sub0:#a6adc8;--sub1:#bac2de;--text:#cdd6f4;--mauve:#cba6f7;--lav:#b4befe;--blue:#89b4fa;--sky:#89dceb;--teal:#94e2d5;--green:#a6e3a1;--yellow:#f9e2af;--peach:#fab387;--red:#f38ba8;--accent:#f5c2e7}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--crust);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.5}
+::selection{background:var(--accent);color:var(--crust)}
+a{color:inherit;text-decoration:none}
+.status{background:var(--crust);border-bottom:1px solid var(--text);padding:10px 24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono','SF Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ov2);position:sticky;top:0;z-index:10}
+.status .left{display:flex;gap:24px;flex-wrap:wrap}
+.status .right{display:flex;gap:16px;flex-wrap:wrap}
+.status b{color:var(--accent);font-weight:700}
+.status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px;vertical-align:middle;animation:pulse 2.5s infinite}
+.status a{color:var(--ov2);transition:color .15s}
+.status a:hover{color:var(--text)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero{border-bottom:1px solid var(--text);padding:64px 24px 0}
+.hero-inner{max-width:1280px;margin:0 auto}
+.hero .pop{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:var(--ov1);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:24px}
+.hero h1{font-family:'Inter',sans-serif;font-size:clamp(72px,13vw,180px);line-height:0.85;font-weight:800;letter-spacing:-0.05em;color:var(--text);margin-bottom:32px}
+.hero h1 .dot{color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;border-top:1px solid var(--sf1)}
+.hero-grid > div{padding:20px 24px;border-right:1px solid var(--sf1)}
+.hero-grid > div:last-child{border-right:none}
+.hero-grid .label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ov0);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:8px}
+.hero-grid .value{font-family:'Inter',sans-serif;font-size:28px;font-weight:700;color:var(--text);letter-spacing:-0.02em}
+.hero-grid .value .unit{color:var(--accent);font-size:0.55em;font-weight:600;margin-left:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--sf1)}
+.cell{padding:48px 32px;border-right:1px solid var(--sf1);position:relative}
+.cell:last-child{border-right:none}
+.cell.full{grid-column:1/-1;border-right:none}
+.cell-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:14px;border-bottom:1px dashed var(--sf1)}
+.cell-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.15em;font-weight:700}
+.cell-name{font-family:'Inter',sans-serif;font-size:13px;color:var(--ov2);letter-spacing:0.2em;text-transform:uppercase;font-weight:500}
+.cell h2{font-size:36px;line-height:1.05;font-weight:700;letter-spacing:-0.025em;margin-bottom:16px}
+.cell h2 mark{background:var(--accent);color:var(--crust);padding:0 6px;font-style:normal}
+.cell p{color:var(--sub0);font-size:16px;line-height:1.65;margin-bottom:14px}
+.cell p strong{color:var(--text);font-weight:600}
+.cell p code{font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--mantle);padding:2px 7px;border-radius:3px;color:var(--green)}
+.feat{display:grid;grid-template-columns:auto 1fr;gap:18px 24px;margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:13px}
+.feat .k{color:var(--accent);font-weight:700;letter-spacing:0.05em}
+.feat .v{color:var(--sub1);line-height:1.65}
+.feat .v b{color:var(--text);font-weight:600}
+pre.code{background:var(--mantle);border:1px solid var(--text);border-left:6px solid var(--accent);padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.85;color:var(--sub1);overflow-x:auto;margin-top:20px}
+pre.code .c{color:var(--ov0)}
+pre.code .k{color:var(--mauve);font-weight:500}
+pre.code .s{color:var(--green)}
+pre.code .p{color:var(--peach)}
+pre.code .v{color:var(--blue)}
+.ref{background:var(--mantle);border:1px solid var(--sf0);padding:24px 28px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.85;color:var(--sub1);overflow-x:auto;margin-top:20px}
+.ref h4{font-size:10px;color:var(--ov0);letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin:14px 0 8px}
+.ref h4:first-child{margin-top:0}
+.ref code{color:var(--mauve);font-weight:500;display:inline-block;width:200px}
+.ref .desc{color:var(--sub1)}
+.band{background:var(--text);color:var(--crust);padding:48px 32px;border-bottom:1px solid var(--text);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px}
+.band-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600}
+.band h3{font-family:'Inter',sans-serif;font-weight:700;font-size:32px;line-height:1.1;letter-spacing:-0.02em}
+.band a.cta{background:var(--crust);color:var(--text);padding:16px 28px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:1px solid var(--crust);transition:all 0.15s;white-space:nowrap}
+.band a.cta:hover{background:var(--accent);color:var(--crust);border-color:var(--accent)}
+footer{padding:32px 24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ov0);letter-spacing:0.1em;text-transform:uppercase;flex-wrap:wrap;gap:16px}
+footer a{color:var(--ov2);border-bottom:1px solid var(--sf0);transition:all .15s}
+footer a:hover{color:var(--text);border-bottom-color:var(--text)}
+@media (max-width:760px){.hero h1{font-size:64px}.hero-grid{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.cell{border-right:none;border-bottom:1px solid var(--sf1)}.cell:last-child{border-bottom:none}.band{grid-template-columns:1fr;text-align:left}.status{font-size:10px;padding:10px 14px}.status .left,.status .right{gap:14px}}
+</style>
 </head>
 <body>
-    <!-- Nav -->
-    <nav class="nav"><div class="nav-inner">
-        <a href="#" class="nav-logo">Tidepool</a>
-        <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#architecture">Architecture</a>
-            <a href="https://github.com/Real-Fruit-Snacks/Tidepool">GitHub</a>
-            <a href="https://github.com/Real-Fruit-Snacks/Tidepool" class="nav-cta">Try It</a>
-        </div>
-    </div></nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-logo animate"><img src="https://raw.githubusercontent.com/Real-Fruit-Snacks/Tidepool/main/docs/assets/logo-dark.svg" alt="Tidepool"></div>
-            <h1 class="hero-tagline animate" style="transition-delay:.1s">Your portfolio, in a terminal</h1>
-            <p class="hero-desc animate" style="transition-delay:.2s">Interactive terminal portfolio via xterm.js. Type commands to explore projects, skills, and contact info. Catppuccin Mocha themed with boot animation.</p>
-            <div class="hero-ctas animate" style="transition-delay:.3s">
-                <a href="https://github.com/Real-Fruit-Snacks/Tidepool" class="btn-primary">Launch Terminal</a>
-                <a href="https://github.com/Real-Fruit-Snacks/Tidepool" class="btn-secondary">View Source</a>
-            </div>
-            <div class="terminal animate-scale" style="transition-delay:.4s">
-                <div class="terminal-bar">
-                    <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
-                    <span class="terminal-label">tidepool</span>
-                </div>
-                <div class="terminal-body"><pre><span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> neofetch
-<span class="t-m">  _____ _     _                   _</span>
-<span class="t-m"> |_   _(_) __| | ___ _ __   ___  | |</span>
-<span class="t-m">   | | | |/ _` |/ _ \ '_ \ / _ \ | |</span>
-<span class="t-m">   | | | | (_| |  __/ |_) | (_) || |</span>
-<span class="t-m">   |_| |_|\__,_|\___| .__/ \___/ |_|</span>
+<div class="status">
+  <div class="left">
+    <span><b>TIDEPOOL</b></span>
+    <span><span class="dot"></span>STATUS · LIVE</span>
+    <span>XTERM.JS · BROWSER</span>
+  </div>
+  <div class="right">
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool">REPO</a>
+    <a href="https://Real-Fruit-Snacks.github.io/Tidepool/">DEMO</a>
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/LICENSE">MIT</a>
+  </div>
+</div>
 
-<span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> repos
-<span class="t-p">Fetching GitHub repositories...</span></pre></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats -->
-    <div class="container">
-        <div class="stats animate">
-            <div class="stat"><div class="stat-num" data-target="15">0</div><div class="stat-label">Commands</div></div>
-            <div class="stat-div"></div>
-            <div class="stat"><div class="stat-num" data-target="24">0</div><div class="stat-label">Bit Color</div></div>
-            <div class="stat-div"></div>
-            <div class="stat"><div class="stat-num" data-target="200">0</div><div class="stat-label">History</div></div>
-            <div class="stat-div"></div>
-            <div class="stat"><div class="stat-num" data-target="5">0</div><div class="stat-label">Platforms</div></div>
-        </div>
-        <div class="gradient-line"></div>
+<section class="hero">
+  <div class="hero-inner">
+    <span class="pop">Real-Fruit-Snacks &nbsp;//&nbsp; terminal portfolio &nbsp;//&nbsp; vanilla js</span>
+    <h1>TIDEPOOL<span class="dot">.</span></h1>
+    <div class="hero-grid">
+      <div><div class="label">commands</div><div class="value">14<span class="unit"> CORE</span></div></div>
+      <div><div class="label">filesystem</div><div class="value">VIRTUAL<span class="unit"> · UNIX</span></div></div>
+      <div><div class="label">theme</div><div class="value">CATPPUCCIN<span class="unit"> · 24-BIT</span></div></div>
+      <div><div class="label">stack</div><div class="value">VANILLA<span class="unit"> · VITE</span></div></div>
     </div>
+  </div>
+</section>
 
-    <!-- Features Bento -->
-    <section id="features">
-        <div class="container">
-            <div class="section-label animate">FEATURES</div>
-            <h2 class="section-title animate" style="transition-delay:.08s">A portfolio you can type in</h2>
-            <p class="section-desc animate" style="transition-delay:.16s">Full xterm.js terminal with virtual filesystem, tab completion, command history, boot animation, and permalink support.</p>
-            <div class="bento">
-                <div class="bento-card bento-hero animate" style="transition-delay:.1s">
-                    <h3>Terminal Emulation</h3>
-                    <p>Full xterm.js terminal with VT100/VT220 emulation, 24-bit ANSI color, cursor blink, 1000-line scrollback, and automatic viewport fitting. Clickable URLs via web-links addon.</p>
-                    <div class="mini-terminal"><span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> help<br><span class="t-m">  about     &#8212; About me</span><br><span class="t-m">  repos     &#8212; GitHub repositories</span><br><span class="t-m">  skills    &#8212; Technical skills</span><br><span class="t-m">  neofetch  &#8212; System info</span></div>
-                </div>
-                <div class="bento-card bento-stat animate" style="transition-delay:.18s">
-                    <div class="big">15</div>
-                    <div class="label">Shell Commands</div>
-                </div>
-                <div class="bento-card animate" style="transition-delay:.2s">
-                    <h3 style="color:var(--mauve)">Virtual Filesystem</h3>
-                    <p>Navigate directories, read files, and discover content through a simulated Unix filesystem. Supports <code>ls</code>, <code>cd</code>, <code>cat</code>, and <code>pwd</code>.</p>
-                </div>
-                <div class="bento-card animate" style="transition-delay:.28s">
-                    <h3 style="color:var(--green)">GitHub Data Pipeline</h3>
-                    <p>Repo stats, languages, and profile info fetched daily via GitHub Actions. Data committed to <code>github.json</code> and hydrated into the virtual filesystem at load time.</p>
-                </div>
-                <div class="bento-card animate" style="transition-delay:.36s">
-                    <h3 style="color:var(--peach)">Tab Completion</h3>
-                    <p>Context-aware completion for commands and file paths. Common prefix expansion with candidate cycling on repeated Tab presses.</p>
-                </div>
-                <div class="bento-card bento-stat animate" style="transition-delay:.1s">
-                    <div class="big" style="color:var(--teal)">24</div>
-                    <div class="label">Bit ANSI Color</div>
-                </div>
-                <div class="bento-card bento-hero animate" style="transition-delay:.18s">
-                    <h3 style="color:var(--red)">Boot Animation</h3>
-                    <p>Simulated BIOS and kernel boot sequence with ASCII art logo. Progressive line reveal with randomized timing. Skippable with any keypress for returning visitors.</p>
-                    <div class="mini-terminal"><span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> skills<br><span class="t-m">JavaScript  </span><span class="t-g">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span> <span class="t-b">95%</span><br><span class="t-m">TypeScript  </span><span class="t-g">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><span class="t-m">&#9617;</span> <span class="t-b">90%</span><br><span class="t-m">Python      </span><span class="t-g">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span><span class="t-m">&#9617;&#9617;</span> <span class="t-b">85%</span></div>
-                </div>
-                <div class="bento-card animate" style="transition-delay:.26s">
-                    <h3 style="color:var(--yellow)">Permalink Support</h3>
-                    <p>Share direct links to commands via URL hash. Visiting <code>#neofetch</code> auto-runs the command on page load. Bookmarkable deep links to any output.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="grid">
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">01</span><span class="cell-name">Premise</span></div>
+    <h2>A whole tiny <mark>OS</mark> in the browser tab.</h2>
+    <p>Tidepool is a terminal-first portfolio rendered with <strong>xterm.js</strong>. Every page is a shell command — <code>help</code> for the catalog, <code>cat about.md</code> for the bio, <code>repos</code> for a live table of GitHub repositories.</p>
+    <p>A virtual Unix filesystem lets you <code>cd projects && ls -l</code>. Tab completion, command history, ANSI 24-bit color, and a boot animation make it feel like a real shell.</p>
+  </div>
 
-    <!-- Capabilities -->
-    <section style="background:var(--mantle)">
-        <div class="container">
-            <div class="section-label animate">CAPABILITIES</div>
-            <h2 class="section-title animate" style="transition-delay:.08s">Shell commands</h2>
-            <p class="section-desc animate" style="transition-delay:.16s">15 commands with aliases. Full keyboard shortcuts. Works on desktop and mobile.</p>
-            <div class="pills">
-                <div class="pill animate"><span class="dot dot-g"></span>help</div>
-                <div class="pill animate"><span class="dot dot-g"></span>neofetch</div>
-                <div class="pill animate"><span class="dot dot-g"></span>repos</div>
-                <div class="pill animate"><span class="dot dot-g"></span>skills</div>
-                <div class="pill animate"><span class="dot dot-g"></span>about</div>
-                <div class="pill animate"><span class="dot dot-g"></span>contact</div>
-                <div class="pill animate"><span class="dot dot-g"></span>resume</div>
-                <div class="pill animate"><span class="dot dot-g"></span>cat</div>
-                <div class="pill animate"><span class="dot dot-g"></span>ls</div>
-                <div class="pill animate"><span class="dot dot-g"></span>cd</div>
-                <div class="pill animate"><span class="dot dot-g"></span>pwd</div>
-                <div class="pill animate"><span class="dot dot-g"></span>whoami</div>
-                <div class="pill animate"><span class="dot dot-g"></span>clear</div>
-                <div class="pill animate"><span class="dot dot-g"></span>history</div>
-                <div class="pill animate"><span class="dot dot-g"></span>Tab Completion</div>
-                <div class="pill animate"><span class="dot dot-g"></span>Permalinks</div>
-                <div class="pill animate"><span class="dot dot-g"></span>Boot Animation</div>
-                <div class="pill animate"><span class="dot dot-y"></span>Mobile Touch</div>
-            </div>
-            <div style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ov0)">
-                <span style="color:var(--green)">&#9679;</span> Full &nbsp;
-                <span style="color:var(--yellow)">&#9679;</span> Touch Button &nbsp;
-                <span style="color:var(--sf2)">&#9679;</span> Not Supported
-            </div>
-        </div>
-    </section>
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">02</span><span class="cell-name">Specs</span></div>
+    <h2>What's running.</h2>
+    <div class="feat">
+      <div class="k">TERMINAL</div><div class="v"><b>xterm.js</b> · VT100/VT220 · 24-bit ANSI · 1000-line scrollback</div>
+      <div class="k">ADDONS</div><div class="v"><b>@xterm/addon-fit</b> for viewport · <b>@xterm/addon-web-links</b> for clickable URLs</div>
+      <div class="k">COMMANDS</div><div class="v"><b>14 core</b> · help · ls · cd · cat · pwd · whoami · history · clear · about · contact · resume · skills · repos · neofetch</div>
+      <div class="k">DATA</div><div class="v">GitHub API via daily <b>gh CLI</b> Action · committed to <code>public/data/github.json</code> · no API tokens reach the frontend</div>
+      <div class="k">HISTORY</div><div class="v">localStorage-persisted · 200 entries · arrow-key recall</div>
+      <div class="k">STACK</div><div class="v">Vanilla JS · Vite · zero runtime deps beyond xterm.js</div>
+    </div>
+  </div>
+</div>
 
-    <!-- Architecture -->
-    <section id="architecture">
-        <div class="container">
-            <div class="section-label animate">ARCHITECTURE</div>
-            <h2 class="section-title animate" style="transition-delay:.08s">Vite + xterm.js</h2>
-            <p class="section-desc animate" style="transition-delay:.16s">Modular JavaScript with Vite bundling. Each command is an independent module. GitHub data fetched daily via CI.</p>
-            <div class="arch-grid">
-                <div class="arch-card animate" style="transition-delay:.1s"><div class="arch-num">1</div><h3>Terminal Layer</h3><p>xterm.js with fit and web-links addons. VT100/VT220 emulation, 24-bit color, 1000-line scrollback. Automatic viewport fitting on resize.</p></div>
-                <div class="arch-card animate" style="transition-delay:.2s"><div class="arch-num">2</div><h3>Shell Engine</h3><p>Input handling, prompt rendering, command dispatch, and history navigation. Tab completion with context-aware path and command matching.</p></div>
-                <div class="arch-card animate" style="transition-delay:.3s"><div class="arch-num">3</div><h3>Virtual Filesystem</h3><p>In-memory directory tree with <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>pwd</code>. Static content plus GitHub data hydrated at load time from <code>github.json</code>.</p></div>
-                <div class="arch-card animate" style="transition-delay:.4s"><div class="arch-num">4</div><h3>Data Pipeline</h3><p>GitHub Actions runs daily, fetches repo stats via <code>gh</code> CLI, commits <code>github.json</code> to <code>public/data/</code>. No API tokens exposed to the frontend.</p></div>
-            </div>
-        </div>
-    </section>
+<div class="grid">
+  <div class="cell full">
+    <div class="cell-header"><span class="cell-num">03</span><span class="cell-name">Quickstart</span></div>
+    <h2>Clone, install, run.</h2>
+    <p>Standard Vite project. The dev server prints a local URL (usually <code>http://localhost:5173</code>).</p>
+<pre class="code"><span class="c"># Prereqs: Node.js 18+</span>
+$ <span class="k">git clone</span> https://github.com/Real-Fruit-Snacks/Tidepool.git
+$ <span class="k">cd</span> Tidepool
+$ <span class="k">npm</span> install
+$ <span class="k">npm</span> run dev                   <span class="c"># → http://localhost:5173</span>
 
-    <!-- Getting Started -->
-    <section style="background:var(--mantle)">
-        <div class="container">
-            <div class="section-label animate">GETTING STARTED</div>
-            <h2 class="section-title animate" style="transition-delay:.08s">Clone and run</h2>
-            <p class="section-desc animate" style="transition-delay:.16s">Node.js and npm required. Vite dev server starts in seconds.</p>
-            <div class="two-col">
-                <div class="terminal animate" style="transition-delay:.1s">
-                    <div class="terminal-bar"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-label">build.sh</span></div>
-                    <div class="terminal-body"><pre><span class="t-g">$</span> git clone https://github.com/Real-Fruit-Snacks/Tidepool.git
-<span class="t-g">$</span> cd Tidepool &amp;&amp; npm install
-<span class="t-g">$</span> npm run dev
+<span class="c"># Production build (hashed assets, xterm.js split into its own chunk)</span>
+$ <span class="k">npm</span> run build
+$ <span class="k">npm</span> run preview
 
-<span class="t-b">VITE ready in 200ms</span>
-<span class="t-b">http://localhost:5173</span></pre></div>
-                </div>
-                <div class="terminal animate" style="transition-delay:.25s">
-                    <div class="terminal-bar"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-label">usage.sh</span></div>
-                    <div class="terminal-body"><pre><span class="t-m"># Production build</span>
-<span class="t-g">$</span> npm run build
-<span class="t-g">$</span> npm run preview
+<span class="c"># Inside the running terminal</span>
+$ help
+$ neofetch
+$ cat about.md
+$ repos</pre>
+  </div>
+</div>
 
-<span class="t-m"># Try commands</span>
-<span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> neofetch
-<span class="t-b">visitor@real-fruit-snacks:~</span> <span class="t-g">$</span> repos</pre></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="grid">
+  <div class="cell full">
+    <div class="cell-header"><span class="cell-num">04</span><span class="cell-name">Reference</span></div>
+    <h2>The shell surface.</h2>
+    <p>Every page in the portfolio is a command. Tab completes, arrows browse history, hash-routing makes every command bookmarkable.</p>
+<div class="ref">
+<h4>COMMANDS</h4>
+<div><code>help · ?</code><span class="desc">Categorized command listing</span></div>
+<div><code>clear · cls</code><span class="desc">Clear the terminal</span></div>
+<div><code>history</code><span class="desc">Show numbered command history</span></div>
+<div><code>pwd</code><span class="desc">Print working directory</span></div>
+<div><code>cd</code><span class="desc">Change directory (~ · - · ..)</span></div>
+<div><code>ls · dir · ll</code><span class="desc">List directory (grid + long)</span></div>
+<div><code>cat · less · more</code><span class="desc">Display file contents</span></div>
+<div><code>whoami</code><span class="desc">Display current user</span></div>
+<div><code>about</code><span class="desc">About me</span></div>
+<div><code>contact · email · socials</code><span class="desc">Contact information</span></div>
+<div><code>resume · cv</code><span class="desc">View resume</span></div>
+<div><code>skills · tech · stack</code><span class="desc">Skills with progress bars</span></div>
+<div><code>repos · projects</code><span class="desc">GitHub repositories table</span></div>
+<div><code>neofetch · fetch</code><span class="desc">System info with ASCII art</span></div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-line"></div>
-            <div class="footer-grid">
-                <div><h4>Documentation</h4><ul><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#quick-start">Quick Start</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#features">Features</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#architecture">Architecture</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool#command-reference">Commands</a></li></ul></div>
-                <div><h4>Resources</h4><ul><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool/issues">Report Issue</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/CONTRIBUTING.md">Contributing</a></li><li><a href="https://xtermjs.org/">xterm.js</a></li><li><a href="https://vitejs.dev/">Vite</a></li></ul></div>
-                <div><h4>Toolkit</h4><ul><li><a href="https://github.com/Real-Fruit-Snacks/Sunken-Archive">Sunken-Archive</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Deadwater">Deadwater</a></li><li><a href="https://github.com/Real-Fruit-Snacks/Shallows">Shallows</a></li><li><a href="https://github.com/Real-Fruit-Snacks">View All &#8594;</a></li></ul></div>
-                <div><h4>License</h4><p>MIT License<br>Copyright &#169; 2026<br>Real-Fruit-Snacks</p></div>
-            </div>
-            <div class="footer-bottom">Part of the Real-Fruit-Snacks reference collection</div>
-        </div>
-    </footer>
+<h4>KEYBOARD</h4>
+<div><code>Tab</code><span class="desc">Autocomplete commands and file paths</span></div>
+<div><code>Up / Down</code><span class="desc">Browse command history</span></div>
+<div><code>Home / End</code><span class="desc">Jump to start / end of line</span></div>
+<div><code>Ctrl+C</code><span class="desc">Cancel current input</span></div>
+<div><code>Ctrl+L</code><span class="desc">Clear screen</span></div>
+<div><code>Ctrl+U</code><span class="desc">Clear line</span></div>
 
-    <script>
-    const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target)}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
-    document.querySelectorAll('.animate,.animate-scale').forEach(el=>obs.observe(el));
-    function countUp(el){const t=parseInt(el.dataset.target),s=el.dataset.suffix||'',p=el.dataset.prefix||'',d=1500,st=performance.now();function u(n){const pr=Math.min((n-st)/d,1),e=1-Math.pow(1-pr,3);el.textContent=p+Math.floor(t*e)+s;if(pr<1)requestAnimationFrame(u)}requestAnimationFrame(u)}
-    const sobs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){countUp(el.target);sobs.unobserve(el.target)}})},{threshold:.5});
-    document.querySelectorAll('.stat-num').forEach(el=>sobs.observe(el));
-    window.addEventListener('scroll',()=>{document.querySelector('.nav').style.borderBottomColor=window.scrollY>20?'rgba(49,50,68,0.8)':'rgba(49,50,68,0.3)'});
-    </script>
+<h4>VIRTUAL FILESYSTEM</h4>
+<div><code>~/about.md</code><span class="desc">Developer biography</span></div>
+<div><code>~/contact.md</code><span class="desc">Email and social links</span></div>
+<div><code>~/resume.md</code><span class="desc">Full resume</span></div>
+<div><code>~/skills.md</code><span class="desc">Technical skills</span></div>
+<div><code>~/projects/&lt;repo&gt;.md</code><span class="desc">Per-repository details (from GitHub)</span></div>
+
+<h4>PERMALINK</h4>
+<div><code>#neofetch</code><span class="desc">Auto-runs neofetch on load</span></div>
+<div><code>#repos</code><span class="desc">Auto-runs repos on load</span></div>
+<div><code>#cat about.md</code><span class="desc">Any command can be permalinked</span></div>
+</div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">05</span><span class="cell-name">Architecture</span></div>
+    <h2>Boot, then shell.</h2>
+    <p>Boot sequence runs first; the shell takes over once it finishes. All output flows through the formatter for consistent ANSI styling and box-drawn tables.</p>
+<pre class="code"><span class="c">src/</span>
+main.js              <span class="c">// Entry point</span>
+shell.js             <span class="c">// Input · prompt · execution</span>
+terminal.js          <span class="c">// xterm.js setup with addons</span>
+filesystem.js        <span class="c">// Virtual filesystem</span>
+formatter.js         <span class="c">// ANSI · box drawing · tables</span>
+github.js            <span class="c">// GitHub data loader</span>
+history.js           <span class="c">// Persistent command history</span>
+autocomplete.js      <span class="c">// Tab completion</span>
+boot.js              <span class="c">// Boot animation</span>
+permalink.js         <span class="c">// URL hash read/write</span>
+theme.js             <span class="c">// Catppuccin Mocha palette</span>
+commands/            <span class="c">// Per-command implementations</span></pre>
+  </div>
+
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">06</span><span class="cell-name">Closing</span></div>
+    <h2>Local data, no tracking.</h2>
+    <p>GitHub data is fetched by a daily Action and committed to <code>public/data/github.json</code> — no API tokens reach the frontend, no runtime API calls. Command history and theme persist in localStorage on your device only.</p>
+    <p>Tested across current Chrome, Firefox, Safari, and Edge. Mobile-friendly with a touch keyboard toggle.</p>
+    <p style="color:var(--ov1);font-size:14px;font-style:italic">A whole portfolio in a shell, in a tab, in a browser.</p>
+  </div>
+</div>
+
+<div class="band">
+  <div class="band-tag">→ TRY IT</div>
+  <h3>Type <span style="font-family:'JetBrains Mono',monospace">help</span> in the terminal<br>and follow the prompts.</h3>
+  <a class="cta" href="https://Real-Fruit-Snacks.github.io/Tidepool/">Open demo</a>
+</div>
+
+<footer>
+  <span>© 2026 Real-Fruit-Snacks · MIT</span>
+  <span>
+    <a href="https://real-fruit-snacks.github.io/">all projects</a> &nbsp;·&nbsp;
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool">github</a> &nbsp;·&nbsp;
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/CHANGELOG.md">changelog</a>
+  </span>
+</footer>
+
 </body>
 </html>
