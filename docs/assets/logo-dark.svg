@@ -10,12 +10,16 @@
   <line x1="200" y1="140" x2="200" y2="200" stroke="#313244" stroke-width="1"/>
   <line x1="400" y1="140" x2="400" y2="200" stroke="#313244" stroke-width="1"/>
   <line x1="600" y1="140" x2="600" y2="200" stroke="#313244" stroke-width="1"/>
-  <text x="20" y="158" font-family="'JetBrains Mono', 'SF Mono', monospace" font-size="9" font-weight="600" fill="#6c7086" letter-spacing="2">COMMANDS</text>
-  <text x="20" y="186" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="#cdd6f4" letter-spacing="-1">14<tspan fill="#f5c2e7" font-size="14"> × CORE</tspan></text>
-  <text x="220" y="158" font-family="'JetBrains Mono', 'SF Mono', monospace" font-size="9" font-weight="600" fill="#6c7086" letter-spacing="2">FILESYSTEM</text>
-  <text x="220" y="186" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="#cdd6f4" letter-spacing="-1">VIRTUAL<tspan fill="#f5c2e7" font-size="14"> · UNIX-LIKE</tspan></text>
-  <text x="420" y="158" font-family="'JetBrains Mono', 'SF Mono', monospace" font-size="9" font-weight="600" fill="#6c7086" letter-spacing="2">THEME</text>
-  <text x="420" y="186" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="#cdd6f4" letter-spacing="-1">CATPPUCCIN<tspan fill="#f5c2e7" font-size="14"> · 24-BIT</tspan></text>
-  <text x="620" y="158" font-family="'JetBrains Mono', 'SF Mono', monospace" font-size="9" font-weight="600" fill="#6c7086" letter-spacing="2">STACK</text>
-  <text x="620" y="186" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="#cdd6f4" letter-spacing="-1">VANILLA<tspan fill="#f5c2e7" font-size="14"> · VITE</tspan></text>
+  <text x="20" y="158" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="600" fill="#6c7086" letter-spacing="1">COMMANDS</text>
+  <text x="20" y="175" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#f5c2e7" letter-spacing="0">14 CORE</text>
+  <text x="20" y="190" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" fill="#585b70" letter-spacing="0">LS · CD · CAT · GREP · HELP</text>
+  <text x="220" y="158" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="600" fill="#6c7086" letter-spacing="1">FILESYSTEM</text>
+  <text x="220" y="175" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#f5c2e7" letter-spacing="0">VIRTUAL</text>
+  <text x="220" y="190" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" fill="#585b70" letter-spacing="0">UNIX-LIKE · IN-MEMORY TREE</text>
+  <text x="420" y="158" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="600" fill="#6c7086" letter-spacing="1">THEME</text>
+  <text x="420" y="175" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#f5c2e7" letter-spacing="0">CATPPUCCIN</text>
+  <text x="420" y="190" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" fill="#585b70" letter-spacing="0">24-BIT TRUE COLOR · MOCHA</text>
+  <text x="620" y="158" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="600" fill="#6c7086" letter-spacing="1">STACK</text>
+  <text x="620" y="175" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#f5c2e7" letter-spacing="0">VANILLA JS</text>
+  <text x="620" y="190" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="8" fill="#585b70" letter-spacing="0">VITE · XTERM.JS · NO DEPS</text>
 </svg>
