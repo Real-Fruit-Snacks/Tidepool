@@ -11,6 +11,51 @@
   },
   "repos": [
     {
+      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Cove",
+      "stars": 0,
+      "updated_at": "2026-05-03T13:06:11Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cove"
+    },
+    {
+      "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Wake",
+      "stars": 0,
+      "updated_at": "2026-05-03T13:01:08Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Wake"
+    },
+    {
+      "description": "Matt — Offensive Security Researcher. Resume & project index.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "Real-Fruit-Snacks.github.io",
+      "stars": 0,
+      "updated_at": "2026-05-03T12:56:49Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks.github.io"
+    },
+    {
+      "description": "Water-themed security toolkit — 34 tools for penetration testing, red team operations, and security research",
+      "forks": 0,
+      "language": null,
+      "name": "Real-Fruit-Snacks",
+      "stars": 0,
+      "updated_at": "2026-05-03T12:56:26Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-05-03T06:48:09Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Privilege escalation reasoning engine — parses LinPEAS/WinPEAS output and generates ranked exploitation playbooks",
       "forks": 0,
       "language": "Python",
@@ -20,15 +65,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Whirlpool"
     },
     {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-05-02T06:36:11Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
-    },
-    {
       "description": "Tradecraft, written down — a personal pentester's notebook. MkDocs Material site themed in Catppuccin Mocha, deployed to GitHub Pages.",
       "forks": 0,
       "language": null,
@@ -36,33 +72,6 @@
       "stars": 0,
       "updated_at": "2026-05-01T22:46:15Z",
       "url": "https://github.com/Real-Fruit-Snacks/MyNotes"
-    },
-    {
-      "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Wake",
-      "stars": 0,
-      "updated_at": "2026-05-01T21:36:40Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Wake"
-    },
-    {
-      "description": "Matt — Offensive Security Researcher. Resume & project index.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "Real-Fruit-Snacks.github.io",
-      "stars": 0,
-      "updated_at": "2026-05-01T21:11:13Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks.github.io"
-    },
-    {
-      "description": "Water-themed security toolkit — 34 tools for penetration testing, red team operations, and security research",
-      "forks": 0,
-      "language": null,
-      "name": "Real-Fruit-Snacks",
-      "stars": 0,
-      "updated_at": "2026-05-01T21:02:12Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Real-Fruit-Snacks"
     },
     {
       "description": "Learn x86 assembly in your browser - interactive simulator, stack visualizer, register quiz, and tutorials from fundamentals to reverse engineering",
@@ -371,15 +380,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Neap"
     },
     {
-      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Cove",
-      "stars": 0,
-      "updated_at": "2026-04-30T23:01:18Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Cove"
-    },
-    {
       "description": "SMB hash bait for authorized red team engagements — drops poisoned .url/.scf/.xml payloads onto writable shares to coerce NTLM authentication via Responder",
       "forks": 0,
       "language": "Python",
@@ -500,5 +500,5 @@
     "TypeScript": 4,
     "Zig": 1
   },
-  "updated_at": "2026-05-03T06:48:03Z"
+  "updated_at": "2026-05-04T06:57:48Z"
 }
