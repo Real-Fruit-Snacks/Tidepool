@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tidepool / Interactive terminal portfolio</title>
+<meta name="description" content="Interactive terminal portfolio built on xterm.js. Virtual filesystem, daily GitHub data via CI, Catppuccin Mocha, tab completion, command history, boot animation, permalinks.">
+<meta property="og:title" content="Tidepool — Interactive terminal portfolio">
+<meta property="og:description" content="14 commands · virtual filesystem · xterm.js · Catppuccin Mocha · permalinks.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e1e2e'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Inter,sans-serif' font-size='20' font-weight='800' fill='%23cdd6f4'%3ET%3Ctspan fill='%23f5c2e7'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--base:#1e1e2e;--mantle:#181825;--crust:#11111b;--sf0:#313244;--sf1:#45475a;--sf2:#585b70;--ov0:#6c7086;--ov1:#7f849c;--ov2:#9399b2;--sub0:#a6adc8;--sub1:#bac2de;--text:#cdd6f4;--mauve:#cba6f7;--lav:#b4befe;--blue:#89b4fa;--sky:#89dceb;--teal:#94e2d5;--green:#a6e3a1;--yellow:#f9e2af;--peach:#fab387;--red:#f38ba8;--accent:#f5c2e7}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--crust);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.5}
+::selection{background:var(--accent);color:var(--crust)}
+a{color:inherit;text-decoration:none}
+.status{background:var(--crust);border-bottom:1px solid var(--text);padding:10px 24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono','SF Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ov2);position:sticky;top:0;z-index:10}
+.status .left{display:flex;gap:24px;flex-wrap:wrap}
+.status .right{display:flex;gap:16px;flex-wrap:wrap}
+.status b{color:var(--accent);font-weight:700}
+.status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px;vertical-align:middle;animation:pulse 2.5s infinite}
+.status a{color:var(--ov2);transition:color .15s}
+.status a:hover{color:var(--text)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero{border-bottom:1px solid var(--text);padding:64px 24px 0}
+.hero-inner{max-width:1280px;margin:0 auto}
+.hero .pop{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:var(--ov1);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:24px}
+.hero h1{font-family:'Inter',sans-serif;font-size:clamp(72px,13vw,180px);line-height:0.85;font-weight:800;letter-spacing:-0.05em;color:var(--text);margin-bottom:32px}
+.hero h1 .dot{color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;border-top:1px solid var(--sf1)}
+.hero-grid > div{padding:20px 24px;border-right:1px solid var(--sf1)}
+.hero-grid > div:last-child{border-right:none}
+.hero-grid .label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ov0);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:8px}
+.hero-grid .value{font-family:'Inter',sans-serif;font-size:28px;font-weight:700;color:var(--text);letter-spacing:-0.02em}
+.hero-grid .value .unit{color:var(--accent);font-size:0.55em;font-weight:600;margin-left:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--sf1)}
+.cell{padding:48px 32px;border-right:1px solid var(--sf1);position:relative}
+.cell:last-child{border-right:none}
+.cell.full{grid-column:1/-1;border-right:none}
+.cell-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:14px;border-bottom:1px dashed var(--sf1)}
+.cell-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.15em;font-weight:700}
+.cell-name{font-family:'Inter',sans-serif;font-size:13px;color:var(--ov2);letter-spacing:0.2em;text-transform:uppercase;font-weight:500}
+.cell h2{font-size:36px;line-height:1.05;font-weight:700;letter-spacing:-0.025em;margin-bottom:16px}
+.cell h2 mark{background:var(--accent);color:var(--crust);padding:0 6px;font-style:normal}
+.cell p{color:var(--sub0);font-size:16px;line-height:1.65;margin-bottom:14px}
+.cell p strong{color:var(--text);font-weight:600}
+.cell p code{font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--mantle);padding:2px 7px;border-radius:3px;color:var(--green)}
+.feat{display:grid;grid-template-columns:auto 1fr;gap:18px 24px;margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:13px}
+.feat .k{color:var(--accent);font-weight:700;letter-spacing:0.05em}
+.feat .v{color:var(--sub1);line-height:1.65}
+.feat .v b{color:var(--text);font-weight:600}
+pre.code{background:var(--mantle);border:1px solid var(--text);border-left:6px solid var(--accent);padding:20px 24px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.85;color:var(--sub1);overflow-x:auto;margin-top:20px}
+pre.code .c{color:var(--ov0)}
+pre.code .k{color:var(--mauve);font-weight:500}
+pre.code .s{color:var(--green)}
+pre.code .p{color:var(--peach)}
+pre.code .v{color:var(--blue)}
+.ref{background:var(--mantle);border:1px solid var(--sf0);padding:24px 28px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.85;color:var(--sub1);overflow-x:auto;margin-top:20px}
+.ref h4{font-size:10px;color:var(--ov0);letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin:14px 0 8px}
+.ref h4:first-child{margin-top:0}
+.ref code{color:var(--mauve);font-weight:500;display:inline-block;width:200px}
+.ref .desc{color:var(--sub1)}
+.band{background:var(--text);color:var(--crust);padding:48px 32px;border-bottom:1px solid var(--text);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px}
+.band-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600}
+.band h3{font-family:'Inter',sans-serif;font-weight:700;font-size:32px;line-height:1.1;letter-spacing:-0.02em}
+.band a.cta{background:var(--crust);color:var(--text);padding:16px 28px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:1px solid var(--crust);transition:all 0.15s;white-space:nowrap}
+.band a.cta:hover{background:var(--accent);color:var(--crust);border-color:var(--accent)}
+footer{padding:32px 24px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ov0);letter-spacing:0.1em;text-transform:uppercase;flex-wrap:wrap;gap:16px}
+footer a{color:var(--ov2);border-bottom:1px solid var(--sf0);transition:all .15s}
+footer a:hover{color:var(--text);border-bottom-color:var(--text)}
+@media (max-width:760px){.hero h1{font-size:64px}.hero-grid{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.cell{border-right:none;border-bottom:1px solid var(--sf1)}.cell:last-child{border-bottom:none}.band{grid-template-columns:1fr;text-align:left}.status{font-size:10px;padding:10px 14px}.status .left,.status .right{gap:14px}}
+</style>
+</head>
+<body>
+
+<div class="status">
+  <div class="left">
+    <span><b>TIDEPOOL</b></span>
+    <span><span class="dot"></span>STATUS · LIVE</span>
+    <span>XTERM.JS · BROWSER</span>
+  </div>
+  <div class="right">
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool">REPO</a>
+    <a href="https://Real-Fruit-Snacks.github.io/Tidepool/">DEMO</a>
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/LICENSE">MIT</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="pop">Real-Fruit-Snacks &nbsp;//&nbsp; terminal portfolio &nbsp;//&nbsp; vanilla js</span>
+    <h1>TIDEPOOL<span class="dot">.</span></h1>
+    <div class="hero-grid">
+      <div><div class="label">commands</div><div class="value">14<span class="unit"> CORE</span></div></div>
+      <div><div class="label">filesystem</div><div class="value">VIRTUAL<span class="unit"> · UNIX</span></div></div>
+      <div><div class="label">theme</div><div class="value">CATPPUCCIN<span class="unit"> · 24-BIT</span></div></div>
+      <div><div class="label">stack</div><div class="value">VANILLA<span class="unit"> · VITE</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="grid">
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">01</span><span class="cell-name">Premise</span></div>
+    <h2>A whole tiny <mark>OS</mark> in the browser tab.</h2>
+    <p>Tidepool is a terminal-first portfolio rendered with <strong>xterm.js</strong>. Every page is a shell command — <code>help</code> for the catalog, <code>cat about.md</code> for the bio, <code>repos</code> for a live table of GitHub repositories.</p>
+    <p>A virtual Unix filesystem lets you <code>cd projects && ls -l</code>. Tab completion, command history, ANSI 24-bit color, and a boot animation make it feel like a real shell.</p>
+  </div>
+
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">02</span><span class="cell-name">Specs</span></div>
+    <h2>What's running.</h2>
+    <div class="feat">
+      <div class="k">TERMINAL</div><div class="v"><b>xterm.js</b> · VT100/VT220 · 24-bit ANSI · 1000-line scrollback</div>
+      <div class="k">ADDONS</div><div class="v"><b>@xterm/addon-fit</b> for viewport · <b>@xterm/addon-web-links</b> for clickable URLs</div>
+      <div class="k">COMMANDS</div><div class="v"><b>14 core</b> · help · ls · cd · cat · pwd · whoami · history · clear · about · contact · resume · skills · repos · neofetch</div>
+      <div class="k">DATA</div><div class="v">GitHub API via daily <b>gh CLI</b> Action · committed to <code>public/data/github.json</code> · no API tokens reach the frontend</div>
+      <div class="k">HISTORY</div><div class="v">localStorage-persisted · 200 entries · arrow-key recall</div>
+      <div class="k">STACK</div><div class="v">Vanilla JS · Vite · zero runtime deps beyond xterm.js</div>
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell full">
+    <div class="cell-header"><span class="cell-num">03</span><span class="cell-name">Quickstart</span></div>
+    <h2>Clone, install, run.</h2>
+    <p>Standard Vite project. The dev server prints a local URL (usually <code>http://localhost:5173</code>).</p>
+<pre class="code"><span class="c"># Prereqs: Node.js 18+</span>
+$ <span class="k">git clone</span> https://github.com/Real-Fruit-Snacks/Tidepool.git
+$ <span class="k">cd</span> Tidepool
+$ <span class="k">npm</span> install
+$ <span class="k">npm</span> run dev                   <span class="c"># → http://localhost:5173</span>
+
+<span class="c"># Production build (hashed assets, xterm.js split into its own chunk)</span>
+$ <span class="k">npm</span> run build
+$ <span class="k">npm</span> run preview
+
+<span class="c"># Inside the running terminal</span>
+$ help
+$ neofetch
+$ cat about.md
+$ repos</pre>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell full">
+    <div class="cell-header"><span class="cell-num">04</span><span class="cell-name">Reference</span></div>
+    <h2>The shell surface.</h2>
+    <p>Every page in the portfolio is a command. Tab completes, arrows browse history, hash-routing makes every command bookmarkable.</p>
+<div class="ref">
+<h4>COMMANDS</h4>
+<div><code>help · ?</code><span class="desc">Categorized command listing</span></div>
+<div><code>clear · cls</code><span class="desc">Clear the terminal</span></div>
+<div><code>history</code><span class="desc">Show numbered command history</span></div>
+<div><code>pwd</code><span class="desc">Print working directory</span></div>
+<div><code>cd</code><span class="desc">Change directory (~ · - · ..)</span></div>
+<div><code>ls · dir · ll</code><span class="desc">List directory (grid + long)</span></div>
+<div><code>cat · less · more</code><span class="desc">Display file contents</span></div>
+<div><code>whoami</code><span class="desc">Display current user</span></div>
+<div><code>about</code><span class="desc">About me</span></div>
+<div><code>contact · email · socials</code><span class="desc">Contact information</span></div>
+<div><code>resume · cv</code><span class="desc">View resume</span></div>
+<div><code>skills · tech · stack</code><span class="desc">Skills with progress bars</span></div>
+<div><code>repos · projects</code><span class="desc">GitHub repositories table</span></div>
+<div><code>neofetch · fetch</code><span class="desc">System info with ASCII art</span></div>
+
+<h4>KEYBOARD</h4>
+<div><code>Tab</code><span class="desc">Autocomplete commands and file paths</span></div>
+<div><code>Up / Down</code><span class="desc">Browse command history</span></div>
+<div><code>Home / End</code><span class="desc">Jump to start / end of line</span></div>
+<div><code>Ctrl+C</code><span class="desc">Cancel current input</span></div>
+<div><code>Ctrl+L</code><span class="desc">Clear screen</span></div>
+<div><code>Ctrl+U</code><span class="desc">Clear line</span></div>
+
+<h4>VIRTUAL FILESYSTEM</h4>
+<div><code>~/about.md</code><span class="desc">Developer biography</span></div>
+<div><code>~/contact.md</code><span class="desc">Email and social links</span></div>
+<div><code>~/resume.md</code><span class="desc">Full resume</span></div>
+<div><code>~/skills.md</code><span class="desc">Technical skills</span></div>
+<div><code>~/projects/&lt;repo&gt;.md</code><span class="desc">Per-repository details (from GitHub)</span></div>
+
+<h4>PERMALINK</h4>
+<div><code>#neofetch</code><span class="desc">Auto-runs neofetch on load</span></div>
+<div><code>#repos</code><span class="desc">Auto-runs repos on load</span></div>
+<div><code>#cat about.md</code><span class="desc">Any command can be permalinked</span></div>
+</div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">05</span><span class="cell-name">Architecture</span></div>
+    <h2>Boot, then shell.</h2>
+    <p>Boot sequence runs first; the shell takes over once it finishes. All output flows through the formatter for consistent ANSI styling and box-drawn tables.</p>
+<pre class="code"><span class="c">src/</span>
+main.js              <span class="c">// Entry point</span>
+shell.js             <span class="c">// Input · prompt · execution</span>
+terminal.js          <span class="c">// xterm.js setup with addons</span>
+filesystem.js        <span class="c">// Virtual filesystem</span>
+formatter.js         <span class="c">// ANSI · box drawing · tables</span>
+github.js            <span class="c">// GitHub data loader</span>
+history.js           <span class="c">// Persistent command history</span>
+autocomplete.js      <span class="c">// Tab completion</span>
+boot.js              <span class="c">// Boot animation</span>
+permalink.js         <span class="c">// URL hash read/write</span>
+theme.js             <span class="c">// Catppuccin Mocha palette</span>
+commands/            <span class="c">// Per-command implementations</span></pre>
+  </div>
+
+  <div class="cell">
+    <div class="cell-header"><span class="cell-num">06</span><span class="cell-name">Closing</span></div>
+    <h2>Local data, no tracking.</h2>
+    <p>GitHub data is fetched by a daily Action and committed to <code>public/data/github.json</code> — no API tokens reach the frontend, no runtime API calls. Command history and theme persist in localStorage on your device only.</p>
+    <p>Tested across current Chrome, Firefox, Safari, and Edge. Mobile-friendly with a touch keyboard toggle.</p>
+    <p style="color:var(--ov1);font-size:14px;font-style:italic">A whole portfolio in a shell, in a tab, in a browser.</p>
+  </div>
+</div>
+
+<div class="band">
+  <div class="band-tag">→ TRY IT</div>
+  <h3>Type <span style="font-family:'JetBrains Mono',monospace">help</span> in the terminal<br>and follow the prompts.</h3>
+  <a class="cta" href="https://Real-Fruit-Snacks.github.io/Tidepool/">Open demo</a>
+</div>
+
+<footer>
+  <span>© 2026 Real-Fruit-Snacks · MIT</span>
+  <span>
+    <a href="https://real-fruit-snacks.github.io/">all projects</a> &nbsp;·&nbsp;
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool">github</a> &nbsp;·&nbsp;
+    <a href="https://github.com/Real-Fruit-Snacks/Tidepool/blob/main/CHANGELOG.md">changelog</a>
+  </span>
+</footer>
+
+</body>
+</html>
