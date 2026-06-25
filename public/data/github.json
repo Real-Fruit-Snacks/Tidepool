@@ -7,17 +7,17 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 15
+    "public_repos": 18
   },
   "repos": [
     {
-      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
+      "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
       "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-gym-tracker",
+      "language": "JavaScript",
+      "name": "Wake",
       "stars": 0,
-      "updated_at": "2026-06-20T15:21:03Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
+      "updated_at": "2026-06-25T01:05:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Wake"
     },
     {
       "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
@@ -25,8 +25,26 @@
       "language": "TypeScript",
       "name": "wayback-linker",
       "stars": 0,
-      "updated_at": "2026-06-20T15:19:45Z",
+      "updated_at": "2026-06-25T01:03:48Z",
       "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
+    },
+    {
+      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-gym-tracker",
+      "stars": 0,
+      "updated_at": "2026-06-25T01:02:57Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
+    },
+    {
+      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-github-updater",
+      "stars": 0,
+      "updated_at": "2026-06-25T01:02:40Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
     },
     {
       "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
@@ -34,8 +52,35 @@
       "language": "TypeScript",
       "name": "Tidemark",
       "stars": 0,
-      "updated_at": "2026-06-20T14:11:44Z",
+      "updated_at": "2026-06-25T01:02:25Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
+    },
+    {
+      "description": "A beautiful, fully-functional website preview for your Obsidian vault featuring interactive file explorer, native search, live local graph, and 16 premium themes.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-vault-website-view",
+      "stars": 0,
+      "updated_at": "2026-06-25T01:01:22Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-website-view"
+    },
+    {
+      "description": "A premium Chrome Extension to bulk-manage your YouTube account. Features a beautiful UI to bulk-remove 'Watch Later' videos and mass-unsubscribe from channels.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "youtube-automation-toolkit",
+      "stars": 0,
+      "updated_at": "2026-06-25T00:58:49Z",
+      "url": "https://github.com/Real-Fruit-Snacks/youtube-automation-toolkit"
+    },
+    {
+      "description": "An engineering-sheet incremental. Build a factory one machine at a time, prestige for Schematics, publish for Patents, exhibit for Legacy Marks.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Blueprint",
+      "stars": 2,
+      "updated_at": "2026-06-24T20:59:02Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
     },
     {
       "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
@@ -45,24 +90,6 @@
       "stars": 0,
       "updated_at": "2026-06-20T13:58:58Z",
       "url": "https://github.com/Real-Fruit-Snacks/Cove"
-    },
-    {
-      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-github-updater",
-      "stars": 0,
-      "updated_at": "2026-06-20T13:50:43Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
-    },
-    {
-      "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Wake",
-      "stars": 0,
-      "updated_at": "2026-06-20T13:43:14Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Wake"
     },
     {
       "description": "Magically scope your entire Obsidian vault down to a specific folder. Focus on what matters.",
@@ -81,15 +108,6 @@
       "stars": 0,
       "updated_at": "2026-06-19T21:23:25Z",
       "url": "https://github.com/Real-Fruit-Snacks/Crownfall"
-    },
-    {
-      "description": "An engineering-sheet incremental. Build a factory one machine at a time, prestige for Schematics, publish for Patents, exhibit for Legacy Marks.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Blueprint",
-      "stars": 1,
-      "updated_at": "2026-06-19T15:44:10Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
     },
     {
       "description": "A browser survivors-like about a fighting retreat. Kiting becomes base-building.",
@@ -148,8 +166,8 @@
   ],
   "languages": {
     "HTML": 1,
-    "JavaScript": 8,
-    "TypeScript": 6
+    "JavaScript": 9,
+    "TypeScript": 7
   },
-  "updated_at": "2026-06-24T07:06:53Z"
+  "updated_at": "2026-06-25T07:06:54Z"
 }
