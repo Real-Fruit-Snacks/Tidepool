@@ -11,13 +11,13 @@
   },
   "repos": [
     {
-      "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
+      "description": "A beautiful, fully-functional website preview for your Obsidian vault featuring interactive file explorer, native search, live local graph, and 16 premium themes.",
       "forks": 0,
-      "language": "JavaScript",
-      "name": "Wake",
+      "language": "TypeScript",
+      "name": "obsidian-vault-website-view",
       "stars": 0,
-      "updated_at": "2026-06-25T01:05:41Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Wake"
+      "updated_at": "2026-06-25T23:39:38Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-website-view"
     },
     {
       "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
@@ -25,8 +25,26 @@
       "language": "TypeScript",
       "name": "wayback-linker",
       "stars": 0,
-      "updated_at": "2026-06-25T01:03:48Z",
+      "updated_at": "2026-06-25T23:19:11Z",
       "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
+    },
+    {
+      "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Wake",
+      "stars": 0,
+      "updated_at": "2026-06-25T23:19:06Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Wake"
+    },
+    {
+      "description": "Magically scope your entire Obsidian vault down to a specific folder. Focus on what matters.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-nested-vaults",
+      "stars": 0,
+      "updated_at": "2026-06-25T23:19:03Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
     },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
@@ -34,7 +52,7 @@
       "language": "TypeScript",
       "name": "obsidian-gym-tracker",
       "stars": 0,
-      "updated_at": "2026-06-25T01:02:57Z",
+      "updated_at": "2026-06-25T23:18:59Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
     },
     {
@@ -43,8 +61,17 @@
       "language": "TypeScript",
       "name": "obsidian-github-updater",
       "stars": 0,
-      "updated_at": "2026-06-25T01:02:40Z",
+      "updated_at": "2026-06-25T23:18:51Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
+    },
+    {
+      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Cove",
+      "stars": 0,
+      "updated_at": "2026-06-25T23:18:20Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cove"
     },
     {
       "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
@@ -52,17 +79,8 @@
       "language": "TypeScript",
       "name": "Tidemark",
       "stars": 0,
-      "updated_at": "2026-06-25T01:02:25Z",
+      "updated_at": "2026-06-25T23:14:20Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
-    },
-    {
-      "description": "A beautiful, fully-functional website preview for your Obsidian vault featuring interactive file explorer, native search, live local graph, and 16 premium themes.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-vault-website-view",
-      "stars": 0,
-      "updated_at": "2026-06-25T01:01:22Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-website-view"
     },
     {
       "description": "A premium Chrome Extension to bulk-manage your YouTube account. Features a beautiful UI to bulk-remove 'Watch Later' videos and mass-unsubscribe from channels.",
@@ -81,24 +99,6 @@
       "stars": 2,
       "updated_at": "2026-06-24T20:59:02Z",
       "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
-    },
-    {
-      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Cove",
-      "stars": 0,
-      "updated_at": "2026-06-20T13:58:58Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Cove"
-    },
-    {
-      "description": "Magically scope your entire Obsidian vault down to a specific folder. Focus on what matters.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-nested-vaults",
-      "stars": 0,
-      "updated_at": "2026-06-20T01:27:20Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
     },
     {
       "description": "A pixel-art medieval wave-defense incremental game",
@@ -169,5 +169,5 @@
     "JavaScript": 9,
     "TypeScript": 7
   },
-  "updated_at": "2026-06-25T07:06:54Z"
+  "updated_at": "2026-06-26T07:13:23Z"
 }
