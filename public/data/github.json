@@ -11,6 +11,15 @@
   },
   "repos": [
     {
+      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "wayback-linker",
+      "stars": 0,
+      "updated_at": "2026-06-30T00:09:54Z",
+      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
+    },
+    {
       "description": "A beautiful, fully-functional website preview for your Obsidian vault featuring interactive file explorer, native search, live local graph, and 16 premium themes.",
       "forks": 0,
       "language": "TypeScript",
@@ -18,15 +27,6 @@
       "stars": 0,
       "updated_at": "2026-06-25T23:39:38Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-website-view"
-    },
-    {
-      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "wayback-linker",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:19:11Z",
-      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
     },
     {
       "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
@@ -169,5 +169,5 @@
     "JavaScript": 9,
     "TypeScript": 7
   },
-  "updated_at": "2026-06-29T07:35:15Z"
+  "updated_at": "2026-06-30T07:13:13Z"
 }
