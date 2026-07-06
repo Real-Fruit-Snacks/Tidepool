@@ -7,9 +7,63 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 18
+    "public_repos": 24
   },
   "repos": [
+    {
+      "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "terminal-workbench",
+      "stars": 0,
+      "updated_at": "2026-07-06T00:57:39Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
+    },
+    {
+      "description": "Terminal Workbench colorschemes for classic Vim - calm graphite surfaces, restrained ANSI-style accents. Dark + light, true color with 256-color fallback.",
+      "forks": 0,
+      "language": "Vim Script",
+      "name": "terminal-workbench-vim",
+      "stars": 0,
+      "updated_at": "2026-07-05T17:49:56Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vim"
+    },
+    {
+      "description": "A calm, dense, high-contrast VS Code theme for people who live in panes, shells, logs, and code. Graphite surfaces, restrained ANSI-style accents, dark and light variants.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-vscode",
+      "stars": 0,
+      "updated_at": "2026-07-05T17:19:17Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode"
+    },
+    {
+      "description": "Terminal Workbench design system: portable theme spec, drop-in CSS tokens, and a live demo. Graphite surfaces, restrained accents, dark + light.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "terminal-workbench-design-system",
+      "stars": 0,
+      "updated_at": "2026-07-05T15:26:49Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system"
+    },
+    {
+      "description": "A modern terminal-inspired theme for Brave: layered green-graphite chrome, restrained mint accents, and full dark and light modes.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-brave",
+      "stars": 0,
+      "updated_at": "2026-07-05T14:57:46Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-brave"
+    },
+    {
+      "description": "Terminal Workbench for Windows Terminal: graphite backgrounds, restrained ANSI-style accents, dark and light color schemes with matching window themes.",
+      "forks": 0,
+      "language": null,
+      "name": "terminal-workbench-windows-terminal",
+      "stars": 0,
+      "updated_at": "2026-07-05T14:48:36Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal"
+    },
     {
       "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
       "forks": 0,
@@ -165,9 +219,11 @@
     }
   ],
   "languages": {
-    "HTML": 1,
-    "JavaScript": 9,
-    "TypeScript": 7
+    "CSS": 1,
+    "HTML": 2,
+    "JavaScript": 11,
+    "TypeScript": 7,
+    "Vim Script": 1
   },
-  "updated_at": "2026-07-05T08:40:30Z"
+  "updated_at": "2026-07-06T09:55:54Z"
 }
