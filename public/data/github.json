@@ -7,26 +7,35 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 26
+    "public_repos": 28
   },
   "repos": [
+    {
+      "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Slate",
+      "stars": 0,
+      "updated_at": "2026-07-08T03:17:28Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Slate"
+    },
+    {
+      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Cove",
+      "stars": 0,
+      "updated_at": "2026-07-08T03:11:03Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cove"
+    },
     {
       "description": "Publish an Obsidian vault as a fast static website.",
       "forks": 0,
       "language": "Python",
       "name": "vault",
       "stars": 0,
-      "updated_at": "2026-07-07T03:08:42Z",
+      "updated_at": "2026-07-08T02:40:44Z",
       "url": "https://github.com/Real-Fruit-Snacks/vault"
-    },
-    {
-      "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
-      "forks": 0,
-      "language": "CSS",
-      "name": "terminal-workbench",
-      "stars": 0,
-      "updated_at": "2026-07-07T02:09:08Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
     },
     {
       "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
@@ -34,8 +43,26 @@
       "language": null,
       "name": "obsidian-plugins",
       "stars": 0,
-      "updated_at": "2026-07-06T16:37:17Z",
+      "updated_at": "2026-07-08T02:19:53Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-plugins"
+    },
+    {
+      "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-pet",
+      "stars": 0,
+      "updated_at": "2026-07-08T01:48:04Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
+    },
+    {
+      "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "terminal-workbench",
+      "stars": 0,
+      "updated_at": "2026-07-08T01:48:03Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
     },
     {
       "description": "Terminal Workbench colorschemes for classic Vim - calm graphite surfaces, restrained ANSI-style accents. Dark + light, true color with 256-color fallback.",
@@ -137,15 +164,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
     },
     {
-      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Cove",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:18:20Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Cove"
-    },
-    {
       "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
       "forks": 0,
       "language": "TypeScript",
@@ -239,10 +257,10 @@
   "languages": {
     "CSS": 1,
     "HTML": 2,
-    "JavaScript": 11,
+    "JavaScript": 12,
     "Python": 1,
-    "TypeScript": 7,
+    "TypeScript": 8,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-07T09:23:42Z"
+  "updated_at": "2026-07-08T08:08:05Z"
 }
