@@ -11,22 +11,13 @@
   },
   "repos": [
     {
-      "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
+      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
       "forks": 0,
       "language": "TypeScript",
-      "name": "Slate",
+      "name": "Tidemark",
       "stars": 0,
-      "updated_at": "2026-07-08T03:17:28Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Slate"
-    },
-    {
-      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Cove",
-      "stars": 0,
-      "updated_at": "2026-07-08T03:11:03Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Cove"
+      "updated_at": "2026-07-09T02:33:10Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
     },
     {
       "description": "Publish an Obsidian vault as a fast static website.",
@@ -34,8 +25,26 @@
       "language": "Python",
       "name": "vault",
       "stars": 0,
-      "updated_at": "2026-07-08T02:40:44Z",
+      "updated_at": "2026-07-09T01:31:19Z",
       "url": "https://github.com/Real-Fruit-Snacks/vault"
+    },
+    {
+      "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Graphite",
+      "stars": 0,
+      "updated_at": "2026-07-09T01:04:15Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Graphite"
+    },
+    {
+      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Cove",
+      "stars": 0,
+      "updated_at": "2026-07-09T00:10:45Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cove"
     },
     {
       "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
@@ -164,15 +173,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
     },
     {
-      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Tidemark",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:14:20Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
-    },
-    {
       "description": "A premium Chrome Extension to bulk-manage your YouTube account. Features a beautiful UI to bulk-remove 'Watch Later' videos and mass-unsubscribe from channels.",
       "forks": 0,
       "language": "JavaScript",
@@ -262,5 +262,5 @@
     "TypeScript": 8,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-08T08:08:05Z"
+  "updated_at": "2026-07-09T09:21:10Z"
 }
