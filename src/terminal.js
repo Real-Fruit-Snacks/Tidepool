@@ -1,4 +1,5 @@
 import { Terminal } from '@xterm/xterm';
+import { CanvasAddon } from '@xterm/addon-canvas';
 import { FitAddon } from '@xterm/addon-fit';
 import { WebLinksAddon } from '@xterm/addon-web-links';
 import { xtermTheme, palette } from './theme.js';
@@ -21,6 +22,15 @@ export function createTerminal(container) {
   }));
 
   term.open(container);
+
+  // Canvas renderer draws box-drawing and block glyphs itself, keeping
+  // borders and progress bars aligned even when the webfont lacks them.
+  try {
+    term.loadAddon(new CanvasAddon());
+  } catch {
+    // DOM renderer remains as fallback
+  }
+
   fitAddon.fit();
 
   const ro = new ResizeObserver(() => fitAddon.fit());

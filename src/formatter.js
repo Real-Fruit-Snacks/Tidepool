@@ -64,7 +64,7 @@ export function box(lines, { title = '', padding = 1, borderColor = palette.bord
   if (title) {
     const titleVis = visibleLength(title);
     const remaining = Math.max(0, innerWidth - titleVis - 3);
-    result.push(border('╭─ ') + fg(palette.violet, bold(title)) + border(' ' + '─'.repeat(remaining) + '╮'));
+    result.push(border('╭─ ') + fg(palette.accent, bold(title)) + border(' ' + '─'.repeat(remaining) + '╮'));
   } else {
     result.push(border('╭' + '─'.repeat(innerWidth) + '╮'));
   }
@@ -97,7 +97,7 @@ export function progressBar(value, max = 100, width = 20, { filled = palette.acc
 }
 
 // Table with headers
-export function table(headers, rows, { headerColor = palette.violet, borderColor = palette.borderStrong } = {}) {
+export function table(headers, rows, { headerColor = palette.accentAlt, borderColor = palette.borderStrong } = {}) {
   const colWidths = headers.map((h, i) => {
     const dataWidths = rows.map(r => visibleLength(String(r[i] || '')));
     return Math.max(visibleLength(h), ...dataWidths);

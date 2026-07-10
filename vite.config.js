@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          xterm: ['@xterm/xterm', '@xterm/addon-fit', '@xterm/addon-web-links']
+          xterm: ['@xterm/xterm', '@xterm/addon-canvas', '@xterm/addon-fit', '@xterm/addon-web-links']
         }
       }
     }

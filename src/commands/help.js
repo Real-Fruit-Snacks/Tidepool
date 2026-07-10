@@ -24,7 +24,7 @@ export function register(registry) {
 
       for (const cat of sorted) {
         lines.push('');
-        lines.push(fg(palette.violet, bold(`  ${cat}`)));
+        lines.push(fg(palette.textMuted, bold(`  ${cat.toUpperCase()}`)));
         lines.push('');
         for (const cmd of categories[cat]) {
           const aliases = ctx.registry.getAliasesFor(cmd.name);

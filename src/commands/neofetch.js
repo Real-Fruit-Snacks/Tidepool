@@ -22,7 +22,7 @@ export function register(registry) {
       const user = data?.user || {};
 
       const info = [
-        ['', fg(palette.accent, bold('visitor')) + fg(palette.textNormal, '@') + fg(palette.violet, bold('real-fruit-snacks'))],
+        ['', fg(palette.accent, bold('visitor')) + fg(palette.textNormal, '@') + fg(palette.accentAlt, bold('real-fruit-snacks'))],
         ['', dim('─'.repeat(30))],
         ['OS', fg(palette.textNormal, 'TerminalOS 1.0 (Browser)')],
         ['Host', fg(palette.textNormal, 'github.com/Real-Fruit-Snacks')],
@@ -31,7 +31,7 @@ export function register(registry) {
         ['Theme', fg(palette.textNormal, 'Terminal Workbench')],
         ['', ''],
         ['Repos', fg(palette.accentAlt, String(user.public_repos ?? '~'))],
-        ['Followers', fg(palette.violet, String(user.followers ?? '~'))],
+        ['Followers', fg(palette.warm, String(user.followers ?? '~'))],
         ['Following', fg(palette.accent, String(user.following ?? '~'))],
         ['Member Since', fg(palette.orange, user.created_at ? new Date(user.created_at).getFullYear().toString() : '~')],
       ];
@@ -43,7 +43,7 @@ export function register(registry) {
       const maxLines = Math.max(artLines, infoLines);
 
       for (let i = 0; i < maxLines; i++) {
-        const artLine = i < artLines ? fg(palette.violet, ASCII_ART[i]) : ' '.repeat(ART_WIDTH);
+        const artLine = i < artLines ? fg(palette.accent, ASCII_ART[i]) : ' '.repeat(ART_WIDTH);
 
         if (i < infoLines) {
           const [key, val] = info[i];

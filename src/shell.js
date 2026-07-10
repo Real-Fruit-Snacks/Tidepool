@@ -3,7 +3,7 @@ import { fg, bold, dim } from './formatter.js';
 
 const PROMPT_USER = fg(palette.accent, bold('visitor'));
 const PROMPT_AT = fg(palette.textNormal, '@');
-const PROMPT_HOST = fg(palette.violet, bold('real-fruit-snacks'));
+const PROMPT_HOST = fg(palette.accentAlt, bold('real-fruit-snacks'));
 const PROMPT_COLON = fg(palette.textNormal, ':');
 const PROMPT_ARROW = fg(palette.accent, bold(' $ '));
 

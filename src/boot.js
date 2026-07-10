@@ -46,7 +46,7 @@ export async function* bootSequence() {
 
   // Logo
   for (const line of LOGO) {
-    yield { text: fg(palette.violet, line), delay: 15 };
+    yield { text: fg(palette.accent, line), delay: 15 };
   }
 
   yield { text: '', delay: 50 };

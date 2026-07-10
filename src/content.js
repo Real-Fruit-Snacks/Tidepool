@@ -2,7 +2,7 @@ import { palette } from './theme.js';
 import { fg, bold, dim } from './formatter.js';
 
 export const about = `
-${fg(palette.violet, bold('Real-Fruit-Snacks'))}
+${fg(palette.accent, bold('Real-Fruit-Snacks'))}
 ${dim('─'.repeat(40))}
 
 Hey! I'm a developer who loves building things that live
@@ -42,7 +42,7 @@ export const skills = [
 ];
 
 export const resume = `
-${fg(palette.violet, bold('EXPERIENCE'))}
+${fg(palette.accent, bold('EXPERIENCE'))}
 ${dim('─'.repeat(40))}
 
 ${fg(palette.accentAlt, bold('Open Source Developer'))}
@@ -50,7 +50,7 @@ ${dim('GitHub • Ongoing')}
   Building tools, contributing to projects, and learning
   by shipping real code.
 
-${fg(palette.violet, bold('EDUCATION'))}
+${fg(palette.accent, bold('EDUCATION'))}
 ${dim('─'.repeat(40))}
 
 ${fg(palette.accentAlt, bold('Self-Taught Developer'))}
@@ -58,7 +58,7 @@ ${dim('The Internet • Always learning')}
   Continuous learning through documentation, open source
   contributions, and building real-world projects.
 
-${fg(palette.violet, bold('INTERESTS'))}
+${fg(palette.accent, bold('INTERESTS'))}
 ${dim('─'.repeat(40))}
 
   ${fg(palette.accent, '•')} Terminal-based applications

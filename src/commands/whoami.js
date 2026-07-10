@@ -6,7 +6,7 @@ export function register(registry) {
     description: 'Display current user',
     category: 'Info',
     action(ctx) {
-      ctx.term.writeln(fg(palette.accent, bold('visitor')) + fg(palette.textNormal, '@') + fg(palette.violet, bold('real-fruit-snacks')));
+      ctx.term.writeln(fg(palette.accent, bold('visitor')) + fg(palette.textNormal, '@') + fg(palette.accentAlt, bold('real-fruit-snacks')));
     }
   });
 }

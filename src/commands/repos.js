@@ -27,7 +27,7 @@ export function register(registry) {
       ]);
 
       ctx.term.writeln('');
-      const lines = fmtTable(headers, rows, { headerColor: palette.violet, borderColor: palette.borderStrong });
+      const lines = fmtTable(headers, rows, { headerColor: palette.accentAlt, borderColor: palette.borderStrong });
       for (const line of lines) {
         ctx.term.writeln(line);
       }
