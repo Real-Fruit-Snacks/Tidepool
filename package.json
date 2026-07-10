@@ -1,12 +1,12 @@
 {
-  "name": "terminal-portfolio",
+  "name": "tidepool",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Real-Fruit-Snacks/website"
+    "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
   },
   "engines": {
     "node": ">=20"

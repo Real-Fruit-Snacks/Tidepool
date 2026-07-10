@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="Tidepool — interactive terminal portfolio">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e1518"/><stop offset="1" stop-color="#1a2429"/></linearGradient>
+    <radialGradient id="pool" cx="0.5" cy="0.42" r="0.75"><stop offset="0" stop-color="#182024"/><stop offset="1" stop-color="#0e1214"/></radialGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#sky)"/>
+
+  <!-- Stars -->
+  <circle cx="140" cy="92" r="3" fill="#63736f"/>
+  <circle cx="262" cy="58" r="2.6" fill="#6bdcff"/>
+  <circle cx="424" cy="118" r="2.8" fill="#63736f"/>
+  <circle cx="560" cy="66" r="2.4" fill="#63736f"/>
+  <circle cx="768" cy="52" r="2.8" fill="#63736f"/>
+  <circle cx="984" cy="84" r="3.2" fill="#63736f"/>
+  <circle cx="1128" cy="148" r="2.6" fill="#63736f"/>
+  <circle cx="1196" cy="64" r="2.4" fill="#63736f"/>
+  <circle cx="86" cy="196" r="2.4" fill="#63736f"/>
+
+  <!-- Wordmark: TIDEPOOL in JetBrains Mono ExtraBold (converted to paths) + mint cursor block -->
+  <g transform="translate(246,300) scale(1.35)">
+    <path fill="#dce4df" d="M37.50 0L22.50 0L22.50-59.50L4-59.50L4-73L56-73L56-59.50L37.50-59.50 M118 0L74 0L74-13.50L88.50-13.50L88.50-59.50L74-59.50L74-73L118-73L118-59.50L103.50-59.50L103.50-13.50L118-13.50 M162 0L138.30 0L138.30-73L162-73Q169.60-73 175.25-70.10Q180.90-67.20 184.05-61.95Q187.20-56.70 187.20-49.60L187.20-23.50Q187.20-16.50 184.05-11.20Q180.90-5.90 175.25-2.95Q169.60 0 162 0M153.30-59.50L153.30-13.50L162-13.50Q166.50-13.50 169.35-16.30Q172.20-19.10 172.20-23.50L172.20-49.60Q172.20-54 169.35-56.75Q166.50-59.50 162-59.50 M251 0L206 0L206-73L251-73L251-60L220.70-60L220.70-43.60L247.50-43.60L247.50-31.20L220.70-31.20L220.70-13L251-13 M285.60 0L270.60 0L270.60-73L295.50-73Q303.20-73 308.95-70.10Q314.70-67.20 317.85-62Q321-56.80 321-49.80Q321-42.90 317.80-37.65Q314.60-32.40 308.90-29.50Q303.20-26.60 295.50-26.60L285.60-26.60L285.60 0M285.60-60L285.60-39.60L295.50-39.60Q300.30-39.60 303.15-42.50Q306-45.40 306-49.80Q306-54.20 303.15-57.10Q300.30-60 295.50-60 M360 1Q349 1 342.50-5.20Q336-11.40 336-22L336-51Q336-61.70 342.50-67.85Q349-74 360-74Q371-74 377.50-67.85Q384-61.70 384-51L384-22Q384-11.40 377.50-5.20Q371 1 360 1M360-12Q369-12 369-21L369-52Q369-61 360-61Q351-61 351-52L351-21Q351-12 360-12 M426 1Q415 1 408.50-5.20Q402-11.40 402-22L402-51Q402-61.70 408.50-67.85Q415-74 426-74Q437-74 443.50-67.85Q450-61.70 450-51L450-22Q450-11.40 443.50-5.20Q437 1 426 1M426-12Q435-12 435-21L435-52Q435-61 426-61Q417-61 417-52L417-21Q417-12 426-12 M518 0L473.50 0L473.50-73L488.50-73L488.50-13.50L518-13.50"/>
+    <rect x="540" y="-73" width="42" height="73" fill="#63f2ab"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="640" y="356" text-anchor="middle" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="22" font-weight="700" letter-spacing="7" fill="#879994">INTERACTIVE TERMINAL PORTFOLIO</text>
+
+  <!-- Distant water -->
+  <line x1="0" y1="430" x2="1280" y2="430" stroke="#39484f" stroke-width="2"/>
+  <rect x="0" y="430" width="1280" height="210" fill="#0e1214"/>
+  <path d="M120,462 q30,-12 60,0 t60,0" fill="none" stroke="#6bdcff" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+  <path d="M320,486 q24,-10 48,0 t48,0" fill="none" stroke="#6bdcff" stroke-width="3.5" stroke-linecap="round" opacity="0.18"/>
+  <path d="M1080,470 q22,-9 44,0 t44,0" fill="none" stroke="#6bdcff" stroke-width="3.5" stroke-linecap="round" opacity="0.22"/>
+
+  <!-- Foreground rocks -->
+  <path d="M0,640 L0,520 C140,498 300,532 430,514 C540,500 620,522 700,514 C820,502 940,526 1060,512 C1140,504 1220,520 1280,510 L1280,640 Z" fill="#090c0d"/>
+  <ellipse cx="560" cy="560" rx="90" ry="22" fill="#13191c"/>
+  <ellipse cx="1180" cy="586" rx="70" ry="18" fill="#13191c"/>
+  <ellipse cx="180" cy="590" rx="110" ry="24" fill="#13191c"/>
+
+  <!-- The tidepool -->
+  <ellipse cx="880" cy="562" rx="212" ry="58" fill="#060a0b"/>
+  <ellipse cx="880" cy="558" rx="200" ry="52" fill="url(#pool)" stroke="#39484f" stroke-width="2"/>
+  <ellipse cx="880" cy="558" rx="150" ry="37" fill="none" stroke="#6bdcff" stroke-width="2" opacity="0.12"/>
+  <ellipse cx="880" cy="558" rx="104" ry="25" fill="none" stroke="#6bdcff" stroke-width="2" opacity="0.22"/>
+  <ellipse cx="880" cy="558" rx="62" ry="15" fill="none" stroke="#6bdcff" stroke-width="2" opacity="0.38"/>
+
+  <!-- Prompt glowing in the pool -->
+  <ellipse cx="880" cy="558" rx="46" ry="13" fill="#63f2ab" opacity="0.1"/>
+  <path d="M852,548 L868,558 L852,568" fill="none" stroke="#63f2ab" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <rect x="882" y="546" width="13" height="24" fill="#63f2ab" opacity="0.9"/>
+
+  <!-- Starfish at the pool's edge -->
+  <path d="M700,586 l6.5,13.5 14.5,1.8 -10.6,10.2 2.7,14.5 -13.1,-7 -13.1,7 2.7,-14.5 -10.6,-10.2 14.5,-1.8 Z" fill="#f0c674" opacity="0.9"/>
+</svg>
