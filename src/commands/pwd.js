@@ -6,7 +6,7 @@ export function register(registry) {
     description: 'Print working directory',
     category: 'Navigation',
     action(ctx) {
-      ctx.term.writeln(fg(palette.blue, ctx.fs.cwd));
+      ctx.term.writeln(fg(palette.accentAlt, ctx.fs.cwd));
     }
   });
 }

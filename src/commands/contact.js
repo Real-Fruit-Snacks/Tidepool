@@ -10,10 +10,10 @@ export function register(registry) {
     action(ctx) {
       const lines = [
         '',
-        ...keyValue(contact, { keyColor: palette.green }),
+        ...keyValue(contact, { keyColor: palette.accent }),
         '',
       ];
-      const boxed = box(lines, { title: 'Contact', borderColor: palette.surface2 });
+      const boxed = box(lines, { title: 'Contact', borderColor: palette.borderStrong });
       for (const line of boxed) {
         ctx.term.writeln(line);
       }

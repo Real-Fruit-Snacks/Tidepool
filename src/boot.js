@@ -2,20 +2,20 @@ import { palette } from './theme.js';
 import { fg, bold, dim } from './formatter.js';
 
 const BOOT_MESSAGES = [
-  { text: 'BIOS v1.0 - Real-Fruit-Snacks Systems', color: palette.surface2, delay: 30 },
-  { text: 'Checking memory... 1024MB OK', color: palette.surface2, delay: 50 },
-  { text: 'Detecting hardware...', color: palette.surface2, delay: 40 },
+  { text: 'BIOS v1.0 - Real-Fruit-Snacks Systems', color: palette.borderStrong, delay: 30 },
+  { text: 'Checking memory... 1024MB OK', color: palette.borderStrong, delay: 50 },
+  { text: 'Detecting hardware...', color: palette.borderStrong, delay: 40 },
   { text: '', delay: 20 },
-  { text: '[    0.000000] Linux version 6.1.0-terminal (gcc 13.2.0)', color: palette.overlay0, delay: 30 },
-  { text: '[    0.000142] Command line: BOOT_IMAGE=/vmlinuz root=/dev/browser', color: palette.overlay0, delay: 20 },
-  { text: '[    0.001337] x86_64 portfolio system detected', color: palette.overlay0, delay: 20 },
-  { text: '[    0.004200] Memory: 1024MB available', color: palette.overlay0, delay: 20 },
-  { text: '[    0.006900] CPU: WebAssembly vCPU @ ∞ GHz', color: palette.overlay0, delay: 20 },
-  { text: '[    0.010000] xterm.js framebuffer initialized', color: palette.overlay0, delay: 30 },
-  { text: '[    0.015000] Mounting virtual filesystem...', color: palette.overlay0, delay: 40 },
-  { text: '[    0.020000] Loading user profile...', color: palette.overlay0, delay: 30 },
-  { text: '[    0.025000] Network: GitHub API endpoint configured', color: palette.overlay0, delay: 30 },
-  { text: '[    0.030000] All systems ready.', color: palette.green, delay: 50 },
+  { text: '[    0.000000] Linux version 6.1.0-terminal (gcc 13.2.0)', color: palette.textFaint, delay: 30 },
+  { text: '[    0.000142] Command line: BOOT_IMAGE=/vmlinuz root=/dev/browser', color: palette.textFaint, delay: 20 },
+  { text: '[    0.001337] x86_64 portfolio system detected', color: palette.textFaint, delay: 20 },
+  { text: '[    0.004200] Memory: 1024MB available', color: palette.textFaint, delay: 20 },
+  { text: '[    0.006900] CPU: WebAssembly vCPU @ ∞ GHz', color: palette.textFaint, delay: 20 },
+  { text: '[    0.010000] xterm.js framebuffer initialized', color: palette.textFaint, delay: 30 },
+  { text: '[    0.015000] Mounting virtual filesystem...', color: palette.textFaint, delay: 40 },
+  { text: '[    0.020000] Loading user profile...', color: palette.textFaint, delay: 30 },
+  { text: '[    0.025000] Network: GitHub API endpoint configured', color: palette.textFaint, delay: 30 },
+  { text: '[    0.030000] All systems ready.', color: palette.accent, delay: 50 },
   { text: '', delay: 30 },
 ];
 
@@ -30,11 +30,11 @@ const LOGO = [
 
 const MOTD = [
   '',
-  `  Welcome to ${fg(palette.green, bold("Real-Fruit-Snacks"))}'s terminal portfolio`,
+  `  Welcome to ${fg(palette.accent, bold("Real-Fruit-Snacks"))}'s terminal portfolio`,
   '',
-  `  ${dim('Type')} ${fg(palette.green, 'help')} ${dim('to see available commands')}`,
-  `  ${dim('Type')} ${fg(palette.green, 'neofetch')} ${dim('for a quick overview')}`,
-  `  ${dim('Type')} ${fg(palette.green, 'repos')} ${dim('to see my GitHub projects')}`,
+  `  ${dim('Type')} ${fg(palette.accent, 'help')} ${dim('to see available commands')}`,
+  `  ${dim('Type')} ${fg(palette.accent, 'neofetch')} ${dim('for a quick overview')}`,
+  `  ${dim('Type')} ${fg(palette.accent, 'repos')} ${dim('to see my GitHub projects')}`,
   '',
 ];
 
@@ -46,7 +46,7 @@ export async function* bootSequence() {
 
   // Logo
   for (const line of LOGO) {
-    yield { text: fg(palette.mauve, line), delay: 15 };
+    yield { text: fg(palette.violet, line), delay: 15 };
   }
 
   yield { text: '', delay: 50 };

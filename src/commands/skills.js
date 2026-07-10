@@ -10,12 +10,12 @@ export function register(registry) {
     action(ctx) {
       for (const group of skills) {
         ctx.term.writeln('');
-        ctx.term.writeln(fg(palette.mauve, bold(`  ${group.category}`)));
+        ctx.term.writeln(fg(palette.violet, bold(`  ${group.category}`)));
         ctx.term.writeln('');
         for (const skill of group.items) {
           const bar = progressBar(skill.level, 100, 20, {
             filled: skill.color,
-            empty: palette.surface1
+            empty: palette.border
           });
           const name = fg(skill.color, skill.name.padEnd(14));
           const pct = dim(`${skill.level}%`);

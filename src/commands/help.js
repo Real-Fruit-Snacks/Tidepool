@@ -24,17 +24,17 @@ export function register(registry) {
 
       for (const cat of sorted) {
         lines.push('');
-        lines.push(fg(palette.mauve, bold(`  ${cat}`)));
+        lines.push(fg(palette.violet, bold(`  ${cat}`)));
         lines.push('');
         for (const cmd of categories[cat]) {
           const aliases = ctx.registry.getAliasesFor(cmd.name);
           const aliasStr = aliases.length ? dim(` (${aliases.join(', ')})`) : '';
-          lines.push(`    ${fg(palette.green, cmd.name.padEnd(12))}${aliasStr}  ${dim(cmd.description)}`);
+          lines.push(`    ${fg(palette.accent, cmd.name.padEnd(12))}${aliasStr}  ${dim(cmd.description)}`);
         }
       }
       lines.push('');
 
-      const boxed = box(lines, { title: 'Commands', borderColor: palette.surface2 });
+      const boxed = box(lines, { title: 'Commands', borderColor: palette.borderStrong });
       for (const line of boxed) {
         ctx.term.writeln(line);
       }

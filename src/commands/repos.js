@@ -20,14 +20,14 @@ export function register(registry) {
 
       const headers = ['Repository', 'Stars', 'Language', 'Description'];
       const rows = repos.map(r => [
-        fg(palette.blue, r.name || ''),
-        fg(palette.yellow, String(r.stars ?? 0)),
-        fg(r.language ? palette.green : palette.overlay0, r.language || '-'),
+        fg(palette.accentAlt, r.name || ''),
+        fg(palette.warm, String(r.stars ?? 0)),
+        fg(r.language ? palette.accent : palette.textFaint, r.language || '-'),
         dim((r.description || '').slice(0, 40) + ((r.description || '').length > 40 ? '...' : '')),
       ]);
 
       ctx.term.writeln('');
-      const lines = fmtTable(headers, rows, { headerColor: palette.mauve, borderColor: palette.surface2 });
+      const lines = fmtTable(headers, rows, { headerColor: palette.violet, borderColor: palette.borderStrong });
       for (const line of lines) {
         ctx.term.writeln(line);
       }

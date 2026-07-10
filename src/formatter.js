@@ -50,7 +50,7 @@ export function padEnd(str, width) {
 }
 
 // Draw a box around lines of text
-export function box(lines, { title = '', padding = 1, borderColor = palette.surface2 } = {}) {
+export function box(lines, { title = '', padding = 1, borderColor = palette.borderStrong } = {}) {
   const contentLines = Array.isArray(lines) ? lines : lines.split('\n');
   const maxWidth = Math.max(
     ...contentLines.map(l => visibleLength(l)),
@@ -64,7 +64,7 @@ export function box(lines, { title = '', padding = 1, borderColor = palette.surf
   if (title) {
     const titleVis = visibleLength(title);
     const remaining = Math.max(0, innerWidth - titleVis - 3);
-    result.push(border('╭─ ') + fg(palette.mauve, bold(title)) + border(' ' + '─'.repeat(remaining) + '╮'));
+    result.push(border('╭─ ') + fg(palette.violet, bold(title)) + border(' ' + '─'.repeat(remaining) + '╮'));
   } else {
     result.push(border('╭' + '─'.repeat(innerWidth) + '╮'));
   }
@@ -80,7 +80,7 @@ export function box(lines, { title = '', padding = 1, borderColor = palette.surf
 }
 
 // Key-value display (pad raw key, then wrap in ANSI)
-export function keyValue(pairs, { keyColor = palette.blue, separator = ' : ' } = {}) {
+export function keyValue(pairs, { keyColor = palette.accentAlt, separator = ' : ' } = {}) {
   const maxKey = Math.max(...pairs.map(([k]) => k.length));
   return pairs.map(([k, v]) =>
     `  ${fg(keyColor, bold(k.padEnd(maxKey)))}${dim(separator)}${v}`
@@ -89,7 +89,7 @@ export function keyValue(pairs, { keyColor = palette.blue, separator = ' : ' } =
 
 
 // Progress bar
-export function progressBar(value, max = 100, width = 20, { filled = palette.green, empty = palette.surface1 } = {}) {
+export function progressBar(value, max = 100, width = 20, { filled = palette.accent, empty = palette.border } = {}) {
   const ratio = Math.min(value / max, 1);
   const filledCount = Math.round(ratio * width);
   const emptyCount = width - filledCount;
@@ -97,7 +97,7 @@ export function progressBar(value, max = 100, width = 20, { filled = palette.gre
 }
 
 // Table with headers
-export function table(headers, rows, { headerColor = palette.mauve, borderColor = palette.surface2 } = {}) {
+export function table(headers, rows, { headerColor = palette.violet, borderColor = palette.borderStrong } = {}) {
   const colWidths = headers.map((h, i) => {
     const dataWidths = rows.map(r => visibleLength(String(r[i] || '')));
     return Math.max(visibleLength(h), ...dataWidths);

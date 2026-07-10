@@ -1,11 +1,11 @@
 import { palette } from './theme.js';
 import { fg, bold, dim } from './formatter.js';
 
-const PROMPT_USER = fg(palette.green, bold('visitor'));
-const PROMPT_AT = fg(palette.text, '@');
-const PROMPT_HOST = fg(palette.mauve, bold('real-fruit-snacks'));
-const PROMPT_COLON = fg(palette.text, ':');
-const PROMPT_ARROW = fg(palette.green, bold(' $ '));
+const PROMPT_USER = fg(palette.accent, bold('visitor'));
+const PROMPT_AT = fg(palette.textNormal, '@');
+const PROMPT_HOST = fg(palette.violet, bold('real-fruit-snacks'));
+const PROMPT_COLON = fg(palette.textNormal, ':');
+const PROMPT_ARROW = fg(palette.accent, bold(' $ '));
 
 export class Shell {
   constructor(term, registry, fs, history, autocomplete, ctx) {
@@ -21,7 +21,7 @@ export class Shell {
   }
 
   getPrompt() {
-    const dir = this.fs.cwd === '/' ? fg(palette.blue, bold('~')) : fg(palette.blue, bold(this.fs.cwd));
+    const dir = this.fs.cwd === '/' ? fg(palette.accentAlt, bold('~')) : fg(palette.accentAlt, bold(this.fs.cwd));
     return `${PROMPT_USER}${PROMPT_AT}${PROMPT_HOST}${PROMPT_COLON}${dir}${PROMPT_ARROW}`;
   }
 
@@ -278,9 +278,9 @@ export class Shell {
       const suggestions = this.registry.suggest(cmdName);
       this.term.writeln(fg(palette.red, `Command not found: ${cmdName}`));
       if (suggestions.length > 0) {
-        this.term.writeln(dim(`  Did you mean: ${suggestions.map(s => fg(palette.green, s)).join(', ')}?`));
+        this.term.writeln(dim(`  Did you mean: ${suggestions.map(s => fg(palette.accent, s)).join(', ')}?`));
       }
-      this.term.writeln(dim(`  Type ${fg(palette.green, 'help')} for available commands.`));
+      this.term.writeln(dim(`  Type ${fg(palette.accent, 'help')} for available commands.`));
     }
   }
 }

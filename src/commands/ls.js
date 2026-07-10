@@ -38,20 +38,20 @@ export function register(registry) {
         for (const entry of entries) {
           const icon = entry.type === 'dir' ? 'drwxr-xr-x' : '-rw-r--r--';
           const coloredName = entry.type === 'dir'
-            ? fg(palette.blue, bold(entry.name + '/'))
+            ? fg(palette.accentAlt, bold(entry.name + '/'))
             : entry.name.endsWith('.md')
-              ? fg(palette.green, entry.name)
-              : fg(palette.text, entry.name);
+              ? fg(palette.accent, entry.name)
+              : fg(palette.textNormal, entry.name);
           ctx.term.writeln(`${dim(icon)}  ${coloredName}`);
         }
       } else {
         // Grid format
         const formatted = entries.map(e =>
           e.type === 'dir'
-            ? fg(palette.blue, bold(e.name + '/'))
+            ? fg(palette.accentAlt, bold(e.name + '/'))
             : e.name.endsWith('.md')
-              ? fg(palette.green, e.name)
-              : fg(palette.text, e.name)
+              ? fg(palette.accent, e.name)
+              : fg(palette.textNormal, e.name)
         );
         const names = entries.map(e => e.type === 'dir' ? e.name + '/' : e.name);
         const maxLen = Math.max(...names.map(n => n.length));

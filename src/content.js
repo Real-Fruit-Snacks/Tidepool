@@ -2,7 +2,7 @@ import { palette } from './theme.js';
 import { fg, bold, dim } from './formatter.js';
 
 export const about = `
-${fg(palette.mauve, bold('Real-Fruit-Snacks'))}
+${fg(palette.violet, bold('Real-Fruit-Snacks'))}
 ${dim('─'.repeat(40))}
 
 Hey! I'm a developer who loves building things that live
@@ -13,58 +13,58 @@ When I'm not coding, you can find me exploring new
 technologies, contributing to open source projects,
 and learning something new every day.
 
-${dim('Feel free to explore — type')} ${fg(palette.green, 'help')} ${dim('to see available commands.')}
+${dim('Feel free to explore — type')} ${fg(palette.accent, 'help')} ${dim('to see available commands.')}
 `;
 
 export const contact = [
-  ['GitHub',   fg(palette.blue, 'https://github.com/Real-Fruit-Snacks')],
-  ['Email',    fg(palette.peach, 'Check GitHub profile')],
+  ['GitHub',   fg(palette.accentAlt, 'https://github.com/Real-Fruit-Snacks')],
+  ['Email',    fg(palette.orange, 'Check GitHub profile')],
 ];
 
 export const skills = [
   { category: 'Languages', items: [
-    { name: 'JavaScript',  level: 90, color: palette.yellow },
-    { name: 'Python',      level: 85, color: palette.green },
-    { name: 'Go',          level: 75, color: palette.sky },
-    { name: 'TypeScript',  level: 70, color: palette.blue },
-    { name: 'Rust',        level: 65, color: palette.peach },
-    { name: 'C',           level: 60, color: palette.text },
+    { name: 'JavaScript',  level: 90, color: palette.warm },
+    { name: 'Python',      level: 85, color: palette.accent },
+    { name: 'Go',          level: 75, color: palette.accentAlt },
+    { name: 'TypeScript',  level: 70, color: palette.accentAlt },
+    { name: 'Rust',        level: 65, color: palette.orange },
+    { name: 'C',           level: 60, color: palette.textNormal },
     { name: 'Assembly',    level: 55, color: palette.red },
-    { name: 'Bash',        level: 75, color: palette.teal },
+    { name: 'Bash',        level: 75, color: palette.accentAlt },
   ]},
   { category: 'Frameworks & Tools', items: [
-    { name: 'Node.js',    level: 88, color: palette.green },
+    { name: 'Node.js',    level: 88, color: palette.accent },
     { name: 'Git',        level: 90, color: palette.red },
-    { name: 'Linux',      level: 85, color: palette.yellow },
-    { name: 'Docker',     level: 70, color: palette.sapphire },
-    { name: 'Vite',       level: 75, color: palette.mauve },
+    { name: 'Linux',      level: 85, color: palette.warm },
+    { name: 'Docker',     level: 70, color: palette.accentAlt },
+    { name: 'Vite',       level: 75, color: palette.violet },
   ]},
 ];
 
 export const resume = `
-${fg(palette.mauve, bold('EXPERIENCE'))}
+${fg(palette.violet, bold('EXPERIENCE'))}
 ${dim('─'.repeat(40))}
 
-${fg(palette.blue, bold('Open Source Developer'))}
+${fg(palette.accentAlt, bold('Open Source Developer'))}
 ${dim('GitHub • Ongoing')}
   Building tools, contributing to projects, and learning
   by shipping real code.
 
-${fg(palette.mauve, bold('EDUCATION'))}
+${fg(palette.violet, bold('EDUCATION'))}
 ${dim('─'.repeat(40))}
 
-${fg(palette.blue, bold('Self-Taught Developer'))}
+${fg(palette.accentAlt, bold('Self-Taught Developer'))}
 ${dim('The Internet • Always learning')}
   Continuous learning through documentation, open source
   contributions, and building real-world projects.
 
-${fg(palette.mauve, bold('INTERESTS'))}
+${fg(palette.violet, bold('INTERESTS'))}
 ${dim('─'.repeat(40))}
 
-  ${fg(palette.green, '•')} Terminal-based applications
-  ${fg(palette.green, '•')} Developer tooling
-  ${fg(palette.green, '•')} Systems programming
-  ${fg(palette.green, '•')} Open source collaboration
+  ${fg(palette.accent, '•')} Terminal-based applications
+  ${fg(palette.accent, '•')} Developer tooling
+  ${fg(palette.accent, '•')} Systems programming
+  ${fg(palette.accent, '•')} Open source collaboration
 `;
 
 // Build the initial filesystem

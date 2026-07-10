@@ -30,7 +30,7 @@ GitHub data is fetched once a day by a GitHub Action and committed to `public/da
 - **Tab completion & history** — completes commands and file paths; arrow keys browse a 200-entry history persisted in localStorage.
 - **Data automation** — a daily GitHub Action fetches repository data with the `gh` CLI and commits it to the repo, keeping the frontend free of tokens and runtime API calls.
 - **Deep linking** — bookmarkable permalinks auto-run commands on page load (`#neofetch`, `#cat about.md`).
-- **Catppuccin Mocha theming** — 24-bit truecolor palette throughout, with a boot animation on load.
+- **Terminal Workbench theming** — the terminal renders the [Terminal Workbench](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system) palette in 24-bit truecolor, with a boot animation on load.
 - **Mobile-friendly** — touch keyboard toggle, tested across current Chrome, Firefox, Safari, and Edge.
 
 ## Getting started
@@ -107,7 +107,7 @@ src/
 ├── autocomplete.js      Tab completion
 ├── boot.js              Boot animation
 ├── permalink.js         URL hash read/write
-├── theme.js             Catppuccin Mocha palette
+├── theme.js             Terminal Workbench palette
 └── commands/            Per-command implementations + registry
 
 public/data/

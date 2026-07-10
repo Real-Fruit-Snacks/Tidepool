@@ -7,7 +7,7 @@
 html, body {
   height: 100%;
   overflow: hidden;
-  background: #1e1e2e; /* Catppuccin Mocha base — keep in sync with theme.js palette.base */
+  background: #090c0d; /* Terminal Workbench bg-0 — keep in sync with theme.js palette.bg0 */
 }
 
 #terminal {
@@ -32,9 +32,9 @@ html, body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 2px solid #cdd6f4;
-  background: #313244;
-  color: #cdd6f4;
+  border: 2px solid #2a363d;
+  background: #13191c;
+  color: #dce4df;
   font-size: 24px;
   cursor: pointer;
   z-index: 1000;
@@ -42,11 +42,11 @@ html, body {
 }
 
 #keyboard-toggle:active {
-  background: #45475a;
+  background: #182024;
 }
 
 #keyboard-toggle:focus-visible {
-  outline: 2px solid #cdd6f4;
+  outline: 2px solid #63f2ab;
   outline-offset: 2px;
 }
 
