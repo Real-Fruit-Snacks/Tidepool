@@ -7,26 +7,35 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 28
+    "public_repos": 26
   },
   "repos": [
     {
-      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
+      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
       "forks": 0,
       "language": "TypeScript",
-      "name": "Tidemark",
+      "name": "obsidian-gym-tracker",
       "stars": 0,
-      "updated_at": "2026-07-09T02:33:10Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
+      "updated_at": "2026-07-10T03:36:40Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
     },
     {
-      "description": "Publish an Obsidian vault as a fast static website.",
+      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
       "forks": 0,
-      "language": "Python",
-      "name": "vault",
+      "language": "TypeScript",
+      "name": "obsidian-github-updater",
       "stars": 0,
-      "updated_at": "2026-07-09T01:31:19Z",
-      "url": "https://github.com/Real-Fruit-Snacks/vault"
+      "updated_at": "2026-07-10T03:06:45Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
+    },
+    {
+      "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-pet",
+      "stars": 0,
+      "updated_at": "2026-07-10T03:06:44Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
     },
     {
       "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
@@ -34,8 +43,17 @@
       "language": "TypeScript",
       "name": "Graphite",
       "stars": 0,
-      "updated_at": "2026-07-09T01:04:15Z",
+      "updated_at": "2026-07-10T03:06:43Z",
       "url": "https://github.com/Real-Fruit-Snacks/Graphite"
+    },
+    {
+      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Tidemark",
+      "stars": 0,
+      "updated_at": "2026-07-10T03:06:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
     },
     {
       "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
@@ -43,8 +61,44 @@
       "language": "JavaScript",
       "name": "Cove",
       "stars": 0,
-      "updated_at": "2026-07-09T00:10:45Z",
+      "updated_at": "2026-07-10T03:06:39Z",
       "url": "https://github.com/Real-Fruit-Snacks/Cove"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-07-10T02:41:33Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
+      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-nested-vaults",
+      "stars": 0,
+      "updated_at": "2026-07-10T02:40:58Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
+    },
+    {
+      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "wayback-linker",
+      "stars": 0,
+      "updated_at": "2026-07-10T02:23:43Z",
+      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
+    },
+    {
+      "description": "Publish an Obsidian vault as a fast static website.",
+      "forks": 0,
+      "language": "Python",
+      "name": "vault",
+      "stars": 0,
+      "updated_at": "2026-07-10T01:14:11Z",
+      "url": "https://github.com/Real-Fruit-Snacks/vault"
     },
     {
       "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
@@ -54,15 +108,6 @@
       "stars": 0,
       "updated_at": "2026-07-08T02:19:53Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-plugins"
-    },
-    {
-      "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-pet",
-      "stars": 0,
-      "updated_at": "2026-07-08T01:48:04Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
     },
     {
       "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
@@ -117,60 +162,6 @@
       "stars": 0,
       "updated_at": "2026-07-05T14:48:36Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal"
-    },
-    {
-      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "wayback-linker",
-      "stars": 0,
-      "updated_at": "2026-06-30T00:09:54Z",
-      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
-    },
-    {
-      "description": "A beautiful, fully-functional website preview for your Obsidian vault featuring interactive file explorer, native search, live local graph, and 16 premium themes.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-vault-website-view",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:39:38Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-website-view"
-    },
-    {
-      "description": "A keyboard-first task manager for Obsidian. Projects, recurring tasks, priorities, smart views, and a permanent logbook — self-contained, with [[Note]] references to your vault.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Wake",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:19:06Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Wake"
-    },
-    {
-      "description": "Magically scope your entire Obsidian vault down to a specific folder. Focus on what matters.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-nested-vaults",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:19:03Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
-    },
-    {
-      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-gym-tracker",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:18:59Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
-    },
-    {
-      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-github-updater",
-      "stars": 0,
-      "updated_at": "2026-06-25T23:18:51Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
     },
     {
       "description": "A premium Chrome Extension to bulk-manage your YouTube account. Features a beautiful UI to bulk-remove 'Watch Later' videos and mass-unsubscribe from channels.",
@@ -257,10 +248,10 @@
   "languages": {
     "CSS": 1,
     "HTML": 2,
-    "JavaScript": 12,
+    "JavaScript": 13,
     "Python": 1,
-    "TypeScript": 8,
+    "TypeScript": 6,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-09T09:21:10Z"
+  "updated_at": "2026-07-10T09:18:41Z"
 }
