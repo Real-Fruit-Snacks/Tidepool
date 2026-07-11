@@ -1,0 +1,16 @@
+# GitLab CI: lets this repository be mirrored or self-hosted on GitLab with no
+# extra setup. Push to GitLab and the pipeline below runs automatically.
+
+pages:
+  stage: deploy
+  image: node:20
+  script:
+    - npm ci
+    - npm run build
+    - cp -r docs dist/docs
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
