@@ -7,17 +7,107 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 26
+    "public_repos": 29
   },
   "repos": [
+    {
+      "description": "Lightning-fast offline Linux man page lookup - 20,449 pre-rendered pages, zero network calls",
+      "forks": 0,
+      "language": "Python",
+      "name": "manpages",
+      "stars": 0,
+      "updated_at": "2026-07-11T03:00:07Z",
+      "url": "https://github.com/Real-Fruit-Snacks/manpages"
+    },
+    {
+      "description": "A calm, dense, high-contrast VS Code theme for people who live in panes, shells, logs, and code. Graphite surfaces, restrained ANSI-style accents, dark and light variants.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-vscode",
+      "stars": 0,
+      "updated_at": "2026-07-11T02:58:10Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode"
+    },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
       "forks": 0,
       "language": "TypeScript",
       "name": "obsidian-gym-tracker",
       "stars": 0,
-      "updated_at": "2026-07-10T03:36:40Z",
+      "updated_at": "2026-07-11T02:21:13Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
+    },
+    {
+      "description": "Terminal Workbench for Windows Terminal: graphite backgrounds, restrained ANSI-style accents, dark and light color schemes with matching window themes.",
+      "forks": 0,
+      "language": null,
+      "name": "terminal-workbench-windows-terminal",
+      "stars": 0,
+      "updated_at": "2026-07-11T02:18:48Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal"
+    },
+    {
+      "description": "Terminal Workbench themes for Notepad++: dark and light, all 92 lexers. Graphite surfaces, restrained accents, color only on signal.",
+      "forks": 0,
+      "language": null,
+      "name": "terminal-workbench-notepad-plus-plus",
+      "stars": 0,
+      "updated_at": "2026-07-11T02:02:25Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-notepad-plus-plus"
+    },
+    {
+      "description": "Terminal Workbench colorschemes for classic Vim - calm graphite surfaces, restrained ANSI-style accents. Dark + light, true color with 256-color fallback.",
+      "forks": 0,
+      "language": "Vim Script",
+      "name": "terminal-workbench-vim",
+      "stars": 0,
+      "updated_at": "2026-07-11T02:02:10Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vim"
+    },
+    {
+      "description": "A modern terminal-inspired theme for Brave: layered green-graphite chrome, restrained mint accents, and full dark and light modes.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-brave",
+      "stars": 0,
+      "updated_at": "2026-07-11T01:54:49Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-brave"
+    },
+    {
+      "description": "Terminal Workbench design system: portable theme spec, drop-in CSS tokens, and a live demo. Graphite surfaces, restrained accents, dark + light.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "terminal-workbench-design-system",
+      "stars": 0,
+      "updated_at": "2026-07-11T01:54:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system"
+    },
+    {
+      "description": "Fast offline tldr pages - fully static command reference with instant search. Zero network calls, no build step, host it anywhere or open straight from disk.",
+      "forks": 0,
+      "language": "Python",
+      "name": "tldr",
+      "stars": 0,
+      "updated_at": "2026-07-11T01:35:11Z",
+      "url": "https://github.com/Real-Fruit-Snacks/tldr"
+    },
+    {
+      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Tidemark",
+      "stars": 0,
+      "updated_at": "2026-07-11T00:18:48Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 0,
+      "updated_at": "2026-07-10T09:19:55Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
@@ -47,15 +137,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Graphite"
     },
     {
-      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Tidemark",
-      "stars": 0,
-      "updated_at": "2026-07-10T03:06:41Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
-    },
-    {
       "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
       "forks": 0,
       "language": "JavaScript",
@@ -63,15 +144,6 @@
       "stars": 0,
       "updated_at": "2026-07-10T03:06:39Z",
       "url": "https://github.com/Real-Fruit-Snacks/Cove"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-07-10T02:41:33Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
@@ -117,51 +189,6 @@
       "stars": 0,
       "updated_at": "2026-07-08T01:48:03Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
-    },
-    {
-      "description": "Terminal Workbench colorschemes for classic Vim - calm graphite surfaces, restrained ANSI-style accents. Dark + light, true color with 256-color fallback.",
-      "forks": 0,
-      "language": "Vim Script",
-      "name": "terminal-workbench-vim",
-      "stars": 0,
-      "updated_at": "2026-07-05T17:49:56Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vim"
-    },
-    {
-      "description": "A calm, dense, high-contrast VS Code theme for people who live in panes, shells, logs, and code. Graphite surfaces, restrained ANSI-style accents, dark and light variants.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-vscode",
-      "stars": 0,
-      "updated_at": "2026-07-05T17:19:17Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode"
-    },
-    {
-      "description": "Terminal Workbench design system: portable theme spec, drop-in CSS tokens, and a live demo. Graphite surfaces, restrained accents, dark + light.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "terminal-workbench-design-system",
-      "stars": 0,
-      "updated_at": "2026-07-05T15:26:49Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system"
-    },
-    {
-      "description": "A modern terminal-inspired theme for Brave: layered green-graphite chrome, restrained mint accents, and full dark and light modes.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-brave",
-      "stars": 0,
-      "updated_at": "2026-07-05T14:57:46Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-brave"
-    },
-    {
-      "description": "Terminal Workbench for Windows Terminal: graphite backgrounds, restrained ANSI-style accents, dark and light color schemes with matching window themes.",
-      "forks": 0,
-      "language": null,
-      "name": "terminal-workbench-windows-terminal",
-      "stars": 0,
-      "updated_at": "2026-07-05T14:48:36Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal"
     },
     {
       "description": "A premium Chrome Extension to bulk-manage your YouTube account. Features a beautiful UI to bulk-remove 'Watch Later' videos and mass-unsubscribe from channels.",
@@ -249,9 +276,9 @@
     "CSS": 1,
     "HTML": 2,
     "JavaScript": 13,
-    "Python": 1,
+    "Python": 3,
     "TypeScript": 6,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-10T09:18:41Z"
+  "updated_at": "2026-07-11T07:40:12Z"
 }
