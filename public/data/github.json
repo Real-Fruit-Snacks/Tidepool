@@ -3,21 +3,291 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/87195021?v=4",
     "bio": null,
     "created_at": "2021-07-09T14:46:03Z",
-    "followers": 4,
+    "followers": 5,
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 29
+    "public_repos": 34
   },
   "repos": [
     {
-      "description": "Lightning-fast offline Linux man page lookup - 20,449 pre-rendered pages, zero network calls",
+      "description": "Obsidian plugin that replaces the built-in community plugin browser: filters, categories, rich README previews, trending, and an installed-plugins dashboard.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-better-store",
+      "stars": 0,
+      "updated_at": "2026-07-12T03:43:56Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-better-store"
+    },
+    {
+      "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
+      "forks": 0,
+      "language": null,
+      "name": "obsidian-plugins",
+      "stars": 0,
+      "updated_at": "2026-07-12T03:16:32Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-plugins"
+    },
+    {
+      "description": "The official monospace of the Terminal Workbench design system — clean geometric letterforms, slashed zero, coding ligatures, and a full terminal pack, generated from a parametric Python engine.",
+      "forks": 0,
+      "language": "Python",
+      "name": "terminal-workbench-mono",
+      "stars": 0,
+      "updated_at": "2026-07-12T01:31:29Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-mono"
+    },
+    {
+      "description": "Terminal Workbench design system: portable theme spec, drop-in CSS tokens, and a live demo. Graphite surfaces, restrained accents, dark + light.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "terminal-workbench-design-system",
+      "stars": 1,
+      "updated_at": "2026-07-12T01:22:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system"
+    },
+    {
+      "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Graphite",
+      "stars": 1,
+      "updated_at": "2026-07-12T00:09:10Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Graphite"
+    },
+    {
+      "description": "Prints ready-to-paste file-transfer commands (scp/sftp/cat/tar over SSH, openssl, netcat) in both directions. Single-file, stdlib-only, Terminal Workbench themed.",
+      "forks": 0,
+      "language": "Python",
+      "name": "xfer",
+      "stars": 0,
+      "updated_at": "2026-07-11T23:54:24Z",
+      "url": "https://github.com/Real-Fruit-Snacks/xfer"
+    },
+    {
+      "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "worldclock",
+      "stars": 0,
+      "updated_at": "2026-07-11T19:09:36Z",
+      "url": "https://github.com/Real-Fruit-Snacks/worldclock"
+    },
+    {
+      "description": "A pixel-art medieval wave-defense incremental game",
+      "forks": 0,
+      "language": "HTML",
+      "name": "Crownfall",
+      "stars": 0,
+      "updated_at": "2026-07-11T18:55:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Crownfall"
+    },
+    {
+      "description": "Lightning-fast offline Linux man page lookup - 58,464 pre-rendered Ubuntu pages, zero network calls",
       "forks": 0,
       "language": "Python",
       "name": "manpages",
       "stars": 0,
-      "updated_at": "2026-07-11T03:00:07Z",
+      "updated_at": "2026-07-11T18:55:33Z",
       "url": "https://github.com/Real-Fruit-Snacks/manpages"
+    },
+    {
+      "description": "An incremental game where the progress bar is depth. Plain HTML/CSS/JS with procedural WebAudio.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "benthic",
+      "stars": 0,
+      "updated_at": "2026-07-11T18:55:24Z",
+      "url": "https://github.com/Real-Fruit-Snacks/benthic"
+    },
+    {
+      "description": "A browser-playable arcade roguelite. You play a dying star: absorb enough mass to reach critical and go supernova — or fade out trying.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "novafall",
+      "stars": 0,
+      "updated_at": "2026-07-11T18:55:23Z",
+      "url": "https://github.com/Real-Fruit-Snacks/novafall"
+    },
+    {
+      "description": "A premium Chrome Extension to bulk-manage your YouTube account. Features a beautiful UI to bulk-remove 'Watch Later' videos and mass-unsubscribe from channels.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "youtube-automation-toolkit",
+      "stars": 0,
+      "updated_at": "2026-07-11T18:55:20Z",
+      "url": "https://github.com/Real-Fruit-Snacks/youtube-automation-toolkit"
+    },
+    {
+      "description": "Paste any string and see everything about its characters - colored per-character grid, Unicode deep dive, lookalike warnings, MD5 and more. All computed locally.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "character-analyzer",
+      "stars": 0,
+      "updated_at": "2026-07-11T18:55:16Z",
+      "url": "https://github.com/Real-Fruit-Snacks/character-analyzer"
+    },
+    {
+      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-gym-tracker",
+      "stars": 1,
+      "updated_at": "2026-07-11T17:19:47Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
+    },
+    {
+      "description": "Publish an Obsidian vault as a fast static website.",
+      "forks": 0,
+      "language": "Python",
+      "name": "obsidian-vault-publisher",
+      "stars": 1,
+      "updated_at": "2026-07-11T17:16:47Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-publisher"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 1,
+      "updated_at": "2026-07-11T17:12:22Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
+      "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "terminal-workbench",
+      "stars": 1,
+      "updated_at": "2026-07-11T17:10:22Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
+    },
+    {
+      "description": "Fast offline tldr pages - fully static command reference with instant search. Zero network calls, no build step, host it anywhere or open straight from disk.",
+      "forks": 0,
+      "language": "Python",
+      "name": "tldr",
+      "stars": 0,
+      "updated_at": "2026-07-11T16:46:32Z",
+      "url": "https://github.com/Real-Fruit-Snacks/tldr"
+    },
+    {
+      "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-pet",
+      "stars": 0,
+      "updated_at": "2026-07-11T16:18:52Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
+    },
+    {
+      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-github-updater",
+      "stars": 0,
+      "updated_at": "2026-07-11T12:22:37Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
+    },
+    {
+      "description": "A browser horror game about a night-shift security guard. 100% procedural WebAudio and Canvas.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "closed-circuit",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:52:28Z",
+      "url": "https://github.com/Real-Fruit-Snacks/closed-circuit"
+    },
+    {
+      "description": "A modern terminal-inspired theme for Brave: layered green-graphite chrome, restrained mint accents, and full dark and light modes.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-brave",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:52:11Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-brave"
+    },
+    {
+      "description": "Terminal Workbench colorschemes for classic Vim - calm graphite surfaces, restrained ANSI-style accents. Dark + light, true color with 256-color fallback.",
+      "forks": 0,
+      "language": "Vim Script",
+      "name": "terminal-workbench-vim",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:47:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vim"
+    },
+    {
+      "description": "A survivors-like where you are the weapon. You're a snowball rolling through an endless dusk snowfield: anything smaller than you gets absorbed and makes you bigger, anything bigger grinds you down.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "snowball-effect",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:46:18Z",
+      "url": "https://github.com/Real-Fruit-Snacks/snowball-effect"
+    },
+    {
+      "description": "sunny.exe — a browser horror game (DayBreak OS + an AI assistant who knows too much). Pure DOM/CSS/SVG/WebAudio.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "sunny.exe",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:46:12Z",
+      "url": "https://github.com/Real-Fruit-Snacks/sunny.exe"
+    },
+    {
+      "description": "An engineering-sheet incremental. Build a factory one machine at a time, prestige for Schematics, publish for Patents, exhibit for Legacy Marks.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Blueprint",
+      "stars": 2,
+      "updated_at": "2026-07-11T11:45:56Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
+    },
+    {
+      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "wayback-linker",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:45:48Z",
+      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
+    },
+    {
+      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-nested-vaults",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:45:46Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
+    },
+    {
+      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Cove",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:45:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cove"
+    },
+    {
+      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Tidemark",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:45:38Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
+    },
+    {
+      "description": "Terminal Workbench themes for Notepad++: dark and light, all 92 lexers. Graphite surfaces, restrained accents, color only on signal.",
+      "forks": 0,
+      "language": null,
+      "name": "terminal-workbench-notepad-plus-plus",
+      "stars": 0,
+      "updated_at": "2026-07-11T11:45:34Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-notepad-plus-plus"
     },
     {
       "description": "A calm, dense, high-contrast VS Code theme for people who live in panes, shells, logs, and code. Graphite surfaces, restrained ANSI-style accents, dark and light variants.",
@@ -29,15 +299,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode"
     },
     {
-      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-gym-tracker",
-      "stars": 0,
-      "updated_at": "2026-07-11T02:21:13Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
-    },
-    {
       "description": "Terminal Workbench for Windows Terminal: graphite backgrounds, restrained ANSI-style accents, dark and light color schemes with matching window themes.",
       "forks": 0,
       "language": null,
@@ -47,177 +308,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal"
     },
     {
-      "description": "Terminal Workbench themes for Notepad++: dark and light, all 92 lexers. Graphite surfaces, restrained accents, color only on signal.",
-      "forks": 0,
-      "language": null,
-      "name": "terminal-workbench-notepad-plus-plus",
-      "stars": 0,
-      "updated_at": "2026-07-11T02:02:25Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-notepad-plus-plus"
-    },
-    {
-      "description": "Terminal Workbench colorschemes for classic Vim - calm graphite surfaces, restrained ANSI-style accents. Dark + light, true color with 256-color fallback.",
-      "forks": 0,
-      "language": "Vim Script",
-      "name": "terminal-workbench-vim",
-      "stars": 0,
-      "updated_at": "2026-07-11T02:02:10Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vim"
-    },
-    {
-      "description": "A modern terminal-inspired theme for Brave: layered green-graphite chrome, restrained mint accents, and full dark and light modes.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-brave",
-      "stars": 0,
-      "updated_at": "2026-07-11T01:54:49Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-brave"
-    },
-    {
-      "description": "Terminal Workbench design system: portable theme spec, drop-in CSS tokens, and a live demo. Graphite surfaces, restrained accents, dark + light.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "terminal-workbench-design-system",
-      "stars": 0,
-      "updated_at": "2026-07-11T01:54:41Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system"
-    },
-    {
-      "description": "Fast offline tldr pages - fully static command reference with instant search. Zero network calls, no build step, host it anywhere or open straight from disk.",
-      "forks": 0,
-      "language": "Python",
-      "name": "tldr",
-      "stars": 0,
-      "updated_at": "2026-07-11T01:35:11Z",
-      "url": "https://github.com/Real-Fruit-Snacks/tldr"
-    },
-    {
-      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Tidemark",
-      "stars": 0,
-      "updated_at": "2026-07-11T00:18:48Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 0,
-      "updated_at": "2026-07-10T09:19:55Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
-    },
-    {
-      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-github-updater",
-      "stars": 0,
-      "updated_at": "2026-07-10T03:06:45Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
-    },
-    {
-      "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-pet",
-      "stars": 0,
-      "updated_at": "2026-07-10T03:06:44Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
-    },
-    {
-      "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Graphite",
-      "stars": 0,
-      "updated_at": "2026-07-10T03:06:43Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Graphite"
-    },
-    {
-      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Cove",
-      "stars": 0,
-      "updated_at": "2026-07-10T03:06:39Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Cove"
-    },
-    {
-      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "obsidian-nested-vaults",
-      "stars": 0,
-      "updated_at": "2026-07-10T02:40:58Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
-    },
-    {
-      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "wayback-linker",
-      "stars": 0,
-      "updated_at": "2026-07-10T02:23:43Z",
-      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
-    },
-    {
-      "description": "Publish an Obsidian vault as a fast static website.",
-      "forks": 0,
-      "language": "Python",
-      "name": "vault",
-      "stars": 0,
-      "updated_at": "2026-07-10T01:14:11Z",
-      "url": "https://github.com/Real-Fruit-Snacks/vault"
-    },
-    {
-      "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
-      "forks": 0,
-      "language": null,
-      "name": "obsidian-plugins",
-      "stars": 0,
-      "updated_at": "2026-07-08T02:19:53Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-plugins"
-    },
-    {
-      "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
-      "forks": 0,
-      "language": "CSS",
-      "name": "terminal-workbench",
-      "stars": 0,
-      "updated_at": "2026-07-08T01:48:03Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
-    },
-    {
-      "description": "A premium Chrome Extension to bulk-manage your YouTube account. Features a beautiful UI to bulk-remove 'Watch Later' videos and mass-unsubscribe from channels.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "youtube-automation-toolkit",
-      "stars": 0,
-      "updated_at": "2026-06-25T00:58:49Z",
-      "url": "https://github.com/Real-Fruit-Snacks/youtube-automation-toolkit"
-    },
-    {
-      "description": "An engineering-sheet incremental. Build a factory one machine at a time, prestige for Schematics, publish for Patents, exhibit for Legacy Marks.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Blueprint",
-      "stars": 2,
-      "updated_at": "2026-06-24T20:59:02Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
-    },
-    {
-      "description": "A pixel-art medieval wave-defense incremental game",
-      "forks": 0,
-      "language": "HTML",
-      "name": "Crownfall",
-      "stars": 0,
-      "updated_at": "2026-06-19T21:23:25Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Crownfall"
-    },
-    {
       "description": "A browser survivors-like about a fighting retreat. Kiting becomes base-building.",
       "forks": 0,
       "language": "JavaScript",
@@ -225,60 +315,15 @@
       "stars": 0,
       "updated_at": "2026-06-19T15:36:48Z",
       "url": "https://github.com/Real-Fruit-Snacks/rearguard"
-    },
-    {
-      "description": "A survivors-like where you are the weapon. You're a snowball rolling through an endless dusk snowfield: anything smaller than you gets absorbed and makes you bigger, anything bigger grinds you down.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "snowball-effect",
-      "stars": 0,
-      "updated_at": "2026-06-19T14:06:34Z",
-      "url": "https://github.com/Real-Fruit-Snacks/snowball-effect"
-    },
-    {
-      "description": "A browser-playable arcade roguelite. You play a dying star: absorb enough mass to reach critical and go supernova — or fade out trying.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "novafall",
-      "stars": 0,
-      "updated_at": "2026-06-19T13:58:53Z",
-      "url": "https://github.com/Real-Fruit-Snacks/novafall"
-    },
-    {
-      "description": "A browser horror game about a night-shift security guard. 100% procedural WebAudio and Canvas.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "closed-circuit",
-      "stars": 0,
-      "updated_at": "2026-06-19T13:53:09Z",
-      "url": "https://github.com/Real-Fruit-Snacks/closed-circuit"
-    },
-    {
-      "description": "An incremental game where the progress bar is depth. Plain HTML/CSS/JS with procedural WebAudio.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "benthic",
-      "stars": 0,
-      "updated_at": "2026-06-19T13:46:19Z",
-      "url": "https://github.com/Real-Fruit-Snacks/benthic"
-    },
-    {
-      "description": "sunny.exe — a browser horror game (DayBreak OS + an AI assistant who knows too much). Pure DOM/CSS/SVG/WebAudio.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "sunny.exe",
-      "stars": 0,
-      "updated_at": "2026-06-19T13:46:11Z",
-      "url": "https://github.com/Real-Fruit-Snacks/sunny.exe"
     }
   ],
   "languages": {
     "CSS": 1,
     "HTML": 2,
-    "JavaScript": 13,
-    "Python": 3,
-    "TypeScript": 6,
+    "JavaScript": 15,
+    "Python": 5,
+    "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-11T07:40:12Z"
+  "updated_at": "2026-07-12T07:59:37Z"
 }
