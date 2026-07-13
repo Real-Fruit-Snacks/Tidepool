@@ -7,17 +7,53 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 34
+    "public_repos": 36
   },
   "repos": [
+    {
+      "description": "Prints ready-to-paste file-transfer commands (scp/sftp/cat/tar over SSH, openssl, netcat) in both directions. Single-file, stdlib-only, Terminal Workbench themed.",
+      "forks": 0,
+      "language": "Python",
+      "name": "xfer",
+      "stars": 0,
+      "updated_at": "2026-07-13T02:23:08Z",
+      "url": "https://github.com/Real-Fruit-Snacks/xfer"
+    },
+    {
+      "description": "Fast, lightweight screenshot capture & annotation tool in pure Rust — region/window capture, 14 annotation tools, OCR, pin-to-screen, Imgur upload. Terminal Workbench themed with dark + light modes.",
+      "forks": 0,
+      "language": "Rust",
+      "name": "HydroShot",
+      "stars": 0,
+      "updated_at": "2026-07-13T02:12:20Z",
+      "url": "https://github.com/Real-Fruit-Snacks/HydroShot"
+    },
     {
       "description": "Obsidian plugin that replaces the built-in community plugin browser: filters, categories, rich README previews, trending, and an installed-plugins dashboard.",
       "forks": 0,
       "language": "TypeScript",
       "name": "obsidian-better-store",
-      "stars": 0,
-      "updated_at": "2026-07-12T03:43:56Z",
+      "stars": 1,
+      "updated_at": "2026-07-13T02:00:30Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-better-store"
+    },
+    {
+      "description": "Interactive x86 & x86-64 assembly simulator and reverse-engineering lab — step-through 32/64-bit engines, stack playground, register quiz, 28 tutorials, and 7 tools. Pure browser, no build, no dependencies.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "x86-x64-assembly-lab",
+      "stars": 0,
+      "updated_at": "2026-07-12T23:43:45Z",
+      "url": "https://github.com/Real-Fruit-Snacks/x86-x64-assembly-lab"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 1,
+      "updated_at": "2026-07-12T07:59:48Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
@@ -54,15 +90,6 @@
       "stars": 1,
       "updated_at": "2026-07-12T00:09:10Z",
       "url": "https://github.com/Real-Fruit-Snacks/Graphite"
-    },
-    {
-      "description": "Prints ready-to-paste file-transfer commands (scp/sftp/cat/tar over SSH, openssl, netcat) in both directions. Single-file, stdlib-only, Terminal Workbench themed.",
-      "forks": 0,
-      "language": "Python",
-      "name": "xfer",
-      "stars": 0,
-      "updated_at": "2026-07-11T23:54:24Z",
-      "url": "https://github.com/Real-Fruit-Snacks/xfer"
     },
     {
       "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
@@ -144,15 +171,6 @@
       "stars": 1,
       "updated_at": "2026-07-11T17:16:47Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-publisher"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 1,
-      "updated_at": "2026-07-11T17:12:22Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
@@ -319,11 +337,12 @@
   ],
   "languages": {
     "CSS": 1,
-    "HTML": 2,
+    "HTML": 3,
     "JavaScript": 15,
     "Python": 5,
+    "Rust": 1,
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-12T07:59:37Z"
+  "updated_at": "2026-07-13T08:48:56Z"
 }
