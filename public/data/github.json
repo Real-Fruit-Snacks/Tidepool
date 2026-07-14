@@ -7,9 +7,36 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 36
+    "public_repos": 37
   },
   "repos": [
+    {
+      "description": "A static, git-backed team calendar you edit right in the browser — commits your changes back to the repo. GitHub & GitLab Pages. No backend.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "team-calendar",
+      "stars": 0,
+      "updated_at": "2026-07-14T03:52:35Z",
+      "url": "https://github.com/Real-Fruit-Snacks/team-calendar"
+    },
+    {
+      "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "worldclock",
+      "stars": 0,
+      "updated_at": "2026-07-14T02:57:40Z",
+      "url": "https://github.com/Real-Fruit-Snacks/worldclock"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-07-13T12:45:19Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
     {
       "description": "Prints ready-to-paste file-transfer commands (scp/sftp/cat/tar over SSH, openssl, netcat) in both directions. Single-file, stdlib-only, Terminal Workbench themed.",
       "forks": 0,
@@ -47,15 +74,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/x86-x64-assembly-lab"
     },
     {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 1,
-      "updated_at": "2026-07-12T07:59:48Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
-    },
-    {
       "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
       "forks": 0,
       "language": null,
@@ -90,15 +108,6 @@
       "stars": 1,
       "updated_at": "2026-07-12T00:09:10Z",
       "url": "https://github.com/Real-Fruit-Snacks/Graphite"
-    },
-    {
-      "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "worldclock",
-      "stars": 0,
-      "updated_at": "2026-07-11T19:09:36Z",
-      "url": "https://github.com/Real-Fruit-Snacks/worldclock"
     },
     {
       "description": "A pixel-art medieval wave-defense incremental game",
@@ -338,11 +347,11 @@
   "languages": {
     "CSS": 1,
     "HTML": 3,
-    "JavaScript": 15,
+    "JavaScript": 16,
     "Python": 5,
     "Rust": 1,
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-13T08:48:56Z"
+  "updated_at": "2026-07-14T07:47:13Z"
 }
