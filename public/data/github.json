@@ -7,17 +7,170 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 37
+    "public_repos": 52
   },
   "repos": [
+    {
+      "description": "An Obsidian cursor engine for the Terminal Workbench family: box/line/underline carets, a torch spotlight, and a Ghost Trail that peels a pet ghost off the text as you type.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-cursor",
+      "stars": 0,
+      "updated_at": "2026-07-16T02:36:44Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-cursor"
+    },
     {
       "description": "Windows desktop API tester that authenticates with a client certificate from the Windows store (mTLS) and renders responses of any format. Self-contained single-file exe, no install.",
       "forks": 0,
       "language": "C#",
       "name": "windows-cert-api-tester",
       "stars": 0,
-      "updated_at": "2026-07-15T01:47:46Z",
+      "updated_at": "2026-07-16T02:35:42Z",
       "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
+    },
+    {
+      "description": "A searchable reference for the Windows Event IDs that matter to defenders and admins — logon, account, Kerberos, process, service, task, PowerShell, and Sysmon events, with logon-type and failure-code tables and a ready-to-copy Get-WinEvent query for each.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "windows-event-id-reference",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:55Z",
+      "url": "https://github.com/Real-Fruit-Snacks/windows-event-id-reference"
+    },
+    {
+      "description": "Convert between Unix epoch time and human dates — seconds or milliseconds auto-detected, UTC and local side by side.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "timestamp-converter",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:51Z",
+      "url": "https://github.com/Real-Fruit-Snacks/timestamp-converter"
+    },
+    {
+      "description": "Encode and decode between plain text and Base64, URL-safe Base64, percent-encoding, or hex — live in both directions.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "text-codec",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:49Z",
+      "url": "https://github.com/Real-Fruit-Snacks/text-codec"
+    },
+    {
+      "description": "Assemble a tcpdump capture command and its BPF filter from protocol, host, port, and direction — with a flag reference and copy button.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "tcpdump-filter-builder",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:46Z",
+      "url": "https://github.com/Real-Fruit-Snacks/tcpdump-filter-builder"
+    },
+    {
+      "description": "Fill in the fields and get a complete systemd .service unit — [Unit]/[Service]/[Install] sections, restart policy, and the install commands.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "systemd-service-generator",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:44Z",
+      "url": "https://github.com/Real-Fruit-Snacks/systemd-service-generator"
+    },
+    {
+      "description": "Fill in the blanks and get a complete schtasks /create command — schedule dropdowns, correct quoting, and a copy button. Plus a searchable Last Run Result code reference for tasks that fail.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "windows-task-builder",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:40Z",
+      "url": "https://github.com/Real-Fruit-Snacks/windows-task-builder"
+    },
+    {
+      "description": "A searchable table of well-known ports — filter by number, service, or purpose.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "port-reference",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:37Z",
+      "url": "https://github.com/Real-Fruit-Snacks/port-reference"
+    },
+    {
+      "description": "Toggle scan type, ports, detection, timing, and output — the nmap command assembles live, every flag explained, with privilege notes and a copy button.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "nmap-command-builder",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:34Z",
+      "url": "https://github.com/Real-Fruit-Snacks/nmap-command-builder"
+    },
+    {
+      "description": "Build a curl command from method, headers, auth, body, and options — assembled live with correct POSIX quoting and a copy button.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "curl-request-builder",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:32Z",
+      "url": "https://github.com/Real-Fruit-Snacks/curl-request-builder"
+    },
+    {
+      "description": "Convert a color between hex, RGB, and HSL with a live swatch, and check WCAG 2.1 contrast against black and white.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "color-format-converter",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:29Z",
+      "url": "https://github.com/Real-Fruit-Snacks/color-format-converter"
+    },
+    {
+      "description": "Unix permissions three ways — checkboxes, octal, and symbolic — kept in sync live, special bits included.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "chmod-calculator",
+      "stars": 0,
+      "updated_at": "2026-07-15T23:48:26Z",
+      "url": "https://github.com/Real-Fruit-Snacks/chmod-calculator"
+    },
+    {
+      "description": "Paste or open an .ovpn file (or a .crt/.pem) and see every certificate's expiry, details, and config security flags — entirely in your browser.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "openvpn-inspector",
+      "stars": 0,
+      "updated_at": "2026-07-15T22:58:54Z",
+      "url": "https://github.com/Real-Fruit-Snacks/openvpn-inspector"
+    },
+    {
+      "description": "Enter an IPv4 address, CIDR block, or IP + netmask — get the network, broadcast, host range, wildcard mask, and a colored binary breakdown.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "ip-cidr-calculator",
+      "stars": 0,
+      "updated_at": "2026-07-15T22:58:48Z",
+      "url": "https://github.com/Real-Fruit-Snacks/ip-cidr-calculator"
+    },
+    {
+      "description": "Parse a Unix cron expression — validate it, see what each field means, and preview the next run times.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "cron-parser",
+      "stars": 0,
+      "updated_at": "2026-07-15T22:58:41Z",
+      "url": "https://github.com/Real-Fruit-Snacks/cron-parser"
+    },
+    {
+      "description": "Paste text and see every character classified — case, digits, symbols, whitespace — with Unicode code points.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "character-analyzer",
+      "stars": 0,
+      "updated_at": "2026-07-15T22:21:16Z",
+      "url": "https://github.com/Real-Fruit-Snacks/character-analyzer"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-07-15T07:50:38Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A static, git-backed team calendar you edit right in the browser — commits your changes back to the repo. GitHub & GitLab Pages. No backend.",
@@ -36,15 +189,6 @@
       "stars": 0,
       "updated_at": "2026-07-14T22:50:47Z",
       "url": "https://github.com/Real-Fruit-Snacks/HydroShot"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-07-14T07:47:18Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
@@ -153,15 +297,6 @@
       "stars": 0,
       "updated_at": "2026-07-11T18:55:20Z",
       "url": "https://github.com/Real-Fruit-Snacks/youtube-automation-toolkit"
-    },
-    {
-      "description": "Paste any string and see everything about its characters - colored per-character grid, Unicode deep dive, lookalike warnings, MD5 and more. All computed locally.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "character-analyzer",
-      "stars": 0,
-      "updated_at": "2026-07-11T18:55:16Z",
-      "url": "https://github.com/Real-Fruit-Snacks/character-analyzer"
     },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
@@ -348,11 +483,11 @@
     "C#": 1,
     "CSS": 1,
     "HTML": 3,
-    "JavaScript": 16,
+    "JavaScript": 31,
     "Python": 4,
     "Rust": 1,
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-15T07:50:28Z"
+  "updated_at": "2026-07-16T07:55:25Z"
 }
