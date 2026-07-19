@@ -11,13 +11,31 @@
   },
   "repos": [
     {
+      "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-pet",
+      "stars": 1,
+      "updated_at": "2026-07-19T01:38:39Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
+    },
+    {
       "description": "Windows desktop API tester that authenticates with a client certificate from the Windows store (mTLS) and renders responses of any format. Self-contained single-file exe, no install.",
       "forks": 0,
       "language": "C#",
       "name": "windows-cert-api-tester",
       "stars": 0,
-      "updated_at": "2026-07-18T04:36:43Z",
+      "updated_at": "2026-07-19T00:23:12Z",
       "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
+    },
+    {
+      "description": "An Obsidian cursor engine for the Terminal Workbench family: box/line/underline carets, a torch spotlight, and a Ghost Trail that peels a pet ghost off the text as you type.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-cursor",
+      "stars": 1,
+      "updated_at": "2026-07-18T20:35:50Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-cursor"
     },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
@@ -25,17 +43,8 @@
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-07-17T07:52:14Z",
+      "updated_at": "2026-07-18T07:27:31Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
-    },
-    {
-      "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-pet",
-      "stars": 1,
-      "updated_at": "2026-07-17T04:14:00Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
     },
     {
       "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
@@ -45,15 +54,6 @@
       "stars": 2,
       "updated_at": "2026-07-17T03:52:54Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
-    },
-    {
-      "description": "An Obsidian cursor engine for the Terminal Workbench family: box/line/underline carets, a torch spotlight, and a Ghost Trail that peels a pet ghost off the text as you type.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-cursor",
-      "stars": 1,
-      "updated_at": "2026-07-17T03:21:50Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-cursor"
     },
     {
       "description": "Terminal Workbench design system: portable theme spec, drop-in CSS tokens, and a live demo. Graphite surfaces, restrained accents, dark + light.",
@@ -489,5 +489,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-18T07:27:10Z"
+  "updated_at": "2026-07-19T07:59:10Z"
 }
