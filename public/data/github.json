@@ -11,13 +11,103 @@
   },
   "repos": [
     {
+      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-gym-tracker",
+      "stars": 1,
+      "updated_at": "2026-07-19T14:53:26Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
+    },
+    {
       "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
       "forks": 0,
       "language": "JavaScript",
       "name": "terminal-workbench-pet",
       "stars": 1,
-      "updated_at": "2026-07-19T01:38:39Z",
+      "updated_at": "2026-07-19T14:53:25Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-pet"
+    },
+    {
+      "description": "An Obsidian cursor engine for the Terminal Workbench family: box/line/underline carets, a torch spotlight, and a Ghost Trail that peels a pet ghost off the text as you type.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "terminal-workbench-cursor",
+      "stars": 1,
+      "updated_at": "2026-07-19T14:53:22Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-cursor"
+    },
+    {
+      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Cove",
+      "stars": 0,
+      "updated_at": "2026-07-19T14:51:36Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Cove"
+    },
+    {
+      "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Graphite",
+      "stars": 1,
+      "updated_at": "2026-07-19T14:50:58Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Graphite"
+    },
+    {
+      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-github-updater",
+      "stars": 0,
+      "updated_at": "2026-07-19T14:07:00Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
+    },
+    {
+      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-nested-vaults",
+      "stars": 0,
+      "updated_at": "2026-07-19T14:04:20Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
+    },
+    {
+      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "wayback-linker",
+      "stars": 0,
+      "updated_at": "2026-07-19T14:02:31Z",
+      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
+    },
+    {
+      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Tidemark",
+      "stars": 0,
+      "updated_at": "2026-07-19T13:51:12Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
+    },
+    {
+      "description": "Obsidian plugin that replaces the built-in community plugin browser: filters, categories, rich README previews, trending, and an installed-plugins dashboard.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-better-store",
+      "stars": 1,
+      "updated_at": "2026-07-19T12:15:54Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-better-store"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-07-19T07:59:17Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Windows desktop API tester that authenticates with a client certificate from the Windows store (mTLS) and renders responses of any format. Self-contained single-file exe, no install.",
@@ -27,24 +117,6 @@
       "stars": 0,
       "updated_at": "2026-07-19T00:23:12Z",
       "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
-    },
-    {
-      "description": "An Obsidian cursor engine for the Terminal Workbench family: box/line/underline carets, a torch spotlight, and a Ghost Trail that peels a pet ghost off the text as you type.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "terminal-workbench-cursor",
-      "stars": 1,
-      "updated_at": "2026-07-18T20:35:50Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-cursor"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-07-18T07:27:31Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
@@ -227,15 +299,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/worldclock"
     },
     {
-      "description": "Obsidian plugin that replaces the built-in community plugin browser: filters, categories, rich README previews, trending, and an installed-plugins dashboard.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-better-store",
-      "stars": 1,
-      "updated_at": "2026-07-13T02:00:30Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-better-store"
-    },
-    {
       "description": "Interactive x86 & x86-64 assembly simulator and reverse-engineering lab — step-through 32/64-bit engines, stack playground, register quiz, 28 tutorials, and 7 tools. Pure browser, no build, no dependencies.",
       "forks": 0,
       "language": "HTML",
@@ -261,15 +324,6 @@
       "stars": 0,
       "updated_at": "2026-07-12T01:31:29Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-mono"
-    },
-    {
-      "description": "A calm, Todoist-like task manager for Obsidian — tasks stay as local Markdown files in your vault.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Graphite",
-      "stars": 1,
-      "updated_at": "2026-07-12T00:09:10Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Graphite"
     },
     {
       "description": "A pixel-art medieval wave-defense incremental game",
@@ -317,15 +371,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/youtube-automation-toolkit"
     },
     {
-      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-gym-tracker",
-      "stars": 1,
-      "updated_at": "2026-07-11T17:19:47Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
-    },
-    {
       "description": "Publish an Obsidian vault as a fast static website.",
       "forks": 0,
       "language": "Python",
@@ -342,15 +387,6 @@
       "stars": 0,
       "updated_at": "2026-07-11T16:46:32Z",
       "url": "https://github.com/Real-Fruit-Snacks/tldr"
-    },
-    {
-      "description": "Effortlessly install, manage, and update unofficial Obsidian plugins directly from GitHub.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-github-updater",
-      "stars": 0,
-      "updated_at": "2026-07-11T12:22:37Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-github-updater"
     },
     {
       "description": "A browser horror game about a night-shift security guard. 100% procedural WebAudio and Canvas.",
@@ -407,42 +443,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/Blueprint"
     },
     {
-      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "wayback-linker",
-      "stars": 0,
-      "updated_at": "2026-07-11T11:45:48Z",
-      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
-    },
-    {
-      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "obsidian-nested-vaults",
-      "stars": 0,
-      "updated_at": "2026-07-11T11:45:46Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
-    },
-    {
-      "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Cove",
-      "stars": 0,
-      "updated_at": "2026-07-11T11:45:41Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Cove"
-    },
-    {
-      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Tidemark",
-      "stars": 0,
-      "updated_at": "2026-07-11T11:45:38Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
-    },
-    {
       "description": "Terminal Workbench themes for Notepad++: dark and light, all 92 lexers. Graphite surfaces, restrained accents, color only on signal.",
       "forks": 0,
       "language": null,
@@ -489,5 +489,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-19T07:59:10Z"
+  "updated_at": "2026-07-20T08:40:20Z"
 }
