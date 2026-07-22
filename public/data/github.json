@@ -16,8 +16,26 @@
       "language": "HTML",
       "name": "terminal-workbench-suite",
       "stars": 0,
-      "updated_at": "2026-07-20T20:07:25Z",
+      "updated_at": "2026-07-21T16:34:11Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
+    },
+    {
+      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-gym-tracker",
+      "stars": 2,
+      "updated_at": "2026-07-21T13:27:42Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-07-21T08:08:12Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
@@ -108,24 +126,6 @@
       "stars": 0,
       "updated_at": "2026-07-20T19:49:20Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vim"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-07-20T08:41:14Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
-    },
-    {
-      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "obsidian-gym-tracker",
-      "stars": 1,
-      "updated_at": "2026-07-19T14:53:26Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
     },
     {
       "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
@@ -498,5 +498,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-21T08:07:28Z"
+  "updated_at": "2026-07-22T08:08:16Z"
 }
