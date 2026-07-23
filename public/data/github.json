@@ -11,6 +11,24 @@
   },
   "repos": [
     {
+      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "wayback-linker",
+      "stars": 1,
+      "updated_at": "2026-07-22T10:16:58Z",
+      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-07-22T08:09:22Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
       "forks": 0,
       "language": "HTML",
@@ -27,15 +45,6 @@
       "stars": 2,
       "updated_at": "2026-07-21T13:27:42Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-07-21T08:08:12Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A small floating ghost companion for Obsidian: it drifts around your vault, follows your cursor, and recolors when you boop it. Pairs with the Terminal Workbench theme.",
@@ -162,15 +171,6 @@
       "stars": 0,
       "updated_at": "2026-07-19T14:04:20Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
-    },
-    {
-      "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "wayback-linker",
-      "stars": 0,
-      "updated_at": "2026-07-19T14:02:31Z",
-      "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
     },
     {
       "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
@@ -498,5 +498,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-22T08:08:16Z"
+  "updated_at": "2026-07-23T08:11:58Z"
 }
