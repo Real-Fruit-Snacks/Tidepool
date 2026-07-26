@@ -11,12 +11,30 @@
   },
   "repos": [
     {
+      "description": "Windows desktop API tester that authenticates with a client certificate from the Windows store (mTLS) and renders responses of any format. Self-contained single-file exe, no install.",
+      "forks": 0,
+      "language": "C#",
+      "name": "windows-cert-api-tester",
+      "stars": 1,
+      "updated_at": "2026-07-26T07:40:56Z",
+      "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
+    },
+    {
+      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "terminal-workbench-suite",
+      "stars": 0,
+      "updated_at": "2026-07-25T14:30:28Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
+    },
+    {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-07-24T08:08:11Z",
+      "updated_at": "2026-07-25T07:50:37Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -27,15 +45,6 @@
       "stars": 1,
       "updated_at": "2026-07-22T10:16:58Z",
       "url": "https://github.com/Real-Fruit-Snacks/wayback-linker"
-    },
-    {
-      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "terminal-workbench-suite",
-      "stars": 0,
-      "updated_at": "2026-07-21T16:34:11Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
     },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
@@ -189,15 +198,6 @@
       "stars": 1,
       "updated_at": "2026-07-19T12:15:54Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-better-store"
-    },
-    {
-      "description": "Windows desktop API tester that authenticates with a client certificate from the Windows store (mTLS) and renders responses of any format. Self-contained single-file exe, no install.",
-      "forks": 0,
-      "language": "C#",
-      "name": "windows-cert-api-tester",
-      "stars": 0,
-      "updated_at": "2026-07-19T00:23:12Z",
-      "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
     },
     {
       "description": "A searchable reference for the Windows Event IDs that matter to defenders and admins — logon, account, Kerberos, process, service, task, PowerShell, and Sysmon events, with logon-type and failure-code tables and a ready-to-copy Get-WinEvent query for each.",
@@ -498,5 +498,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-25T07:49:59Z"
+  "updated_at": "2026-07-26T08:08:25Z"
 }
