@@ -16,8 +16,17 @@
       "language": "C#",
       "name": "windows-cert-api-tester",
       "stars": 1,
-      "updated_at": "2026-07-26T07:40:56Z",
+      "updated_at": "2026-07-26T23:29:13Z",
       "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-07-26T08:08:58Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
@@ -27,15 +36,6 @@
       "stars": 0,
       "updated_at": "2026-07-25T14:30:28Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-07-25T07:50:37Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
@@ -498,5 +498,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-26T08:08:25Z"
+  "updated_at": "2026-07-27T09:31:39Z"
 }
