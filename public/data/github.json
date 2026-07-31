@@ -15,9 +15,18 @@
       "forks": 0,
       "language": "C#",
       "name": "windows-cert-api-tester",
-      "stars": 1,
-      "updated_at": "2026-07-29T23:30:53Z",
+      "stars": 0,
+      "updated_at": "2026-07-30T12:35:44Z",
       "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-07-30T08:10:30Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
@@ -27,15 +36,6 @@
       "stars": 0,
       "updated_at": "2026-07-29T18:19:03Z",
       "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-07-29T08:21:04Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
@@ -498,5 +498,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-07-30T08:07:24Z"
+  "updated_at": "2026-07-31T08:34:10Z"
 }
