@@ -11,12 +11,39 @@
   },
   "repos": [
     {
+      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "terminal-workbench-suite",
+      "stars": 1,
+      "updated_at": "2026-08-01T23:26:34Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
+    },
+    {
+      "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
+      "forks": 1,
+      "language": "CSS",
+      "name": "terminal-workbench",
+      "stars": 4,
+      "updated_at": "2026-08-01T23:17:03Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
+    },
+    {
+      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "Tidemark",
+      "stars": 1,
+      "updated_at": "2026-08-01T14:29:07Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
+    },
+    {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-07-31T08:35:51Z",
+      "updated_at": "2026-08-01T08:04:07Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -27,24 +54,6 @@
       "stars": 0,
       "updated_at": "2026-07-30T12:35:44Z",
       "url": "https://github.com/Real-Fruit-Snacks/windows-cert-api-tester"
-    },
-    {
-      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "terminal-workbench-suite",
-      "stars": 0,
-      "updated_at": "2026-07-29T18:19:03Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
-    },
-    {
-      "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
-      "forks": 0,
-      "language": "CSS",
-      "name": "terminal-workbench",
-      "stars": 3,
-      "updated_at": "2026-07-28T04:21:38Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench"
     },
     {
       "description": "Obsidian plugin that archives note links with the Wayback Machine and replaces them with snapshot URLs.",
@@ -180,15 +189,6 @@
       "stars": 0,
       "updated_at": "2026-07-19T14:04:20Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
-    },
-    {
-      "description": "Obsidian plugin for variable substitution in markdown via YAML frontmatter.",
-      "forks": 0,
-      "language": "TypeScript",
-      "name": "Tidemark",
-      "stars": 0,
-      "updated_at": "2026-07-19T13:51:12Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidemark"
     },
     {
       "description": "Obsidian plugin that replaces the built-in community plugin browser: filters, categories, rich README previews, trending, and an installed-plugins dashboard.",
@@ -498,5 +498,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-08-01T08:03:37Z"
+  "updated_at": "2026-08-02T08:05:23Z"
 }
