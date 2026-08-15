@@ -11,22 +11,31 @@
   },
   "repos": [
     {
+      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-nested-vaults",
+      "stars": 3,
+      "updated_at": "2026-08-14T07:12:12Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
+    },
+    {
+      "description": "Publish an Obsidian vault as a fast static website.",
+      "forks": 0,
+      "language": "Python",
+      "name": "obsidian-vault-publisher",
+      "stars": 2,
+      "updated_at": "2026-08-14T07:11:27Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-publisher"
+    },
+    {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-08-13T07:12:26Z",
+      "updated_at": "2026-08-14T07:09:10Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
-    },
-    {
-      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "obsidian-nested-vaults",
-      "stars": 2,
-      "updated_at": "2026-08-12T18:54:59Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
     },
     {
       "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
@@ -416,15 +425,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/youtube-automation-toolkit"
     },
     {
-      "description": "Publish an Obsidian vault as a fast static website.",
-      "forks": 0,
-      "language": "Python",
-      "name": "obsidian-vault-publisher",
-      "stars": 1,
-      "updated_at": "2026-07-11T17:16:47Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-publisher"
-    },
-    {
       "description": "Fast offline tldr pages - fully static command reference with instant search. Zero network calls, no build step, host it anywhere or open straight from disk.",
       "forks": 0,
       "language": "Python",
@@ -480,5 +480,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-08-14T07:08:47Z"
+  "updated_at": "2026-08-15T06:20:31Z"
 }
