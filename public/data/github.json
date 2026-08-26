@@ -16,7 +16,7 @@
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-08-24T06:36:29Z",
+      "updated_at": "2026-08-25T06:29:13Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
-      "forks": 0,
+      "forks": 1,
       "language": "TypeScript",
       "name": "obsidian-gym-tracker",
       "stars": 2,
@@ -480,5 +480,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-08-25T06:28:38Z"
+  "updated_at": "2026-08-26T06:30:19Z"
 }
