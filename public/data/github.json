@@ -11,12 +11,21 @@
   },
   "repos": [
     {
+      "description": "Enter an IPv4 address, CIDR block, or IP + netmask — get the network, broadcast, host range, wildcard mask, and a colored binary breakdown.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "ip-cidr-calculator",
+      "stars": 1,
+      "updated_at": "2026-09-01T09:28:49Z",
+      "url": "https://github.com/Real-Fruit-Snacks/ip-cidr-calculator"
+    },
+    {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-08-30T10:54:54Z",
+      "updated_at": "2026-08-31T12:14:28Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -308,15 +317,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/openvpn-inspector"
     },
     {
-      "description": "Enter an IPv4 address, CIDR block, or IP + netmask — get the network, broadcast, host range, wildcard mask, and a colored binary breakdown.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "ip-cidr-calculator",
-      "stars": 0,
-      "updated_at": "2026-07-15T22:58:48Z",
-      "url": "https://github.com/Real-Fruit-Snacks/ip-cidr-calculator"
-    },
-    {
       "description": "Parse a Unix cron expression — validate it, see what each field means, and preview the next run times.",
       "forks": 0,
       "language": "JavaScript",
@@ -480,5 +480,5 @@
     "TypeScript": 7,
     "Vim Script": 1
   },
-  "updated_at": "2026-08-31T12:09:52Z"
+  "updated_at": "2026-09-01T10:46:33Z"
 }
