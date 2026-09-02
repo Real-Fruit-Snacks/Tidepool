@@ -7,9 +7,36 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 51
+    "public_repos": 53
   },
   "repos": [
+    {
+      "description": "Two-way sync between Obsidian and Filen — zero-knowledge, end-to-end encrypted. Desktop and mobile.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-filen-cloud-sync",
+      "stars": 0,
+      "updated_at": "2026-09-02T03:44:37Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-filen-cloud-sync"
+    },
+    {
+      "description": "Linkhaven — a Linkwarden-style bookmark navigator for Obsidian: collection tree + cover-card grid over plain Markdown notes, automatic metadata capture, identical on desktop and mobile.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "obsidian-linkhaven",
+      "stars": 0,
+      "updated_at": "2026-09-02T02:44:44Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-linkhaven"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-09-01T10:49:08Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
     {
       "description": "Enter an IPv4 address, CIDR block, or IP + netmask — get the network, broadcast, host range, wildcard mask, and a colored binary breakdown.",
       "forks": 0,
@@ -18,15 +45,6 @@
       "stars": 1,
       "updated_at": "2026-09-01T09:28:49Z",
       "url": "https://github.com/Real-Fruit-Snacks/ip-cidr-calculator"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-08-31T12:14:28Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
@@ -477,8 +495,8 @@
     "JavaScript": 30,
     "Python": 3,
     "Rust": 1,
-    "TypeScript": 7,
+    "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-01T10:46:33Z"
+  "updated_at": "2026-09-02T10:11:22Z"
 }
