@@ -11,6 +11,15 @@
   },
   "repos": [
     {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-09-04T10:11:59Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Linkhaven — a Linkwarden-style bookmark navigator for Obsidian: collection tree + cover-card grid over plain Markdown notes, automatic metadata capture, identical on desktop and mobile.",
       "forks": 0,
       "language": "TypeScript",
@@ -27,15 +36,6 @@
       "stars": 0,
       "updated_at": "2026-09-03T15:26:31Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-filen-cloud-sync"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-09-03T10:24:06Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Enter an IPv4 address, CIDR block, or IP + netmask — get the network, broadcast, host range, wildcard mask, and a colored binary breakdown.",
@@ -498,5 +498,5 @@
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-04T10:10:12Z"
+  "updated_at": "2026-09-05T09:39:22Z"
 }
