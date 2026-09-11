@@ -7,16 +7,25 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 53
+    "public_repos": 54
   },
   "repos": [
+    {
+      "description": "A lightweight, privacy-first microblogging feed inspired by usememos.com.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-Thoughtbin",
+      "stars": 0,
+      "updated_at": "2026-09-10T23:40:56Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-Thoughtbin"
+    },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-09-09T10:27:04Z",
+      "updated_at": "2026-09-10T10:15:45Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -492,11 +501,11 @@
     "C#": 1,
     "CSS": 1,
     "HTML": 4,
-    "JavaScript": 30,
+    "JavaScript": 31,
     "Python": 3,
     "Rust": 1,
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-10T10:15:40Z"
+  "updated_at": "2026-09-11T10:13:42Z"
 }
