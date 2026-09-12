@@ -7,16 +7,43 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 54
+    "public_repos": 57
   },
   "repos": [
     {
-      "description": "A lightweight, privacy-first microblogging feed inspired by usememos.com.",
+      "description": "An Obsidian theme where every note is a case file: manila folders, typewriter type, rubber stamps, and highlights that stay redacted until you hover them. Day and night.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "obsidian-dossier",
+      "stars": 0,
+      "updated_at": "2026-09-12T01:17:57Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-dossier"
+    },
+    {
+      "description": "A synthwave theme for Obsidian with night and day modes: neon pink and cyan, a striped sun, and a grid that runs to the horizon.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "obsidian-outrun",
+      "stars": 0,
+      "updated_at": "2026-09-12T01:10:27Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
+    },
+    {
+      "description": "A calm dark theme for Obsidian: deep charcoal, soft light, periwinkle accent. Light mode included.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "obsidian-glow",
+      "stars": 0,
+      "updated_at": "2026-09-12T01:10:26Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-glow"
+    },
+    {
+      "description": "A private Memos-style timeline for quick thoughts inside your Obsidian vault: capture, tags, pins, archive, tasks, attachments, search and an activity calendar.",
       "forks": 0,
       "language": "JavaScript",
       "name": "obsidian-Thoughtbin",
       "stars": 0,
-      "updated_at": "2026-09-10T23:40:56Z",
+      "updated_at": "2026-09-12T01:10:25Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-Thoughtbin"
     },
     {
@@ -25,7 +52,7 @@
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-09-10T10:15:45Z",
+      "updated_at": "2026-09-11T10:13:48Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -499,7 +526,7 @@
   ],
   "languages": {
     "C#": 1,
-    "CSS": 1,
+    "CSS": 4,
     "HTML": 4,
     "JavaScript": 31,
     "Python": 3,
@@ -507,5 +534,5 @@
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-11T10:13:42Z"
+  "updated_at": "2026-09-12T09:47:47Z"
 }
