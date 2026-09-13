@@ -7,16 +7,70 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 57
+    "public_repos": 61
   },
   "repos": [
+    {
+      "description": "Dev Lab: pre-flight review against the official linter and community review rules, an inventory of commands and settings, and UI captures under every installed theme",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-plugin-lab",
+      "stars": 0,
+      "updated_at": "2026-09-13T02:24:29Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-plugin-lab"
+    },
+    {
+      "description": "A private Memos-style timeline for quick thoughts inside your Obsidian vault: capture, tags, pins, archive, tasks, attachments, search and an activity calendar.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-Thoughtbin",
+      "stars": 0,
+      "updated_at": "2026-09-13T02:19:40Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-Thoughtbin"
+    },
+    {
+      "description": "Build themes from inside the app: inspect which CSS rule wins, capture a screenshot matrix into contact sheets, write a lint and contrast report",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-theme-lab",
+      "stars": 0,
+      "updated_at": "2026-09-13T02:19:33Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-theme-lab"
+    },
+    {
+      "description": "A calm dark theme for Obsidian: deep charcoal, soft light, periwinkle accent. Light mode included.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "obsidian-glow",
+      "stars": 0,
+      "updated_at": "2026-09-13T02:19:25Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-glow"
+    },
+    {
+      "description": "An Obsidian theme where every note is a tarot card: gold on black, Cinzel titles, callouts that are cards, and a folded callout turns face down. Night and day",
+      "forks": 0,
+      "language": null,
+      "name": "obsidian-grimoire",
+      "stars": 0,
+      "updated_at": "2026-09-13T01:50:44Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-grimoire"
+    },
+    {
+      "description": "An Obsidian theme printed in colour: halftone paper, hard black panels, Bangers headlines, and callouts that are speech bubbles. Day and night",
+      "forks": 0,
+      "language": null,
+      "name": "obsidian-comic",
+      "stars": 0,
+      "updated_at": "2026-09-13T01:50:43Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-comic"
+    },
     {
       "description": "An Obsidian theme where every note is a case file: manila folders, typewriter type, rubber stamps, and highlights that stay redacted until you hover them. Day and night.",
       "forks": 0,
       "language": "CSS",
       "name": "obsidian-dossier",
-      "stars": 0,
-      "updated_at": "2026-09-12T01:17:57Z",
+      "stars": 1,
+      "updated_at": "2026-09-13T01:50:41Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-dossier"
     },
     {
@@ -25,26 +79,8 @@
       "language": "CSS",
       "name": "obsidian-outrun",
       "stars": 0,
-      "updated_at": "2026-09-12T01:10:27Z",
+      "updated_at": "2026-09-13T01:50:39Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
-    },
-    {
-      "description": "A calm dark theme for Obsidian: deep charcoal, soft light, periwinkle accent. Light mode included.",
-      "forks": 0,
-      "language": "CSS",
-      "name": "obsidian-glow",
-      "stars": 0,
-      "updated_at": "2026-09-12T01:10:26Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-glow"
-    },
-    {
-      "description": "A private Memos-style timeline for quick thoughts inside your Obsidian vault: capture, tags, pins, archive, tasks, attachments, search and an activity calendar.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "obsidian-Thoughtbin",
-      "stars": 0,
-      "updated_at": "2026-09-12T01:10:25Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-Thoughtbin"
     },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
@@ -52,7 +88,7 @@
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-09-11T10:13:48Z",
+      "updated_at": "2026-09-12T09:47:53Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -528,11 +564,11 @@
     "C#": 1,
     "CSS": 4,
     "HTML": 4,
-    "JavaScript": 31,
+    "JavaScript": 33,
     "Python": 3,
     "Rust": 1,
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-12T09:47:47Z"
+  "updated_at": "2026-09-13T10:48:03Z"
 }
