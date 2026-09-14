@@ -11,6 +11,24 @@
   },
   "repos": [
     {
+      "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "worldclock",
+      "stars": 1,
+      "updated_at": "2026-09-14T09:58:48Z",
+      "url": "https://github.com/Real-Fruit-Snacks/worldclock"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-09-13T10:48:09Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Dev Lab: pre-flight review against the official linter and community review rules, an inventory of commands and settings, and UI captures under every installed theme",
       "forks": 0,
       "language": "JavaScript",
@@ -81,15 +99,6 @@
       "stars": 0,
       "updated_at": "2026-09-13T01:50:39Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-09-12T09:47:53Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Linkhaven — a Linkwarden-style bookmark navigator for Obsidian: collection tree + cover-card grid over plain Markdown notes, automatic metadata capture, identical on desktop and mobile.",
@@ -443,15 +452,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/HydroShot"
     },
     {
-      "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "worldclock",
-      "stars": 0,
-      "updated_at": "2026-07-14T02:57:40Z",
-      "url": "https://github.com/Real-Fruit-Snacks/worldclock"
-    },
-    {
       "description": "Interactive x86 & x86-64 assembly simulator and reverse-engineering lab — step-through 32/64-bit engines, stack playground, register quiz, 28 tutorials, and 7 tools. Pure browser, no build, no dependencies.",
       "forks": 0,
       "language": "HTML",
@@ -570,5 +570,5 @@
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-13T10:48:03Z"
+  "updated_at": "2026-09-14T11:15:02Z"
 }
