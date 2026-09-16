@@ -3,20 +3,38 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/87195021?v=4",
     "bio": null,
     "created_at": "2021-07-09T14:46:03Z",
-    "followers": 5,
+    "followers": 6,
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 61
+    "public_repos": 62
   },
   "repos": [
+    {
+      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "obsidian-nested-vaults",
+      "stars": 4,
+      "updated_at": "2026-09-16T03:01:54Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
+    },
+    {
+      "description": "Offline single-page generator for throwaway signup identities: names, handles, passwords, security answers and avatars.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "identity-gen",
+      "stars": 0,
+      "updated_at": "2026-09-15T23:00:18Z",
+      "url": "https://github.com/Real-Fruit-Snacks/identity-gen"
+    },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-09-14T11:15:08Z",
+      "updated_at": "2026-09-15T10:41:26Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -126,15 +144,6 @@
       "stars": 1,
       "updated_at": "2026-09-01T09:28:49Z",
       "url": "https://github.com/Real-Fruit-Snacks/ip-cidr-calculator"
-    },
-    {
-      "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "obsidian-nested-vaults",
-      "stars": 3,
-      "updated_at": "2026-08-14T07:12:12Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
     },
     {
       "description": "Publish an Obsidian vault as a fast static website.",
@@ -563,12 +572,12 @@
   "languages": {
     "C#": 1,
     "CSS": 4,
-    "HTML": 4,
+    "HTML": 5,
     "JavaScript": 33,
     "Python": 3,
     "Rust": 1,
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-15T10:41:21Z"
+  "updated_at": "2026-09-16T10:29:38Z"
 }
