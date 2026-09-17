@@ -7,9 +7,36 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 62
+    "public_repos": 63
   },
   "repos": [
+    {
+      "description": "Offline single-page generator for throwaway signup identities: names, handles, passwords, security answers and avatars.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "identity-gen",
+      "stars": 0,
+      "updated_at": "2026-09-17T02:19:37Z",
+      "url": "https://github.com/Real-Fruit-Snacks/identity-gen"
+    },
+    {
+      "description": "NetExec wrapper combining 35+ AD enumeration modules into a single command",
+      "forks": 0,
+      "language": "Python",
+      "name": "Maelstrom",
+      "stars": 0,
+      "updated_at": "2026-09-17T01:54:29Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Maelstrom"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-09-16T10:29:43Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
     {
       "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
       "forks": 0,
@@ -18,24 +45,6 @@
       "stars": 4,
       "updated_at": "2026-09-16T03:01:54Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-nested-vaults"
-    },
-    {
-      "description": "Offline single-page generator for throwaway signup identities: names, handles, passwords, security answers and avatars.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "identity-gen",
-      "stars": 0,
-      "updated_at": "2026-09-15T23:00:18Z",
-      "url": "https://github.com/Real-Fruit-Snacks/identity-gen"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-09-15T10:41:26Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Fully offline world clock — live day/night map, any IANA timezone, zero dependencies, no build. Terminal Workbench style.",
@@ -574,10 +583,10 @@
     "CSS": 4,
     "HTML": 5,
     "JavaScript": 33,
-    "Python": 3,
+    "Python": 4,
     "Rust": 1,
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-16T10:29:38Z"
+  "updated_at": "2026-09-17T10:39:27Z"
 }
