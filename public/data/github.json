@@ -11,6 +11,15 @@
   },
   "repos": [
     {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-09-18T10:15:20Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Build themes from inside the app: inspect which CSS rule wins, capture a screenshot matrix into contact sheets, write a lint and contrast report",
       "forks": 0,
       "language": "JavaScript",
@@ -72,15 +81,6 @@
       "stars": 0,
       "updated_at": "2026-09-17T23:22:59Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-09-17T10:39:32Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Offline single-page generator for throwaway signup identities: names, handles, passwords, security answers and avatars.",
@@ -597,5 +597,5 @@
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-18T10:15:15Z"
+  "updated_at": "2026-09-19T09:57:35Z"
 }
