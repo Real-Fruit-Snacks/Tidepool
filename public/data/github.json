@@ -11,12 +11,21 @@
   },
   "repos": [
     {
+      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "terminal-workbench-suite",
+      "stars": 3,
+      "updated_at": "2026-09-19T13:56:01Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
+    },
+    {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-09-18T10:15:20Z",
+      "updated_at": "2026-09-19T09:57:40Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -48,7 +57,7 @@
     },
     {
       "description": "An Obsidian theme where every note is a tarot card: gold on black, Cinzel titles, callouts that are cards, and a folded callout turns face down. Night and day",
-      "forks": 0,
+      "forks": 1,
       "language": null,
       "name": "obsidian-grimoire",
       "stars": 0,
@@ -171,15 +180,6 @@
       "stars": 2,
       "updated_at": "2026-08-14T07:11:27Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-vault-publisher"
-    },
-    {
-      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "terminal-workbench-suite",
-      "stars": 2,
-      "updated_at": "2026-08-12T00:15:45Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
     },
     {
       "description": "A modern terminal-inspired theme for Obsidian: graphite backgrounds, crisp typography, restrained ANSI-style accents, and readable code in dark and light modes.",
@@ -597,5 +597,5 @@
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-19T09:57:35Z"
+  "updated_at": "2026-09-20T10:17:33Z"
 }
