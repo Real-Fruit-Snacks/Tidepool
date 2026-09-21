@@ -11,13 +11,40 @@
   },
   "repos": [
     {
-      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
+      "description": "A calm dark theme for Obsidian: deep charcoal, soft light, periwinkle accent. Light mode included.",
       "forks": 0,
-      "language": "HTML",
-      "name": "terminal-workbench-suite",
-      "stars": 3,
-      "updated_at": "2026-09-19T13:56:01Z",
-      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
+      "language": "CSS",
+      "name": "obsidian-glow",
+      "stars": 1,
+      "updated_at": "2026-09-21T08:03:37Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-glow"
+    },
+    {
+      "description": "A synthwave theme for Obsidian with night and day modes: neon pink and cyan, a striped sun, and a grid that runs to the horizon.",
+      "forks": 0,
+      "language": "CSS",
+      "name": "obsidian-outrun",
+      "stars": 1,
+      "updated_at": "2026-09-21T08:03:08Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
+    },
+    {
+      "description": "An Obsidian theme printed in colour: halftone paper, hard black panels, Bangers headlines, and callouts that are speech bubbles. Day and night",
+      "forks": 0,
+      "language": null,
+      "name": "obsidian-comic",
+      "stars": 1,
+      "updated_at": "2026-09-21T08:02:00Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-comic"
+    },
+    {
+      "description": "An Obsidian theme where every note is a tarot card: gold on black, Cinzel titles, callouts that are cards, and a folded callout turns face down. Night and day",
+      "forks": 1,
+      "language": null,
+      "name": "obsidian-grimoire",
+      "stars": 1,
+      "updated_at": "2026-09-21T08:01:40Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-grimoire"
     },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
@@ -25,8 +52,17 @@
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-09-19T09:57:40Z",
+      "updated_at": "2026-09-20T10:17:37Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
+      "description": "The Terminal Workbench family in one repo: theme spec, CSS tokens, live demo, ports for Vim/VS Code/Brave/Notepad++/Windows Terminal, and the Terminal Workbench Mono typeface.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "terminal-workbench-suite",
+      "stars": 3,
+      "updated_at": "2026-09-19T13:56:01Z",
+      "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite"
     },
     {
       "description": "Build themes from inside the app: inspect which CSS rule wins, capture a screenshot matrix into contact sheets, write a lint and contrast report",
@@ -56,24 +92,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-speedlog"
     },
     {
-      "description": "An Obsidian theme where every note is a tarot card: gold on black, Cinzel titles, callouts that are cards, and a folded callout turns face down. Night and day",
-      "forks": 1,
-      "language": null,
-      "name": "obsidian-grimoire",
-      "stars": 0,
-      "updated_at": "2026-09-17T23:26:44Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-grimoire"
-    },
-    {
-      "description": "An Obsidian theme printed in colour: halftone paper, hard black panels, Bangers headlines, and callouts that are speech bubbles. Day and night",
-      "forks": 0,
-      "language": null,
-      "name": "obsidian-comic",
-      "stars": 0,
-      "updated_at": "2026-09-17T23:25:19Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-comic"
-    },
-    {
       "description": "An Obsidian theme where every note is a case file: manila folders, typewriter type, rubber stamps, and highlights that stay redacted until you hover them. Day and night.",
       "forks": 0,
       "language": "CSS",
@@ -81,15 +99,6 @@
       "stars": 1,
       "updated_at": "2026-09-17T23:24:09Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-dossier"
-    },
-    {
-      "description": "A synthwave theme for Obsidian with night and day modes: neon pink and cyan, a striped sun, and a grid that runs to the horizon.",
-      "forks": 0,
-      "language": "CSS",
-      "name": "obsidian-outrun",
-      "stars": 0,
-      "updated_at": "2026-09-17T23:22:59Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
     },
     {
       "description": "Offline single-page generator for throwaway signup identities: names, handles, passwords, security answers and avatars.",
@@ -135,15 +144,6 @@
       "stars": 0,
       "updated_at": "2026-09-13T02:19:40Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-Thoughtbin"
-    },
-    {
-      "description": "A calm dark theme for Obsidian: deep charcoal, soft light, periwinkle accent. Light mode included.",
-      "forks": 0,
-      "language": "CSS",
-      "name": "obsidian-glow",
-      "stars": 0,
-      "updated_at": "2026-09-13T02:19:25Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-glow"
     },
     {
       "description": "Linkhaven — a Linkwarden-style bookmark navigator for Obsidian: collection tree + cover-card grid over plain Markdown notes, automatic metadata capture, identical on desktop and mobile.",
@@ -597,5 +597,5 @@
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-20T10:17:33Z"
+  "updated_at": "2026-09-21T11:27:14Z"
 }
