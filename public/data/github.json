@@ -11,12 +11,21 @@
   },
   "repos": [
     {
+      "description": "Interactive x86 & x86-64 assembly simulator and reverse-engineering lab — step-through 32/64-bit engines, stack playground, register quiz, 28 tutorials, and 7 tools. Pure browser, no build, no dependencies.",
+      "forks": 0,
+      "language": "HTML",
+      "name": "x86-x64-assembly-lab",
+      "stars": 1,
+      "updated_at": "2026-09-23T07:32:12Z",
+      "url": "https://github.com/Real-Fruit-Snacks/x86-x64-assembly-lab"
+    },
+    {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
       "forks": 0,
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-09-21T11:27:20Z",
+      "updated_at": "2026-09-22T10:35:23Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -479,15 +488,6 @@
       "url": "https://github.com/Real-Fruit-Snacks/HydroShot"
     },
     {
-      "description": "Interactive x86 & x86-64 assembly simulator and reverse-engineering lab — step-through 32/64-bit engines, stack playground, register quiz, 28 tutorials, and 7 tools. Pure browser, no build, no dependencies.",
-      "forks": 0,
-      "language": "HTML",
-      "name": "x86-x64-assembly-lab",
-      "stars": 0,
-      "updated_at": "2026-07-12T23:43:45Z",
-      "url": "https://github.com/Real-Fruit-Snacks/x86-x64-assembly-lab"
-    },
-    {
       "description": "Snapshot bundle of the Obsidian plugins I use, packaged as ready-to-install zips in GitHub Releases, with an index page linking each plugin to its community listing and source repository.",
       "forks": 0,
       "language": null,
@@ -597,5 +597,5 @@
     "TypeScript": 9,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-22T10:35:16Z"
+  "updated_at": "2026-09-23T10:28:18Z"
 }
