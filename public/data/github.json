@@ -7,9 +7,27 @@
     "following": 0,
     "login": "Real-Fruit-Snacks",
     "name": null,
-    "public_repos": 65
+    "public_repos": 66
   },
   "repos": [
+    {
+      "description": "Learn, practice and solve chess at any level. Static PWA with Stockfish in the browser.",
+      "forks": 0,
+      "language": "TypeScript",
+      "name": "chess-trainer",
+      "stars": 0,
+      "updated_at": "2026-09-29T10:30:37Z",
+      "url": "https://github.com/Real-Fruit-Snacks/chess-trainer"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-09-28T12:22:19Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
     {
       "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
       "forks": 0,
@@ -27,15 +45,6 @@
       "stars": 2,
       "updated_at": "2026-09-27T12:52:00Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-09-27T11:02:18Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
@@ -594,8 +603,8 @@
     "JavaScript": 34,
     "Python": 4,
     "Rust": 1,
-    "TypeScript": 9,
+    "TypeScript": 10,
     "Vim Script": 1
   },
-  "updated_at": "2026-09-28T12:22:12Z"
+  "updated_at": "2026-09-29T11:48:29Z"
 }
