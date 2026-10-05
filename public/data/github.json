@@ -16,7 +16,7 @@
       "language": "TypeScript",
       "name": "chess-trainer",
       "stars": 0,
-      "updated_at": "2026-10-04T02:09:56Z",
+      "updated_at": "2026-10-04T18:10:30Z",
       "url": "https://github.com/Real-Fruit-Snacks/chess-trainer"
     },
     {
@@ -25,7 +25,7 @@
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-10-03T10:49:06Z",
+      "updated_at": "2026-10-04T11:31:12Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "description": "Bookmark manager for Obsidian with switchable layouts and zero lock-in. Each bookmark is a markdown file with YAML frontmatter.",
-      "forks": 0,
+      "forks": 1,
       "language": "JavaScript",
       "name": "Cove",
       "stars": 2,
@@ -606,5 +606,5 @@
     "TypeScript": 10,
     "Vim Script": 1
   },
-  "updated_at": "2026-10-04T11:31:06Z"
+  "updated_at": "2026-10-05T13:02:07Z"
 }
