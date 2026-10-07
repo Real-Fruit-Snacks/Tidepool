@@ -11,13 +11,22 @@
   },
   "repos": [
     {
-      "description": "Learn, practice and solve chess at any level. Static PWA with Stockfish in the browser.",
+      "description": "Learn, practise and play chess at any level — lessons, puzzles, drills, opening repertoires, game review and a human-like opponent. Stockfish and Maia run in your browser: free, private and offline.",
       "forks": 0,
       "language": "TypeScript",
       "name": "chess-trainer",
       "stars": 0,
-      "updated_at": "2026-10-06T10:45:57Z",
+      "updated_at": "2026-10-07T10:38:51Z",
       "url": "https://github.com/Real-Fruit-Snacks/chess-trainer"
+    },
+    {
+      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
+      "forks": 1,
+      "language": "TypeScript",
+      "name": "obsidian-gym-tracker",
+      "stars": 4,
+      "updated_at": "2026-10-07T09:23:24Z",
+      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
     },
     {
       "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
@@ -25,7 +34,7 @@
       "language": "JavaScript",
       "name": "Tidepool",
       "stars": 2,
-      "updated_at": "2026-10-05T13:02:13Z",
+      "updated_at": "2026-10-06T12:25:44Z",
       "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
@@ -54,15 +63,6 @@
       "stars": 2,
       "updated_at": "2026-09-27T12:52:00Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-outrun"
-    },
-    {
-      "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
-      "forks": 1,
-      "language": "TypeScript",
-      "name": "obsidian-gym-tracker",
-      "stars": 3,
-      "updated_at": "2026-09-25T00:01:19Z",
-      "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
     },
     {
       "description": "Interactive x86 & x86-64 assembly simulator and reverse-engineering lab — step-through 32/64-bit engines, stack playground, register quiz, 28 tutorials, and 7 tools. Pure browser, no build, no dependencies.",
@@ -606,5 +606,5 @@
     "TypeScript": 10,
     "Vim Script": 1
   },
-  "updated_at": "2026-10-06T12:25:38Z"
+  "updated_at": "2026-10-07T12:18:49Z"
 }
