@@ -16,8 +16,17 @@
       "language": "TypeScript",
       "name": "chess-trainer",
       "stars": 0,
-      "updated_at": "2026-10-07T10:38:51Z",
+      "updated_at": "2026-10-08T10:24:53Z",
       "url": "https://github.com/Real-Fruit-Snacks/chess-trainer"
+    },
+    {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-10-07T12:18:55Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
@@ -27,15 +36,6 @@
       "stars": 4,
       "updated_at": "2026-10-07T09:23:24Z",
       "url": "https://github.com/Real-Fruit-Snacks/obsidian-gym-tracker"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-10-06T12:25:44Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "Obsidian plugin that scopes your entire vault down to a single folder. Explorer, search, graph, tags, and backlinks all respect the boundary.",
@@ -606,5 +606,5 @@
     "TypeScript": 10,
     "Vim Script": 1
   },
-  "updated_at": "2026-10-07T12:18:49Z"
+  "updated_at": "2026-10-08T12:28:30Z"
 }
