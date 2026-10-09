@@ -11,6 +11,15 @@
   },
   "repos": [
     {
+      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
+      "forks": 0,
+      "language": "JavaScript",
+      "name": "Tidepool",
+      "stars": 2,
+      "updated_at": "2026-10-08T12:28:37Z",
+      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
+    },
+    {
       "description": "Learn, practise and play chess at any level — lessons, puzzles, drills, opening repertoires, game review and a human-like opponent. Stockfish and Maia run in your browser: free, private and offline.",
       "forks": 0,
       "language": "TypeScript",
@@ -18,15 +27,6 @@
       "stars": 0,
       "updated_at": "2026-10-08T10:24:53Z",
       "url": "https://github.com/Real-Fruit-Snacks/chess-trainer"
-    },
-    {
-      "description": "Interactive terminal portfolio built with xterm.js — explore a developer profile through real shell commands in the browser",
-      "forks": 0,
-      "language": "JavaScript",
-      "name": "Tidepool",
-      "stars": 2,
-      "updated_at": "2026-10-07T12:18:55Z",
-      "url": "https://github.com/Real-Fruit-Snacks/Tidepool"
     },
     {
       "description": "A mobile and desktop Obsidian plugin for tracking strength workouts and rucks.",
@@ -606,5 +606,5 @@
     "TypeScript": 10,
     "Vim Script": 1
   },
-  "updated_at": "2026-10-08T12:28:30Z"
+  "updated_at": "2026-10-09T12:17:17Z"
 }
